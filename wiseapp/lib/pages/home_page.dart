@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart'; 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wiseapp/pages/Instagram/Instagram_main.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -210,6 +211,10 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
+                                    Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => InstagramIgWidget()),
+              );
                                     // Handle onTap
                                   },
                                   child: Column(
@@ -219,6 +224,10 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(8),
+                                          child: InkWell(
+                                            onTap: () {
+                                            // Handle tapping on the image
+                                             },
                                           child: Image.asset(
                                             'assets/images/Instagram_logo_2016.svg.png',
                                             width: 150,
@@ -226,6 +235,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                             fit: BoxFit.contain,
                                           ),
                                         ),
+                                      ),
                                       ),
                                       Text(
                                          AppLocalizations.of(context)!.instagram,
