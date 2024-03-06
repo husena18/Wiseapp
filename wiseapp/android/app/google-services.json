@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798895064061",
+    "project_id": "wiseapp-22256",
+    "storage_bucket": "wiseapp-22256.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798895064061:android:294c7c61af35d3ee898f94",
+        "android_client_info": {
+          "package_name": "com.example.wiseapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR5NfDnDPBggkwTnQEqiaoQu65tyBNJ9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

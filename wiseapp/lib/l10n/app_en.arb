@@ -1,0 +1,28 @@
+{   
+    "welcomewiseapp": "Welcome to WiseApp",
+    "wiseapp": "WiseApp",
+    "helloworld" : "Hello World",
+    "letsgo": "Lets Go!",
+    "searchapphere" : "Search App Here:",
+    "socialmedia" : "Social Media",
+    "instagram" : "Instagram",
+    "paymentfinance" : "Payment/Finance",
+    "gpay" : "G-Pay",
+    "phonepay" : "PhonePe",
+    "paytm" : "PayTM",
+    "foodeliveryapp" : "Food Delivery Apps",
+    "zomato" : "Zomato",
+    "swiggy" : "Swiggy",
+    "travelapp" : "Travel App",
+    "irctc" : "IRCTC",
+    "makemytrip" : "MakeMyTrip",
+    "whereismytrain" : "Where is my Train",
+    "navigationapp" : "Navigation App",
+    "googlemaps" : "Google Maps",
+    "gpsnavigation" : "GPS Navigation",
+    "waze" : "Waze",
+    "snapchat" : "Spapchat",
+    "pinterest" : "Pinterest",
+    "x" : "X"
+      
+}
