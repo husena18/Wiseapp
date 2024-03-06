@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
 
   cupertino_icons: ^1.0.6
   provider: ^6.0.5
@@ -38,6 +39,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter 
 
+  lottie: ^1.0.1
   cloud_firestore: ^4.15.5 
   auto_size_text: ^3.0.0
   cached_network_image: ^3.2.1
@@ -121,6 +123,7 @@ flutter:
     - assets\images\WiseApp_Light.png
     - assets\images\WiseApp.png
     - assets\images\Zomato_logo.png
+    - assets\lottie_animations\Animation_-_1709761131674.json
 
 
 

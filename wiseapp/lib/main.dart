@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:wiseapp/controller/language_change_controller.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:wiseapp/pages/Instagram/Add_to_story2.dart';
 import 'package:wiseapp/pages/home_screen.dart';
 import 'package:wiseapp/pages/text_to_speech.dart';
 import 'package:wiseapp/pages/video_screen.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: MyHomePage(title: 'WiseApp'),
+            home: Addtostory2IgWidget()
           );
         },
       ),
