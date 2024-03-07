@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 
 class Addtostory2IgWidget extends StatefulWidget {
@@ -38,11 +39,13 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
               child: Align(
                 alignment: AlignmentDirectional(0, 0.43),
                 child: Lottie.asset(
-                  'assets/lottie_animations/Animation_-_1709196170491.json',
-                  width: 398,
-                  height: 440,
-                  fit: BoxFit.fitWidth,
-                  animate: true,
+                    'animations/focus.json',
+                    width: 285,
+                    height: 254,
+                    reverse: true,
+                    repeat: true,
+                    fit: BoxFit.fitWidth,
+                    animate: true,
                 )
               ),
             ),
@@ -53,7 +56,7 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
                   // Handle onTap
                 },
                 child: Text(
-                  'Use your camera to \nclick a photo or select\n from your gallery',
+                  AppLocalizations.of(context)!.fromgallery,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

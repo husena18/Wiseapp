@@ -39,7 +39,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter 
 
-  lottie: ^1.0.1
+  lottie: ^3.1.0
   cloud_firestore: ^4.15.5 
   auto_size_text: ^3.0.0
   cached_network_image: ^3.2.1
@@ -99,37 +99,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-    - assets\images\1600x960_392480-phone-pe.jpeg.png
-    - assets\images\605abdb7af3405c6b20a426b1e128322.jpg
-    - assets\images\google-maps-logo-on-transparent-white-background-free-vector.jpg
-    - assets\images\1690643640twitter-x-icon-png.webp
-    - assets\images\Feed_Post_-_1_1_photo.png
-    - assets\images\GoogleMaps-Icon-alone-1.png.webp
-    - assets\images\Instagram_Light.png
-    - assets\images\Instagram_logo_2016.svg.png
-    - assets\images\Instagram.png
-    - assets\images\OIP.jpg
-    - assets\images\pinterest-logos-vector-png-hd-14.png
-    - assets\images\png-clipart-whatsapp-computer-icons-logo-whatsapp-green-and-white-what-s-up-logo-grass-desktop-wallpaper-thumbnail.png
-    - assets\images\Screenshot_2024-02-23_at_23.57.04.png
-    - assets\images\Screenshot_2024-02-23_at_23.58.44.png
-    - assets\images\snapchat-logo-filters-png-5.png
-    - assets\images\uber-eats-logo-39748746B7-seeklogo.com.png
-    - assets\images\unnamed-2.png
-    - assets\images\unnamed-3.png
-    - assets\images\unnamed-4.png
-    - assets\images\unnamed.png
-    - assets\images\WiseApp_Light.png
-    - assets\images\WiseApp.png
-    - assets\images\Zomato_logo.png
-    - assets\images\WhatsApp_Image_2024-02-28_at_23.28.03.jpeg
-    - assets\images\WhatsApp_Image_2024-02-28_at_23.15.31.jpeg
-    - assets\images\WhatsApp_Image_2024-02-28_at_23.24.59.jpeg
-    - assets\images\WhatsApp_Image_2024-02-28_at_23.25.00.jpeg
-    - assets\images\WhatsApp_Image_2024-02-28_at_23.25.21_(1).jpeg
-    - assets/images/WhatsApp_Image_2024-02-28_at_23.28.03.jpeg
-    - assets\lottie_animations\Animation_-_1709761131674.json
+  assets: 
+  - animations/
     
 
     

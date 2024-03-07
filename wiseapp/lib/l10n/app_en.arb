@@ -23,6 +23,7 @@
     "waze" : "Waze",
     "snapchat" : "Spapchat",
     "pinterest" : "Pinterest",
-    "x" : "X"
+    "x" : "X",
+    "fromgallery": "Use your camera to \nclick a photo or select\n from your gallery"
       
 }

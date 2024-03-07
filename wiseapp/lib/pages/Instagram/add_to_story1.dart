@@ -80,9 +80,11 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
                 child: Align(
                   alignment: AlignmentDirectional(-2.67, -1.07),
                   child: Lottie.asset(
-                    'assets/lottie_animations/Animation_-_1709196170491.json',
+                    'animations/focus.json',
                     width: 285,
                     height: 254,
+                    reverse: true,
+                    repeat: true,
                     fit: BoxFit.fitWidth,
                     animate: true,
                   ),
