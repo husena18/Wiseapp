@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: Addtostory2IgWidget()
+            home: MyHomePage(title: 'WiseApp')
           );
         },
       ),

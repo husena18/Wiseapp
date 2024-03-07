@@ -3,6 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'add_to_story1.dart'; 
 
 class InstagramIgWidget extends StatefulWidget {
   const InstagramIgWidget({Key? key}) : super(key: key);
@@ -72,10 +73,17 @@ class _InstagramIgWidgetState extends State<InstagramIgWidget> {
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 10),
                             child: ElevatedButton(
-                              onPressed: () async {
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Addtostory1IgWidget())
+                                );
+                              },
+                              
+
                                 // Replace the navigation logic as per your app's requirements
                                 // context.pushNamed('ADDTOSTORY1_IG');
-                              },
+                              
                               child: Text('Add to your Story for 24 hours'),
                             ),
                           ),
