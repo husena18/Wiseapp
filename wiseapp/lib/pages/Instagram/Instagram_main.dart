@@ -46,8 +46,8 @@ class _InstagramIgWidgetState extends State<InstagramIgWidget> {
                           Theme.of(context).brightness == Brightness.dark
                               ? 'assets/images/WhatsApp_Image_2024-02-28_at_23.28.03.jpeg'
                               : 'assets/images/WhatsApp_Image_2024-02-28_at_23.28.01.jpeg',
-                          width: 418,
-                          height: 796,
+                          width: 350,
+                          height: 700,
                           fit: BoxFit.cover,
                         ),
                       ),
