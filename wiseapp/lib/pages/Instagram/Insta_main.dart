@@ -1,6 +1,6 @@
-// insta_main.dart
 import 'package:flutter/material.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
+import 'package:wiseapp/image_fetch.dart'; // Import the file where ImageFetcher is defined
 
 class InstaMain extends StatelessWidget {
   @override
@@ -8,17 +8,14 @@ class InstaMain extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
+          // Background Image using ImageFetcher
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/Instagram.jpg', // Replace with your image path
-              fit: BoxFit.cover,
-            ),
+            child: ImageFetcher(imageUrl: 'instagram_assets/Instagram.png'),
           ),
           // Centered Dialog Box
           Center(
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.8, // Adjust the width as needed
+              width: MediaQuery.of(context).size.width * 0.95, // Adjust the width as needed
               height: MediaQuery.of(context).size.height * 0.4, // Adjust the height as needed
               color: Colors.white, // Background color of the dialog box
               child: Column(
