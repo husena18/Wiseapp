@@ -1,4 +1,6 @@
+// insta_main.dart
 import 'package:flutter/material.dart';
+import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 
 class InstaMain extends StatelessWidget {
   @override
@@ -9,7 +11,7 @@ class InstaMain extends StatelessWidget {
           // Background Image
           Positioned.fill(
             child: Image.asset(
-              'assets/background_image.jpg', // Replace with your image path
+              'assets/images/Instagram.jpg', // Replace with your image path
               fit: BoxFit.cover,
             ),
           ),
@@ -24,7 +26,10 @@ class InstaMain extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Handle button press
+                      Navigator.push( // Navigate to add_to_story.dart when button is pressed
+                        context,
+                        MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
+                      );
                     },
                     child: Text('Add to your story for 24 hrs'),
                   ),

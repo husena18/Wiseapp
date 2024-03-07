@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 
 class Addtostory2IgWidget extends StatefulWidget {
   const Addtostory2IgWidget({Key? key}) : super(key: key);

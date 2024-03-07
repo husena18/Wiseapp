@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
+import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
 
 class Addtostory1IgModel extends ChangeNotifier {
   late FocusNode _unfocusNode;
@@ -45,9 +47,13 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () {
+        // Navigate to another page when animation is clicked
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Addtostory2IgWidget()),
+        );
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Theme.of(context).backgroundColor,
@@ -114,10 +120,10 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
                     'Click here',
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                      fontFamily: 'Readex Pro',
-                      color: Theme.of(context).textTheme.bodyText1!.color,
-                      fontSize: 22,
-                    ),
+                          fontFamily: 'Readex Pro',
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          fontSize: 22,
+                        ),
                   ),
                 ),
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:wiseapp/pages/Instagram/Instagram_main.dart';
+import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -213,7 +213,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                   onTap: () async {
                                     Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => InstagramIgWidget()),
+                MaterialPageRoute(builder: (context) => InstaMain()),
               );
                                     // Handle onTap
                                   },

@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:wiseapp/pages/Instagram/Add_to_story2.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
+import 'package:wiseapp/pages/home_page.dart';
 import 'package:wiseapp/pages/home_screen.dart';
 import 'package:wiseapp/pages/text_to_speech.dart';
 import 'package:wiseapp/pages/video_screen.dart';
@@ -53,7 +54,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: MyHomePage(title: '',),
+            home: MyHomePage(title: 'WiseApp'),
           );
         },
       ),
