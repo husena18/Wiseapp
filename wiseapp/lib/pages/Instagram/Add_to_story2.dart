@@ -15,6 +15,8 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
 
   @override
   Widget build(BuildContext context) {
+    var fromgallery;
+    
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.grey[200],

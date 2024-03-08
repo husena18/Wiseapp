@@ -36,6 +36,10 @@ class InstaMain extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () {
+                      Navigator.push( // Navigate to add_to_story.dart when button is pressed
+                        context,
+                        MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
+                      );
                       // Handle button press
                     },
                     child: Text('Search and follow your friends'),
