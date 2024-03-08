@@ -50,7 +50,7 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
                 child: Align(
                   alignment: Alignment(-4.64, -1.52),
                   child: Image.asset(
-                    'assets/lottie_animations/Animation_-_1709196170491.json',
+                    'assets/lottie_animations/cursor.json',
                     width: 343,
                     height: 346,
                     fit: BoxFit.fitWidth,

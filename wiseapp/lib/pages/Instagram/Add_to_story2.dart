@@ -16,22 +16,7 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    var fromgallery;
-    return GestureDetector(
-      onTap: () {
-        // Navigate to another page when animation is clicked
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Addtostory2IgWidget()),
-        );
-      },
-    
-    
-    child: Scaffold(
-=======
     return Scaffold(
->>>>>>> 53f567d75f34c37f8803a17d6cd0c52057062199
       key: scaffoldKey,
       backgroundColor: Colors.grey[200],
       body: SafeArea(
@@ -93,7 +78,7 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
           ],
         ),
       ),
-    ));
+    );
 
   }
 }
