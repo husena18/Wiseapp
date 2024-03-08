@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 class Follow1IgWidget extends StatefulWidget {
   const Follow1IgWidget({Key? key}) : super(key: key);
@@ -15,39 +14,23 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget>
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  final animationsMap = {
-    'textOnPageLoadAnimation': AnimationInfo(
-      loop: true,
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: Duration.zero,
-          duration: Duration(milliseconds: 1240),
-          begin: Offset(1, 1),
-          end: Offset(1.5, 1.5),
-        ),
-      ],
-    ),
-  };
-
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Follow1IgModel());
+    _unfocusNode = FocusNode();
   }
 
   @override
   void dispose() {
-    _model.dispose();
+    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+      onTap: () => _unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_unfocusNode)
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
