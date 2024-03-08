@@ -74,9 +74,9 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
               Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: AlignmentDirectional(-2.67, -1.07),
+                  alignment: AlignmentDirectional(-2.18, -0.92),
                   child: Lottie.asset(
-                    'animations/focus.json',
+                    'animations/cursor.json',
                     width: 285,
                     height: 254,
                     reverse: true,
