@@ -42,8 +42,8 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
                 alignment: AlignmentDirectional(0.3, 0.43),
                 child: Lottie.asset(
                   'animations/cursor.json',
-                  width: 285,
-                  height: 254,
+                  width: 250,
+                  height: 220,
                   reverse: true,
                   repeat: true,
                   fit: BoxFit.fitWidth,

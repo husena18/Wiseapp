@@ -9,19 +9,11 @@ class ImageFetcher extends StatelessWidget {
   final BoxFit fit;
 
   const ImageFetcher({
-<<<<<<< Updated upstream
     Key? key,
     required this.imageUrl,
     this.width,
     this.height,
     this.fit = BoxFit.cover,
-=======
-    required this.imageUrl,
-    this.width,
-    this.height,
-    this.fit = BoxFit.fill,
-    Key? key,
->>>>>>> Stashed changes
   }) : super(key: key);
 
   Future<String?> fetchImageUrl() async {
@@ -45,13 +37,8 @@ class ImageFetcher extends StatelessWidget {
         } else if (snapshot.hasError || snapshot.data == null) {
           return Center(child: Text('Failed to load image'));
         } else {
-<<<<<<< Updated upstream
           return Image.network(
             snapshot.data!,
-=======
-          return Image(
-            image: CachedNetworkImageProvider(snapshot.data!),
->>>>>>> Stashed changes
             width: width,
             height: height,
             fit: fit,
