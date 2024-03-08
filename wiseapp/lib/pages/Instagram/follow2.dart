@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:lottie/lottie.dart';
-
 
 class Follow2IgWidget extends StatefulWidget {
   const Follow2IgWidget({Key? key}) : super(key: key);
@@ -12,43 +9,20 @@ class Follow2IgWidget extends StatefulWidget {
 
 class _Follow2IgWidgetState extends State<Follow2IgWidget>
     with TickerProviderStateMixin {
-  late Follow2IgModel _model;
-
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final animationsMap = {
-    'textOnPageLoadAnimation': AnimationInfo(
-      loop: true,
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: Duration.zero,
-          duration: Duration(milliseconds: 1240),
-          begin: Offset(1, 1),
-          end: Offset(1.5, 1.5),
-        ),
-      ],
-    ),
-  };
-
-  @override
-  void initState() {
-    super.initState();
-    _model = createModel(context, () => Follow2IgModel());
-  }
+  late final FocusNode _unfocusNode = FocusNode();
+  late final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void dispose() {
-    _model.dispose();
+    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+      onTap: () => _unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_unfocusNode)
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
@@ -75,12 +49,11 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
                 opacity: 0.8,
                 child: Align(
                   alignment: Alignment(-4.64, -1.52),
-                  child: Lottie.asset(
+                  child: Image.asset(
                     'assets/lottie_animations/Animation_-_1709196170491.json',
                     width: 343,
                     height: 346,
                     fit: BoxFit.fitWidth,
-                    animate: true,
                   ),
                 ),
               ),
@@ -98,7 +71,7 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
                     },
                     child: Icon(
                       Icons.settings_outlined,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).primaryColor,
                       size: 70,
                     ),
                   ),
@@ -123,7 +96,7 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
                           ),
                         ),
                   ),
-                ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
+                ),
               ),
             ],
           ),
