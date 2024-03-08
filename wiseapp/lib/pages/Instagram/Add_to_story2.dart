@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wiseapp/image_fetch.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 
 class Addtostory2IgWidget extends StatefulWidget {
   const Addtostory2IgWidget({Key? key}) : super(key: key);
@@ -25,12 +25,9 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
             Align(
               alignment: AlignmentDirectional(0, 0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  'assets/images/WhatsApp_Image_2024-02-28_at_23.25.40_(1).jpeg',
-                  width: 435,
-                  height: 825,
-                  fit: BoxFit.cover,
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.40_(1).jpeg',
+                  
                 ),
               ),
             ),
@@ -39,14 +36,14 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
               child: Align(
                 alignment: AlignmentDirectional(0, 0.43),
                 child: Lottie.asset(
-                    'animations/focus.json',
-                    width: 285,
-                    height: 254,
-                    reverse: true,
-                    repeat: true,
-                    fit: BoxFit.fitWidth,
-                    animate: true,
-                )
+                  'animations/focus.json',
+                  width: 285,
+                  height: 254,
+                  reverse: true,
+                  repeat: true,
+                  fit: BoxFit.fitWidth,
+                  animate: true,
+                ),
               ),
             ),
             Align(
