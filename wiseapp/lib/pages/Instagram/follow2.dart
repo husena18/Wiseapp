@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wiseapp/image_fetch.dart';
 
 class Follow2IgWidget extends StatefulWidget {
   const Follow2IgWidget({Key? key}) : super(key: key);
@@ -36,10 +37,8 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
                 alignment: Alignment.center,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? 'assets/images/WhatsApp_Image_2024-02-28_at_23.25.25_(1).jpeg'
-                        : 'assets/images/WhatsApp_Image_2024-02-28_at_23.25.25.jpeg',
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.25.jpeg',
                     width: 443,
                     height: 809,
                     fit: BoxFit.cover,

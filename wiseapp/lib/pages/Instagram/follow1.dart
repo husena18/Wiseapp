@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Instagram/follow2.dart';
 
 class Follow1IgWidget extends StatefulWidget {
   const Follow1IgWidget({Key? key}) : super(key: key);
@@ -28,10 +30,14 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget>
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => _unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_unfocusNode)
-          : FocusScope.of(context).unfocus(),
+   return GestureDetector(
+      onTap: () {
+        // Navigate to another page when animation is clicked
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Follow2IgWidget()),
+        );
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Theme.of(context).primaryColor,
@@ -43,10 +49,8 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget>
                 alignment: Alignment.center,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? 'assets/images/WhatsApp_Image_2024-02-28_at_23.28.03.jpeg'
-                        : 'assets/images/WhatsApp_Image_2024-02-28_at_23.28.01.jpeg',
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.28.01.jpeg',
                     width: 443,
                     height: 809,
                     fit: BoxFit.cover,
@@ -58,7 +62,7 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget>
                 child: Align(
                   alignment: Alignment(-1.43, 1.26),
                   child: Lottie.asset(
-                    'assets/lottie_animations/Animation_-_1709196170491.json',
+                    'assets/lottie_animations/cursor.json',
                     width: 285,
                     height: 254,
                     fit: BoxFit.fitWidth,
