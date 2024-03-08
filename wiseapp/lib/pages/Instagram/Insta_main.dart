@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 import 'package:wiseapp/image_fetch.dart'; 
-import 'dart:ui';// Import the file where ImageFetcher is defined
+import 'dart:ui';
+
+import 'package:wiseapp/pages/Instagram/follow1.dart';// Import the file where ImageFetcher is defined
 
 class InstaMain extends StatelessWidget {
   @override
@@ -52,6 +54,10 @@ class InstaMain extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () {
+                       Navigator.push( // Navigate to add_to_story.dart when button is pressed
+                        context,
+                        MaterialPageRoute(builder: (context) => Follow1IgWidget()),
+                      );
                       // Handle button press
                     },
                     child: Text('Post for everyone to see'),

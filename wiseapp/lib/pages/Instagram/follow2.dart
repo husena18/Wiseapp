@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Follow2IgWidget extends StatefulWidget {
   const Follow2IgWidget({Key? key}) : super(key: key);
