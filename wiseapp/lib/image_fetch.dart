@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+
 
 class ImageFetcher extends StatelessWidget {
   final String imageUrl;
+  final double? width;
+  final double? height;
+  final BoxFit fit;
 
-  const ImageFetcher({Key? key, required this.imageUrl}) : super(key: key);
+  const ImageFetcher({
+    Key? key,
+    required this.imageUrl,
+    this.width,
+    this.height,
+    this.fit = BoxFit.cover,
+  }) : super(key: key);
 
   Future<String?> fetchImageUrl() async {
     try {
       var storage = FirebaseStorage.instance;
-      var imageRef = storage.ref().child(imageUrl); // Use the imageUrl directly
+      var imageRef = storage.ref().child(imageUrl);
       return await imageRef.getDownloadURL();
     } catch (e) {
       print('Error fetching image URL: $e');
@@ -28,7 +37,12 @@ class ImageFetcher extends StatelessWidget {
         } else if (snapshot.hasError || snapshot.data == null) {
           return Center(child: Text('Failed to load image'));
         } else {
-          return Image.network(snapshot.data!);
+          return Image.network(
+            snapshot.data!,
+            width: width,
+            height: height,
+            fit: fit,
+          );
         }
       },
     );

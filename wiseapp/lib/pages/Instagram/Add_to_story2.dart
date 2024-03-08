@@ -24,10 +24,13 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
           children: [
             Align(
               alignment: AlignmentDirectional(0, 0),
+              child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
               child: ClipRRect(
                 child: ImageFetcher(
                   imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.40_(1).jpeg',
-                  
+                ),
                 ),
               ),
             ),
@@ -57,7 +60,7 @@ class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 22,
                   ),
                 ),

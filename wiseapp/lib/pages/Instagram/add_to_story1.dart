@@ -61,9 +61,13 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
             children: [
               Align(
                 alignment: AlignmentDirectional(0, 0),
-                child: ClipRRect(
-                  child: ImageFetcher(
-                    imageUrl: 'instagram_assets//WhatsApp_Image_2024-02-28_at_23.28.03.jpeg',
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  child: ClipRRect(
+                    child: ImageFetcher(
+                      imageUrl: 'instagram_assets//WhatsApp_Image_2024-02-28_at_23.28.03.jpeg',
+                    ),
                   ),
                 ),
               ),
@@ -114,10 +118,10 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
                     'Click here',
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                      fontFamily: 'Readex Pro',
-                      color: Theme.of(context).textTheme.bodyText1!.color,
-                      fontSize: 22,
-                    ),
+                          fontFamily: 'Readex Pro',
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          fontSize: 22,
+                        ),
                   ),
                 ),
               ),
