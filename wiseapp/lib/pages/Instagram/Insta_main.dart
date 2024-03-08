@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
-import 'package:wiseapp/image_fetch.dart'; 
+import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Instagram/dm1.dart'; 
 import 'dart:ui';
-
 import 'package:wiseapp/pages/Instagram/follow1.dart';
 import 'package:wiseapp/pages/Instagram/follow2.dart';// Import the file where ImageFetcher is defined
 
@@ -41,7 +41,7 @@ class InstaMain extends StatelessWidget {
                     onPressed: () {
                       Navigator.push( // Navigate to add_to_story.dart when button is pressed
                         context,
-                        MaterialPageRoute(builder: (context) => Follow2IgWidget(),
+                        MaterialPageRoute(builder: (context) => Follow1IgWidget(),
                       ));
                       // Handle button press
                     },
@@ -49,6 +49,10 @@ class InstaMain extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () {
+                      Navigator.push( // Navigate to add_to_story.dart when button is pressed
+                        context,
+                        MaterialPageRoute(builder: (context) => Dm1IgWidget(),
+                      ));
                       // Handle button press
                     },
                     child: Text('Text your friends (DM)'),
