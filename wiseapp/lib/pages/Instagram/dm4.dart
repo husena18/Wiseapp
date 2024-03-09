@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Dm4IgWidget extends StatefulWidget {
   const Dm4IgWidget({Key? key}) : super(key: key);
@@ -54,7 +54,7 @@ class _Dm4IgWidgetState extends State<Dm4IgWidget> {
               Align(
                 alignment: AlignmentDirectional(-0.07, 0.09),
                 child: Text(
-                  'You can now chat with your friends',
+                  AppLocalizations.of(context)!.chatwithfriends,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

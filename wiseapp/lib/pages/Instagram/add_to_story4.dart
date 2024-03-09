@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Addtostory4IgWidget extends StatefulWidget {
   const Addtostory4IgWidget({Key? key}) : super(key: key);
@@ -35,7 +35,7 @@ class _Addtostory4IgWidgetState extends State<Addtostory4IgWidget> {
             Align(
               alignment: AlignmentDirectional(0, -0.1),
               child: Text(
-                'Story uploaded',
+                AppLocalizations.of(context)!.storyuploaded,
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,

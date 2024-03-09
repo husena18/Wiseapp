@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Instagram/follow3.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class Follow2IgWidget extends StatefulWidget {
   const Follow2IgWidget({Key? key}) : super(key: key);
@@ -48,11 +51,11 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
               Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: Alignment(-4.64, -1.52),
-                  child: Image.asset(
-                    'assets/lottie_animations/cursor.json',
-                    width: 343,
-                    height: 346,
+                  alignment: Alignment(-0.73, -1.1),
+                  child: Lottie.asset(
+                    'animations/cursor.json',
+                    width: 200,
+                    height: 140,
                     fit: BoxFit.fitWidth,
                   ),
                 ),
@@ -67,7 +70,10 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      Navigator.of(context).pushNamed('FOLLOW3_IG');
+                      Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Follow3IgWidget()),
+                );
                     },
                     child: Icon(
                       Icons.settings_outlined,
@@ -78,21 +84,22 @@ class _Follow2IgWidgetState extends State<Follow2IgWidget>
                 ),
               ),
               Align(
-                alignment: Alignment(0.36, -0.86),
+                alignment: Alignment(0.36, -0.66),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
                   hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
+                  highlightColor: Color.fromARGB(125, 76, 72, 72),
                   onTap: () async {},
                   child: Text(
-                    'Search the person you want to follow',
+                    AppLocalizations.of(context)!.searchpeople,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText1!.merge(
                           TextStyle(
-                            fontFamily: 'Readex Pro',
-                            color: Theme.of(context).primaryColor,
-                            fontSize: 20,
+                            fontFamily: 'Times New Roman',
+                            color:Color.fromARGB(214, 6, 4, 4),
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                   ),

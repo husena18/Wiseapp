@@ -55,7 +55,7 @@ class Post1IgWidget extends StatelessWidget {
                   Navigator.pushNamed(context, 'DM2_IG');
                 },
                 child: Text(
-                  'Click here',
+                  'clickhere',
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
                     fontSize: 26,

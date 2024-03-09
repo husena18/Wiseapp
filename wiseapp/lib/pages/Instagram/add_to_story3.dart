@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story4.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Addtostory3IgWidget extends StatefulWidget {
   const Addtostory3IgWidget({Key? key}) : super(key: key);
@@ -57,7 +58,7 @@ class _Addtostory3IgWidgetState extends State<Addtostory3IgWidget> {
             Align(
               alignment: AlignmentDirectional(0.76, -0.82),
               child: Text(
-                'Use these to add text, music,\n and gifs to your story',
+                AppLocalizations.of(context)!.editstory,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Readex Pro',
@@ -95,7 +96,7 @@ class _Addtostory3IgWidgetState extends State<Addtostory3IgWidget> {
             Align(
               alignment: AlignmentDirectional(-0.27, 0.8),
               child: Text(
-                'Click here to post story \n after editing',
+                AppLocalizations.of(context)!.poststory,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Readex Pro',

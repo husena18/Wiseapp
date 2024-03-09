@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Instagram/follow2.dart';
+import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class Follow1IgWidget extends StatefulWidget {
-  const Follow1IgWidget({Key? key}) : super(key: key);
+class Follow5IgWidget extends StatefulWidget {
+  const Follow5IgWidget({Key? key}) : super(key: key);
 
   @override
-  State<Follow1IgWidget> createState() => _Follow1IgWidgetState();
+  State<Follow5IgWidget> createState() => _Follow4IgWidgetState();
 }
 
-class _Follow1IgWidgetState extends State<Follow1IgWidget> {
+class _Follow4IgWidgetState extends State<Follow5IgWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +24,9 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child:  ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.28.03.jpeg',
+                  imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.21_(2).jpeg',
                   width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
+                  height: MediaQuery.of(context).size.height,
                 ),
               ),
             ),
@@ -35,24 +34,20 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Follow2IgWidget()),
+                  MaterialPageRoute(builder: (context) => InstaMain()),
                 );
               },
-              child: Opacity(
-                opacity: 0.8,
-                child: Align(
-                  alignment: Alignment(-0.80, 0.90),
-                  child: Lottie.asset(
-                    'animations/cursor.json',
-                    width: 240,
-                    height: 100,
-                    fit: BoxFit.fitWidth,
-                  ),
+              child: Align(
+                alignment: Alignment(-0.80, 0.85),
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Theme.of(context).primaryColor,
+                  size: 70,
                 ),
               ),
             ),
             Align(
-              alignment: Alignment(0.36, 0.86),
+              alignment: Alignment(0.36, -0.86),
               child: InkWell(
                 splashColor: Color.fromARGB(246, 0, 0, 0),
                 focusColor: Color.fromARGB(246, 0, 0, 0),
@@ -60,16 +55,15 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
                 highlightColor: Color.fromARGB(246, 0, 0, 0),
                 onTap: () async {},
                 child: Text(
-                  AppLocalizations.of(context)!.searchhere,
+                  '',
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.merge(
-                        TextStyle(
-                          fontFamily: 'Readex Pro',
-                          color:Colors.black,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                    TextStyle(
+                      fontFamily: 'Readex Pro',
+                      color: Theme.of(context).primaryColor,
+                      fontSize: 20,
+                    ),
+                  ),
                 ),
               ),
             ),

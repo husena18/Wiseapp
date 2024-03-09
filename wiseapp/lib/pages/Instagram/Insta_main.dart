@@ -5,6 +5,8 @@ import 'package:wiseapp/pages/Instagram/dm1.dart';
 import 'dart:ui';
 import 'package:wiseapp/pages/Instagram/follow1.dart';
 import 'package:wiseapp/pages/Instagram/post1.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class InstaMain extends StatelessWidget {
   @override
@@ -35,7 +37,7 @@ class InstaMain extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
                       );
                     },
-                    child: Text('Add to your story for 24 hrs'),
+                    child: Text(AppLocalizations.of(context)!.storyadd),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -45,7 +47,7 @@ class InstaMain extends StatelessWidget {
                       ));
                       // Handle button press
                     },
-                    child: Text('Search and follow your friends'),
+                    child: Text(AppLocalizations.of(context)!.searchfollow),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -55,7 +57,7 @@ class InstaMain extends StatelessWidget {
                       ));
                       // Handle button press
                     },
-                    child: Text('Text your friends (DM)'),
+                    child: Text(AppLocalizations.of(context)!.dm),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -65,13 +67,17 @@ class InstaMain extends StatelessWidget {
                       );
                       // Handle button press
                     },
-                    child: Text('Post for everyone to see'),
+                    child: Text(
+                    AppLocalizations.of(context)!.post),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       // Handle button press
                     },
-                    child: Text('Scroll through reels for fun videos'),
+                    child: Text(
+                      AppLocalizations.of(context)!.reels,
+
+                  ),
                   ),
                 ],
               ),
