@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Instagram/follow2.dart';
+import 'package:wiseapp/pages/Instagram/follow5.dart';
 
-class Follow1IgWidget extends StatefulWidget {
-  const Follow1IgWidget({Key? key}) : super(key: key);
+class Follow4IgWidget extends StatefulWidget {
+  const Follow4IgWidget({Key? key}) : super(key: key);
 
   @override
-  State<Follow1IgWidget> createState() => _Follow1IgWidgetState();
+  State<Follow4IgWidget> createState() => _Follow1IgWidgetState();
 }
 
-class _Follow1IgWidgetState extends State<Follow1IgWidget> {
+class _Follow1IgWidgetState extends State<Follow4IgWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child:  ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.28.03.jpeg',
+                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.22.jpeg',
                   width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 ),
@@ -34,7 +34,7 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Follow2IgWidget()),
+                  MaterialPageRoute(builder: (context) => Follow5IgWidget()),
                 );
               },
               child: Opacity(
@@ -59,13 +59,13 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
                 highlightColor: Color.fromARGB(246, 0, 0, 0),
                 onTap: () async {},
                 child: Text(
-                  'Click here to search',
+                  'Click here to follow',
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.merge(
                         TextStyle(
                           fontFamily: 'Readex Pro',
-                          color:Colors.black,
-                          fontSize: 25,
+                          color: const Color.fromARGB(243, 0, 0, 0),
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
