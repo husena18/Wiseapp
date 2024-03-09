@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/post2.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Post1IgWidget extends StatelessWidget {
   const Post1IgWidget({Key? key}) : super(key: key);
@@ -55,7 +56,7 @@ class Post1IgWidget extends StatelessWidget {
                   Navigator.pushNamed(context, 'DM2_IG');
                 },
                 child: Text(
-                  'clickhere',
+                  AppLocalizations.of(context)!.clickhere,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
                     fontSize: 26,

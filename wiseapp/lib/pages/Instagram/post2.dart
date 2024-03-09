@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/post3.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Post2IgWidget extends StatelessWidget {
   const Post2IgWidget({Key? key}) : super(key: key);
@@ -60,7 +61,7 @@ class Post2IgWidget extends StatelessWidget {
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  'postphoto',
+                  AppLocalizations.of(context)!.postphoto,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                         fontFamily: 'Readex Pro',

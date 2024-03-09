@@ -3,6 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/pages/Instagram/post5.dart'; // Import the correct next page widget
 import 'package:wiseapp/image_fetch.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Post4IgWidget extends StatefulWidget {
   const Post4IgWidget({Key? key}) : super(key: key);
@@ -99,7 +100,7 @@ class _Post4IgWidgetState extends State<Post4IgWidget> {
                   highlightColor: Colors.transparent,
                   onTap: () async {},
                   child: Text(
-                    'Click here once you\n are ready to post',
+                    AppLocalizations.of(context)!.posted,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           fontFamily: 'Readex Pro',

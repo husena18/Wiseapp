@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Instagram/Insta_main.dart'; // Change post6.dart to the next post file if necessary
+import 'package:wiseapp/pages/Instagram/Insta_main.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+ // Change post6.dart to the next post file if necessary
 
 class Post5IgWidget extends StatelessWidget {
   const Post5IgWidget({Key? key}) : super(key: key);
@@ -30,7 +32,7 @@ class Post5IgWidget extends StatelessWidget {
               Align(
                 alignment: AlignmentDirectional(-0.07, 0.09),
                 child: Text(
-                  'Your post is uploaded, and you can now see it in your profile',
+                  AppLocalizations.of(context)!.postuploaded,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

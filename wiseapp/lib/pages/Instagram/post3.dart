@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/pages/Instagram/post4.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Post3IgWidget extends StatelessWidget {
   const Post3IgWidget({Key? key}) : super(key: key);
@@ -61,7 +62,7 @@ class Post3IgWidget extends StatelessWidget {
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  'Edit your photos \n and click on next',
+                  AppLocalizations.of(context)!.editpost,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     fontFamily: 'Readex Pro',

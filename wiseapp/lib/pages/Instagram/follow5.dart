@@ -55,7 +55,7 @@ class _Follow4IgWidgetState extends State<Follow5IgWidget> {
                 highlightColor: Color.fromARGB(246, 0, 0, 0),
                 onTap: () async {},
                 child: Text(
-                  '',
+                  AppLocalizations.of(context)!.followed,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.merge(
                     TextStyle(

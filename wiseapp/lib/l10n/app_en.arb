@@ -40,7 +40,11 @@
     "chatwithfriends":"You can now chat with your friends",
     "searchhere":"Click here to search",
     "searchpeople":"Search the person \nyou want to follow",
-    "followhere":"Click here to follow"
+    "followhere":"Click here to follow",
+    "followed":"You are now following.",
+    "editpost":"Edit your photos \n and click on next",
+    "posted":"Click here once you\n are ready to post",
+    "postuploaded":"Your post is uploaded, and you can now see it in your profile"
 
     
 
