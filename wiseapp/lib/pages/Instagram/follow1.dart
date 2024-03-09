@@ -40,7 +40,7 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
               child: Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: Alignment(-0.80, 0.85),
+                  alignment: Alignment(-0.80, 0.90),
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 240,
@@ -51,7 +51,7 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
               ),
             ),
             Align(
-              alignment: Alignment(0.36, -0.86),
+              alignment: Alignment(0.36, 0.86),
               child: InkWell(
                 splashColor: Color.fromARGB(246, 0, 0, 0),
                 focusColor: Color.fromARGB(246, 0, 0, 0),
