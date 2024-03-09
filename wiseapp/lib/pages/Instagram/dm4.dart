@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 
+
 class Dm4IgWidget extends StatefulWidget {
   const Dm4IgWidget({Key? key}) : super(key: key);
 
@@ -37,29 +38,47 @@ class _Dm4IgWidgetState extends State<Dm4IgWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: Alignment.center,
+                child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? 'assets/images/WhatsApp_Image_2024-03-02_at_02.10.02.jpeg'
-                        : 'assets/images/WhatsApp_Image_2024-03-02_at_02.10.05.jpeg',
-                    width: 443,
-                    height: 809,
-                    fit: BoxFit.cover,
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-03-02_at_02.10.02.jpeg',
                   ),
                 ),
               ),
+                ),
+            
+        
               Align(
-                alignment: AlignmentDirectional(0.03, 0.28),
+                alignment: AlignmentDirectional(-0.07, 0.09),
                 child: Text(
                   'You can now chat with your friends',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
-                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 26,
+                    color: Colors.white, 
                   ),
                 ),
               ),
+               Align(
+                alignment: AlignmentDirectional(-0.07, 0.19),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => InstaMain()), // Replace YourNextPage with the actual next page widget
+                  );
+                },
+                child: Text(
+                  "Let's explore other functionalities",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
             ],
           ),
         ),

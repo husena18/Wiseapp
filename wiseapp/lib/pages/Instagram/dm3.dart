@@ -38,26 +38,52 @@ class _Dm3IgWidgetState extends State<Dm3IgWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(0, 0),
+                alignment: Alignment.center,
+                child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? 'assets/images/WhatsApp_Image_2024-03-02_at_02.05.53.jpeg'
-                        : 'assets/images/WhatsApp_Image_2024-03-02_at_02.05.56.jpeg',
-                    width: 443,
-                    height: 809,
-                    fit: BoxFit.cover,
+                  child: ImageFetcher(
+                    imageUrl:
+                     'instagram_assets/WhatsApp_Image_2024-03-02_at_02.05.53.jpeg',
                   ),
                 ),
               ),
+                ),
+            
+        GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Dm4IgWidget()),
+                );
+              },
+              child: Align(
+                alignment: AlignmentDirectional(-1.03, -0.74),
+                child: Transform.rotate(
+                  angle:0,
+                  child: Lottie.asset(
+                    'animations/cursor.json',
+                    width: 250,
+                    height: 220,
+                    reverse: true,
+                    repeat: true,
+                    fit: BoxFit.fitWidth,
+                    animate: true,
+                  ),
+                ),
+              ),
+            ),
               Align(
-                alignment: AlignmentDirectional(-0.07, 0.19),
+                alignment: AlignmentDirectional(-0.07, 0.29),
                 child: Text(
                   'Search and select the person you want',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
-                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 26,
+                    color: Colors.white,
                   ),
                 ),
               ),

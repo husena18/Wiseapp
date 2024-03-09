@@ -39,39 +39,49 @@ class _Dm2IgWidgetState extends State<Dm2IgWidget> {
             children: [
               Align(
                 alignment: Alignment.center,
+                child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? 'assets/images/WhatsApp_Image_2024-02-28_at_23.25.26.jpeg'
-                        : 'assets/images/WhatsApp_Image_2024-02-28_at_23.25.29.jpeg',
-                    width: 443,
-                    height: 809,
-                    fit: BoxFit.cover,
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.29.jpeg',
                   ),
                 ),
               ),
-              Opacity(
-                opacity: 0.8,
-                child: Align(
-                  alignment: AlignmentDirectional(3.12, -1.34),
+                ),
+            
+        GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Dm3IgWidget()),
+                );
+              },
+              child: Align(
+                alignment: AlignmentDirectional(1.67, -1.14),
+                child: Transform.rotate(
+                  angle: 1.3,
                   child: Lottie.asset(
-                    'assets/lottie_animations/Animation_-_1709196170491.json',
-                    width: 285,
-                    height: 254,
+                    'animations/cursor.json',
+                    width: 250,
+                    height: 220,
+                    reverse: true,
+                    repeat: true,
                     fit: BoxFit.fitWidth,
                     animate: true,
                   ),
                 ),
               ),
+            ),
               Align(
-                alignment: AlignmentDirectional(0.71, -0.83),
+                alignment: AlignmentDirectional(0.71, -0.53),
                 child: Text(
                   'Click here to\ntext someone new',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
-                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 26,
                   ),
                 ),
               ),
