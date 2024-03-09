@@ -24,7 +24,7 @@ class _Follow4IgWidgetState extends State<Follow5IgWidget> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child:  ImageFetcher(
-                  imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.21.jpeg',
+                  imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.21_(2).jpeg',
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
                 ),
