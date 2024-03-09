@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/follow2.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Follow1IgWidget extends StatefulWidget {
   const Follow1IgWidget({Key? key}) : super(key: key);
@@ -59,7 +60,7 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
                 highlightColor: Color.fromARGB(246, 0, 0, 0),
                 onTap: () async {},
                 child: Text(
-                  'Click here to search',
+                  AppLocalizations.of(context)!.searchhere,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.merge(
                         TextStyle(

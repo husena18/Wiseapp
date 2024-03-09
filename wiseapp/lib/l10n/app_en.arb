@@ -24,6 +24,25 @@
     "snapchat" : "Spapchat",
     "pinterest" : "Pinterest",
     "x" : "X",
-    "fromgallery": "Use your camera to \nclick a photo or select\n from your gallery"
+    "fromgallery": "Use your camera to \nclick a photo or select\n from your gallery",
+    "storyadd" : "Add to your story for 24 hrs",
+    "searchfollow" : "Search and follow your friends",
+    "dm":"Text your friends (DM)",
+    "post":"Post for everyone to see",
+    "reels":"Scroll through reels for fun videos",
+    "clickhere":"Click here",
+    "postphoto":"Click here after selecting \n a photo you want to post",
+    "editstory":"Use these to add text, music,\n and gifs to your story",
+    "poststory":"Click here to post story \n after editing",
+    "storyuploaded":"Story uploaded",
+    "newmessage":"Click here to\ntext someone new",
+    "selectpersontotext":"Search and select the person you want",
+    "chatwithfriends":"You can now chat with your friends",
+    "searchhere":"Click here to search",
+    "searchpeople":"Search the person \nyou want to follow",
+    "followhere":"Click here to follow"
+
+    
+
       
 }

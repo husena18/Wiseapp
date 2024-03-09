@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/dm4.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class Dm3IgWidget extends StatefulWidget {
   const Dm3IgWidget({Key? key}) : super(key: key);
@@ -77,7 +79,7 @@ class _Dm3IgWidgetState extends State<Dm3IgWidget> {
               Align(
                 alignment: AlignmentDirectional(-0.07, 0.29),
                 child: Text(
-                  'Search and select the person you want',
+                  AppLocalizations.of(context)!.selectpersontotext,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

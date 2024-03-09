@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/dm3.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Dm2IgWidget extends StatefulWidget {
   const Dm2IgWidget({Key? key}) : super(key: key);
@@ -76,7 +77,7 @@ class _Dm2IgWidgetState extends State<Dm2IgWidget> {
               Align(
                 alignment: AlignmentDirectional(0.71, -0.53),
                 child: Text(
-                  'Click here to\ntext someone new',
+                  AppLocalizations.of(context)!.newmessage,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

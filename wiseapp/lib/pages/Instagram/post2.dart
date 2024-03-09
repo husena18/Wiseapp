@@ -60,7 +60,7 @@ class Post2IgWidget extends StatelessWidget {
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  'Click here after selecting \n a photo you want to post',
+                  'postphoto',
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                         fontFamily: 'Readex Pro',

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class Addtostory1IgModel extends ChangeNotifier {
   late final FocusNode _unfocusNode;
@@ -117,7 +119,7 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  'Click Here',
+                  AppLocalizations.of(context)!.clickhere,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     fontFamily: 'Readex Pro',

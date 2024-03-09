@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/follow4.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class Follow3IgWidget extends StatefulWidget {
   const Follow3IgWidget({Key? key}) : super(key: key);
@@ -59,7 +61,7 @@ class _Follow1IgWidgetState extends State<Follow3IgWidget> {
                 highlightColor: Color.fromARGB(246, 0, 0, 0),
                 onTap: () async {},
                 child: Text(
-                  'Search the person \nyou want to follow',
+                  AppLocalizations.of(context)!.searchpeople,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.merge(
                         TextStyle(
