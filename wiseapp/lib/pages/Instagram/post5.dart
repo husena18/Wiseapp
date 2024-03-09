@@ -1,45 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:lottie/lottie.dart';
-import 'package:wiseapp/pages/Instagram/Insta_main.dart'; // Change post6.dart to the next post file if necessary
 import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Instagram/Insta_main.dart'; // Change post6.dart to the next post file if necessary
 
-class Post5IgWidget extends StatefulWidget {
+class Post5IgWidget extends StatelessWidget {
   const Post5IgWidget({Key? key}) : super(key: key);
 
   @override
-  State<Post5IgWidget> createState() => _Post5IgWidgetState();
-}
-
-class _Post5IgWidgetState extends State<Post5IgWidget> {
-  late Post5IgWidget _model;
-
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    _model = Post5IgWidget();
-
-    // On page load action.
-    SchedulerBinding.instance!.addPostFrameCallback((_) async {
-      Navigator.of(context).pushNamed('POST5_IG');
-    });
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: Scaffold(
-        key: scaffoldKey,
-        backgroundColor: Theme.of(context).primaryColor,
-        body: SafeArea(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        top: true,
+        child: GestureDetector(
+          onTap: () {},
           child: Stack(
             children: [
               Align(
@@ -49,8 +22,36 @@ class _Post5IgWidgetState extends State<Post5IgWidget> {
                   height: MediaQuery.of(context).size.height,
                   child: ClipRRect(
                     child: ImageFetcher(
-                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.15.31_(1).jpeg',
+                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.15.31_(2).jpeg',
                     ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.07, 0.09),
+                child: Text(
+                  'Your post is uploaded, and you can now see it in your profile',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Readex Pro',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 26,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.07, 0.19),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => InstaMain()), 
+                    );
+                  },
+                  child: Text(
+                    "Let's explore other functionalities",
+                    style: TextStyle(fontSize: 18),
                   ),
                 ),
               ),
