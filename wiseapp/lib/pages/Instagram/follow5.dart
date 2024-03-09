@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
-import 'package:wiseapp/pages/Instagram/follow2.dart';
 
 class Follow5IgWidget extends StatefulWidget {
   const Follow5IgWidget({Key? key}) : super(key: key);
