@@ -4,7 +4,7 @@ import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/dm1.dart'; 
 import 'dart:ui';
 import 'package:wiseapp/pages/Instagram/follow1.dart';
-import 'package:wiseapp/pages/Instagram/follow2.dart';// Import the file where ImageFetcher is defined
+import 'package:wiseapp/pages/Instagram/post1.dart';
 
 class InstaMain extends StatelessWidget {
   @override
@@ -61,7 +61,7 @@ class InstaMain extends StatelessWidget {
                     onPressed: () {
                        Navigator.push( // Navigate to add_to_story.dart when button is pressed
                         context,
-                        MaterialPageRoute(builder: (context) => Follow1IgWidget()),
+                        MaterialPageRoute(builder: (context) => Post1IgWidget()),
                       );
                       // Handle button press
                     },
