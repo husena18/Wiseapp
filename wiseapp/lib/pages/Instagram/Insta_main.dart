@@ -3,7 +3,6 @@ import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 import 'package:wiseapp/pages/Instagram/Add_to_story2.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
 import 'package:wiseapp/pages/Instagram/dm1.dart';
 import 'dart:ui';
 import 'package:wiseapp/pages/Instagram/follow1.dart';
@@ -25,9 +24,18 @@ class _InstaMainState extends State<InstaMain> {
   String? selectedOption4;
   String? selectedOption5;
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back to the homepage
+          },
+        ),
+      ),
+      
       body: Stack(
         children: [
           // Background Image using ImageFetcher
@@ -129,7 +137,7 @@ class _InstaMainState extends State<InstaMain> {
                     case 'Add to your story for 24 hrs':
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => VideoScreen()),
+                        MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
                       );
                       break;
                     case 'Search and follow your friends':
