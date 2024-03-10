@@ -48,7 +48,7 @@ class _GoogleMapsState extends State<GoogleMaps> {
                   buildButtonWithDropdown(
                     context,
                     AppLocalizations.of(context)!.searchlocation,
-                    ['What location should we enter?', '1. Look for famous places like the Eiffel Tower or Statue of Liberty. \n2. Search for popular spots in your city, like parks or restaurants.\n3. Try typing in your home address to see how it works.\n4. Explore streets with the Street View feature.\n5. Switch to Satellite View to see places from above.\n \nBy trying out these things, you will quickly get the hang of how Google Maps works!'],
+                    [AppLocalizations.of(context)!.whatlocation, AppLocalizations.of(context)!.locans],
                     selectedOption,
                     (newValue) {
                       setState(() {
@@ -85,6 +85,8 @@ class _GoogleMapsState extends State<GoogleMaps> {
                   // Implement navigation logic here
                   switch (buttonText) {
                     case 'Search Location':
+                    case 'जहाँ आप जाना चाहते हैं, वहाँ की जानकारी खोजें':
+                    case 'લોકેશન શોધવા માટે અહીં ક્લિક કરો':
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => GM1Widget()),

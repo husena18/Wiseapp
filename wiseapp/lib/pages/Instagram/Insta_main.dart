@@ -59,7 +59,7 @@ class _InstaMainState extends State<InstaMain> {
                   buildButtonWithDropdown(
                     context,
                     AppLocalizations.of(context)!.storyadd,
-                    ['What is an instagram story?', 'Instagram Stories are like temporary slideshows of photos and videos that you can share with your followers. They disappear after 24 hours, and you can add fun stuff like stickers and drawings to make them more interesting. Its a way to share moments from your day in a casual and temporary way.'],
+                    [AppLocalizations.of(context)!.story, AppLocalizations.of(context)!.storyans],
                     selectedOption1,
                     (newValue) {
                       setState(() {
@@ -70,7 +70,7 @@ class _InstaMainState extends State<InstaMain> {
                   buildButtonWithDropdown(
                     context,
                     AppLocalizations.of(context)!.searchfollow,
-                    ['Why should we follow someone?', ' the "follow" feature on Instagram allows you to stay connected with other users by subscribing to their updates. When you follow someone, their posts and stories will appear in your feed, making it easy to see what they are sharing.'],
+                    [AppLocalizations.of(context)!.follow,AppLocalizations.of(context)!.followans],
                     selectedOption2,
                     (newValue) {
                       setState(() {
@@ -81,7 +81,7 @@ class _InstaMainState extends State<InstaMain> {
                   buildButtonWithDropdown(
                     context,
                     AppLocalizations.of(context)!.dm,
-                    ['What is DM(Direct Message)?', 'Direct Message (DM) is a messaging function in Instagram that allows you to send private messages to a specific user or a group of users. You can send text, photos, videos, and links in a DM.'],
+                    [AppLocalizations.of(context)!.dms, AppLocalizations.of(context)!.dmans],
                     selectedOption3,
                     (newValue) {
                       setState(() {
@@ -92,7 +92,7 @@ class _InstaMainState extends State<InstaMain> {
                   buildButtonWithDropdown(
                     context,
                     AppLocalizations.of(context)!.post,
-                    ['What is a post?', 'A post is a photo or video that you share on Instagram. You can share it with your followers, or with a specific group of people using the "Close Friends" feature. You can also add a caption, location, and hashtags to your post.'],
+                    [AppLocalizations.of(context)!.posts, AppLocalizations.of(context)!.postans],
                     selectedOption4,
                     (newValue) {
                       setState(() {
@@ -103,7 +103,7 @@ class _InstaMainState extends State<InstaMain> {
                   buildButtonWithDropdown(
                     context,
                     AppLocalizations.of(context)!.reels,
-                    ['What is meant by reels?', 'Reels is a feature on Instagram that allows you to create and share short videos with music, text, and other creative effects. You can share reels with your followers, or on the Explore page, where anyone on Instagram can discover them.'],
+                    [AppLocalizations.of(context)!.reelss, AppLocalizations.of(context)!.reelsans],
                     selectedOption5,
                     (newValue) {
                       setState(() {
@@ -135,30 +135,42 @@ class _InstaMainState extends State<InstaMain> {
                   // Handle button press
                   switch (buttonText) {
                     case 'Add to your story for 24 hrs':
+                    case 'તમારા વાર્તા માટે 24 કલાક ઉમેરો':
+                    case 'अपनी कहानी में 24 घंटे के लिए जोड़ें':
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
                       );
                       break;
                     case 'Search and follow your friends':
+                    case 'તમારા મિત્રો શોધો અને અનુસરો':
+                    case 'अपने दोस्तों को खोजें और फॉलो करें':
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => VideoScreen2()),
                       );
                       break;
                     case 'Text your friends (DM)':
+                    case 'તમારા મિત્રોને ટેક્સ્ટ કરો (DM)':
+                    case 'अपने दोस्तों को टेक्स्ट करें (DM)':
+                  
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => VideoScreen2()),
                       );
                       break;
                     case 'Post for everyone to see':
+                    case 'બધાને જોવા માટે પોસ્ટ કરો':
+                    case 'सभी को दिखाने के लिए पोस्ट करें':
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Post1IgWidget()),
                       );
                       break;
                     case 'Scroll through reels for fun videos':
+                    case 'મજા માટે રીલ્સ સ્ક્રોલ કરો':
+                    case 'मजेदार वीडियो के लिए रील्स स्क्रॉल करें':
                       // Handle Reels button press
                       break;
                   }

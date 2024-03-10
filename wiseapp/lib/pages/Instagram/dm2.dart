@@ -43,11 +43,13 @@ class _Dm2IgWidgetState extends State<Dm2IgWidget>
     dm(); // Call the method to speak the welcome text
   }
 
-  Future<void> dm() async {
-    await flutterTts.setLanguage('en');
-    await flutterTts.setPitch(1.0);
-    await flutterTts.speak('Click here to text someone new!');
-  }
+Future<void> dm() async {
+  await flutterTts.setLanguage('en');
+  await flutterTts.setLanguage('hi');
+  await flutterTts.setLanguage('gu');
+  await flutterTts.setPitch(1.0);
+  await flutterTts.speak(AppLocalizations.of(context)!.chtsm); // Use chdm property to get the localized string
+}
 
   @override
   void dispose() {

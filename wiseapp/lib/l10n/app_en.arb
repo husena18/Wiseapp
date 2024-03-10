@@ -47,6 +47,22 @@
     "postuploaded":"Your post is uploaded, and you can now see it in your profile",
     "nowfollow" : "You are now following this person",
     "searchlocation" : "Search a location",
-    "locationsuccess" : "You,ve Successfully found the location"
-     
+    "locationsuccess" : "You,ve Successfully found the location",
+    "whatlocation" : "What location should we enter?",
+    "locans" : "1. Look for famous places like the Eiffel Tower or Statue of Liberty. \n2. Search for popular spots in your city, like parks or restaurants.\n3. Try typing in your home address to see how it works.\n4. Explore streets with the Street View feature.\n5. Switch to Satellite View to see places from above.\n \nBy trying out these things, you will quickly get the hang of how Google Maps works!",
+    "story" : "What is an instagram story?",
+    "storyans" : "Instagram Stories are a feature on Instagram that allows users to post photos or videos that vanish after 24 hours. Its a great way to share moments from your day, without overloading your profile with photos and videos. You can add text, music, and gifs to your story, and you can also see who has viewed your story",
+    "follow" : "Why should we follow people on Instagram?",
+    "followans" : "Following people on Instagram is a great way to stay updated on what your friends and family are up to. When you follow someone, you can see their posts and stories in your feed, and you can also send them direct messages. Following people is also a great way to discover new content and connect with people who share your interests.",
+    "posts" : "What is an instagram post?",
+    "postans" : "An Instagram post is a photo or video that you share on Instagram. You can add a caption to your post, and you can also tag people and add a location. You can also share your post to other social media platforms, like Facebook and Twitter.",
+    "dms" : "What is a direct message?",
+    "dmans" : "A direct message, or DM, is a private message sent on social media platforms. You can use DMs to chat with your friends, and you can also send photos and videos through DMs. You can also create group chats with multiple people.",
+    "reelss" : "What are Instagram Reels?",
+    "reelsans" : "Instagram Reels are short, entertaining videos that you can create and share on Instagram. You can add music, text, and effects to your Reels, and you can also share your Reels to your story or feed. Reels are a great way to show off your creativity and connect with your followers.",
+    "chdm" : "Click here to send a direct message",
+    "chtsm" : "Click here to text someone new!",
+    "searchselectfollow" : "Search and select the person you want to follow",
+    "fnf" : "You can now chat with your friends & family!"
+
 }
