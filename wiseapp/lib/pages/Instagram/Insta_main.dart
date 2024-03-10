@@ -10,6 +10,7 @@ import 'package:wiseapp/pages/Instagram/follow1.dart';
 import 'package:wiseapp/pages/Instagram/post1.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/pages/video_screen.dart';
+import 'package:wiseapp/pages/video_screen2.dart';
 
 class InstaMain extends StatefulWidget {
   @override
@@ -134,13 +135,13 @@ class _InstaMainState extends State<InstaMain> {
                     case 'Search and follow your friends':
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Follow1IgWidget()),
+                        MaterialPageRoute(builder: (context) => VideoScreen2()),
                       );
                       break;
                     case 'Text your friends (DM)':
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Dm1IgWidget()),
+                        MaterialPageRoute(builder: (context) => VideoScreen2()),
                       );
                       break;
                     case 'Post for everyone to see':

@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:video_player/video_player.dart';
-import 'package:wiseapp/pages/Instagram/add_to_story1.dart'; // Assuming Addtostory1IgWidget is from here
+import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
+import 'package:wiseapp/pages/Instagram/dm1.dart';
+import 'package:wiseapp/pages/Instagram/follow1.dart';
+import 'package:wiseapp/pages/Instagram/post1.dart'; // Assuming Addtostory1IgWidget is from here
 
-class VideoScreen extends StatefulWidget {
+class VideoScreen2 extends StatefulWidget {
   @override
-  _VideoScreenState createState() => _VideoScreenState();
+  _VideoScreen2State createState() => _VideoScreen2State();
 }
 
-class _VideoScreenState extends State<VideoScreen> {
+class _VideoScreen2State extends State<VideoScreen2> {
   VideoPlayerController? _controller;
   Future<void>? _initializeVideoPlayerFuture;
 
@@ -21,7 +24,7 @@ class _VideoScreenState extends State<VideoScreen> {
   Future<void> fetchVideoUrl() async {
     try {
       var storage = FirebaseStorage.instance;
-      var videoRef = storage.ref().child('VID-20231201-WA0008.mp4');
+      var videoRef = storage.ref().child('dm.mp4');
       var url = await videoRef.getDownloadURL();
 
       setState(() {
@@ -46,7 +49,7 @@ class _VideoScreenState extends State<VideoScreen> {
     // Navigate to the new screen when skip button is pressed
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
+      MaterialPageRoute(builder: (context) =>  Dm1IgWidget()),
     );
   }
 
