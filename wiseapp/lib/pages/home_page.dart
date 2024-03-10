@@ -231,8 +231,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                             onTap: () {
                                             // Handle tapping on the image
                                              },
-                                          child: Image.asset(
-                                            'assets/images/Instagram_logo_2016.svg.png',
+                                          child: ImageFetcher( 
+                                            imageUrl: 'instagram_assets/Instagram_logo_2016.svg.png',
                                             width: 150,
                                             height: 150,
                                             fit: BoxFit.contain,
@@ -259,8 +259,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        'assets/images/snapchat-logo-filters-png-5.png',
+                                      child: ImageFetcher(
+                                        imageUrl: 'instagram_assets/snapchat-logo-filters-png-5.png',
                                         height: 150,
                                         fit: BoxFit.scaleDown,
                                       ),
@@ -284,8 +284,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        'assets/images/pinterest-logos-vector-png-hd-14.png',
+                                      child: ImageFetcher(
+                                        imageUrl: 'instagram_assets/pinterest-logos-vector-png-hd-14.png',
                                         width: 150,
                                         height: 150,
                                         fit: BoxFit.contain,
@@ -309,8 +309,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        'assets/images/1690643640twitter-x-icon-png.webp',
+                                      child: ImageFetcher(
+                                       imageUrl: 'instagram_assets/1690643640twitter-x-icon-png.webp',
                                         width: 150,
                                         height: 150,
                                         fit: BoxFit.contain,
@@ -371,8 +371,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(16),
-                                        child: Image.asset(
-                                          'assets/images/605abdb7af3405c6b20a426b1e128322.jpg',
+                                        child: ImageFetcher(
+                                         imageUrl:  'instagram_assets/605abdb7af3405c6b20a426b1e128322.jpg',
                                           width: 150,
                                           height: 150,
                                           fit: BoxFit.cover,
@@ -397,8 +397,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        'assets/images/Screenshot_2024-02-23_at_23.57.04.png',
+                                      child: ImageFetcher(
+                                       imageUrl:  'instagram_assets/Screenshot_2024-02-23_at_23.57.04.png',
                                         width: 150,
                                         height: 150,
                                         fit: BoxFit.contain,
@@ -422,8 +422,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        'assets/images/Screenshot_2024-02-23_at_23.58.44.png',
+                                      child: ImageFetcher(
+                                        imageUrl: 'instagram_assets/Screenshot_2024-02-23_at_23.58.44.png',
                                         width: 150,
                                         height: 150,
                                         fit: BoxFit.contain,
@@ -483,8 +483,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(16),
-                                        child: Image.asset(
-                                          'assets/images/Zomato_logo.png',
+                                        child: ImageFetcher(
+                                         imageUrl:  'instagram_assets/Zomato_logo.png',
                                           width: 150,
                                           height: 150,
                                           fit: BoxFit.cover,
@@ -509,8 +509,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        'assets/images/unnamed-2.png',
+                                      child: ImageFetcher(
+                                        imageUrl: 'instagram_assets/unnamed-2.png',
                                         width: 150,
                                         height: 150,
                                         fit: BoxFit.contain,
@@ -534,8 +534,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        'assets/images/uber-eats-logo-39748746B7-seeklogo.com.png',
+                                      child: ImageFetcher(
+                                        imageUrl: 'instagram_assets/uber-eats-logo-39748746B7-seeklogo.com.png',
                                         width: 150,
                                         height: 150,
                                         fit: BoxFit.contain,
@@ -596,8 +596,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/unnamed.png',
+                                          child: ImageFetcher(
+                                            imageUrl: 'instagram_assets/unnamed.png',
                                             width: 150,
                                             height: 150,
                                             fit: BoxFit.contain,
@@ -622,8 +622,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                           10, 0, 0, 0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
-                                        child: Image.asset(
-                                          'assets/images/unnamed-4.png',
+                                        child: ImageFetcher(
+                                          imageUrl: 'instagram_assets/unnamed-4.png',
                                           width: 150,
                                           height: 150,
                                           fit: BoxFit.contain,
@@ -647,8 +647,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                           10, 0, 0, 0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
-                                        child: Image.asset(
-                                          'assets/images/unnamed.png',
+                                        child: ImageFetcher(
+                                          imageUrl: 'instagram_assets/unnamed.png',
                                           width: 150,
                                           height: 150,
                                           fit: BoxFit.contain,
@@ -739,8 +739,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(8),
-                                                  child: Image.asset(
-                                                    'assets/images/google-maps-logo-on-transparent-white-background-free-vector.jpg',
+                                                  child: ImageFetcher(
+                                                    imageUrl: 'instagram_assets/google-maps-logo-on-transparent-white-background-free-vector.jpg',
                                                     width: 150,
                                                     height: 150,
                                                     fit: BoxFit.contain,
@@ -768,8 +768,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(8),
-                                                  child: Image.asset(
-                                                    'assets/images/unnamed-3.png',
+                                                  child: ImageFetcher(
+                                                    imageUrl: 'instagram_assets/unnamed-3.png',
                                                     width: 150,
                                                     height: 150,
                                                     fit: BoxFit.contain,
@@ -800,8 +800,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8),
-                                              child: Image.asset(
-                                                'assets/images/unnamed-2.png',
+                                              child: ImageFetcher(
+                                                imageUrl: 'instagram_assets/unnamed-2.png',
                                                 width: 150,
                                                 height: 150,
                                                 fit: BoxFit.contain,
