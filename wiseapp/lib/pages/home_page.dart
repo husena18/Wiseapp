@@ -720,7 +720,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                   onTap: () async {
                                     Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => InstaMain()),
+                MaterialPageRoute(builder: (context) => GoogleMaps()),
               );
                                     // Handle onTap
                                   },
