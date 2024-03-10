@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
+import 'package:wiseapp/image_fetch.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -61,11 +62,10 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: Image.asset(
-                        'assets/images/WiseApp_Light.png',
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
+                    child: Container(
+                      child: ImageFetcher(
+                        imageUrl: 'instagram_assets/WiseApp.png',
                         width: 230,
                         height: 45,
                         fit: BoxFit.cover,
@@ -88,7 +88,9 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                     ),
                   ),
                 ],
+               
               ),
+
               Align(
                 alignment: AlignmentDirectional(1, -1),
                 child: Padding(
