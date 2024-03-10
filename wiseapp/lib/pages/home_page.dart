@@ -4,6 +4,7 @@ import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:wiseapp/image_fetch.dart';
 
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -213,13 +214,12 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                   focusColor: Colors.transparent,
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => InstaMain()),
-              );
-                                    // Handle onTap
-                                  },
+                                  onTap: () {
+                                    Navigator.push( // Navigate to another page when animation is clicked
+                                      context,
+                                      MaterialPageRoute(builder: (context) => InstaMain()), // Replace DestinationPage with your destination page
+                                     );
+                                    },
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -229,6 +229,12 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                           borderRadius: BorderRadius.circular(8),
                                           child: InkWell(
                                             onTap: () {
+                                              {
+                                    Navigator.push( // Navigate to another page when animation is clicked
+                                      context,
+                                      MaterialPageRoute(builder: (context) => InstaMain()), // Replace DestinationPage with your destination page
+                                     );
+                                    }
                                             // Handle tapping on the image
                                              },
                                           child: ImageFetcher( 
