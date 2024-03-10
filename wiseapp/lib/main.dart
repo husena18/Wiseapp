@@ -8,6 +8,7 @@ import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:wiseapp/pages/home_page.dart';
 import 'package:wiseapp/pages/home_screen.dart';
+import 'package:wiseapp/pages/search.dart';
 import 'package:wiseapp/pages/text_to_speech.dart';
 import 'package:wiseapp/pages/video_screen.dart';
 import 'package:wiseapp/image_fetch.dart';
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: InstaMain(),
+            home: SearchPage(),
           );
         },
       ),
