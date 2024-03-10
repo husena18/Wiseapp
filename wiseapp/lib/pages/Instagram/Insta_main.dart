@@ -128,7 +128,7 @@ class _InstaMainState extends State<InstaMain> {
                     case 'Add to your story for 24 hrs':
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => VideoScreen( videoUrl: 'Adding card details and setting up pin.mp4',redirectionPage:Addtostory1IgWidget(), )),
+                        MaterialPageRoute(builder: (context) => VideoScreen()),
                       );
                       break;
                     case 'Search and follow your friends':

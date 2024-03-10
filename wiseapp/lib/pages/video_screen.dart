@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:video_player/video_player.dart';
+import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 
 class VideoScreen extends StatefulWidget {
-  final String videoUrl;
-  final Widget redirectionPage;
-
-  VideoScreen({required this.videoUrl, required this.redirectionPage});
-
   @override
   _VideoScreenState createState() => _VideoScreenState();
 }
@@ -15,22 +11,34 @@ class VideoScreen extends StatefulWidget {
 class _VideoScreenState extends State<VideoScreen> {
   late VideoPlayerController _controller;
   late Future<void> _initializeVideoPlayerFuture;
+  final String _videoUrl = "https://www.youtube.com/watch?v=9JggrhuUNYY";
 
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.videoUrl))
-      ..initialize().then((_) {
-        setState(() {}); // Update the state after initialization completes
+    _controller = VideoPlayerController.network(_videoUrl);
+    _initializeVideoPlayerFuture = _controller.initialize().then((_) {
+      setState(() {
+        // Start playing the video automatically when it's initialized
         _controller.play();
       });
-    _initializeVideoPlayerFuture = _controller.initialize();
+    });
   }
 
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  void _skipVideo() {
+    // Navigate to the new screen when skip button is pressed
+    // Call the function that navigates to the new screen here
+    // For example:
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
+    );
   }
 
   @override
@@ -55,19 +63,23 @@ class _VideoScreenState extends State<VideoScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => widget.redirectionPage),
-          );
-        },
+        onPressed: _skipVideo,
         child: Text('Skip'),
       ),
     );
   }
 }
 
-// Function to create a VideoScreen widget with the provided video URL and redirection page
-VideoScreen createVideoScreen(String videoUrl, Widget redirectionPage) {
-  return VideoScreen(videoUrl: videoUrl, redirectionPage: redirectionPage);
+class NewScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('New Screen'),
+      ),
+      body: Center(
+        child: Text('This is the new screen'),
+      ),
+    );
+  }
 }
