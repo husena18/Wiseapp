@@ -4,6 +4,22 @@ import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/dm3.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'package:flutter_tts/flutter_tts.dart';
+
+class Dm2IgModel extends ChangeNotifier {
+  late final FocusNode _unfocusNode;
+
+  FocusNode get unfocusNode => _unfocusNode;
+
+  Dm2IgModel() : _unfocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+}
+
 class Dm2IgWidget extends StatefulWidget {
   const Dm2IgWidget({Key? key}) : super(key: key);
 
@@ -11,17 +27,33 @@ class Dm2IgWidget extends StatefulWidget {
   State<Dm2IgWidget> createState() => _Dm2IgWidgetState();
 }
 
-class _Dm2IgWidgetState extends State<Dm2IgWidget> {
-  // late Dm2IgWidget _model; // Not needed in this example
+class _Dm2IgWidgetState extends State<Dm2IgWidget>
+    with TickerProviderStateMixin {
+  late Dm2IgModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  late FlutterTts flutterTts;
 
   @override
   void initState() {
     super.initState();
-    // _model = Dm2IgWidget(); // Not needed in this example
+    _model = Dm2IgModel();
+    flutterTts = FlutterTts();
+    dm(); // Call the method to speak the welcome text
   }
 
+  Future<void> dm() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Click here to text someone new!');
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

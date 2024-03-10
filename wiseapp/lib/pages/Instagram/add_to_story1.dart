@@ -3,7 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:flutter_tts/flutter_tts.dart';
 
 class Addtostory1IgModel extends ChangeNotifier {
   late final FocusNode _unfocusNode;
@@ -32,10 +32,20 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+  late FlutterTts flutterTts;
+
   @override
   void initState() {
     super.initState();
     _model = Addtostory1IgModel();
+    flutterTts = FlutterTts();
+    addtostory(); // Call the method to speak the welcome text
+  }
+
+  Future<void> addtostory() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Click on your top left profile icon to add a story');
   }
 
   @override
@@ -65,6 +75,7 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
                 ),
               ),
             ),
+  
             GestureDetector( // Wrap Lottie.asset with GestureDetector
   onTap: () {
     // Navigate to another page when animation is clicked
@@ -111,7 +122,7 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(-0.83, -0.53),
+              alignment: AlignmentDirectional(0.43, -0.53),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,

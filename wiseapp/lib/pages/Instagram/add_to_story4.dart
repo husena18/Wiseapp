@@ -2,6 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
+class Addtostory4IgModel extends ChangeNotifier {
+  late final FocusNode _unfocusNode;
+
+  FocusNode get unfocusNode => _unfocusNode;
+
+  Addtostory4IgModel() : _unfocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+}
 
 class Addtostory4IgWidget extends StatefulWidget {
   const Addtostory4IgWidget({Key? key}) : super(key: key);
@@ -10,7 +25,34 @@ class Addtostory4IgWidget extends StatefulWidget {
   State<Addtostory4IgWidget> createState() => _Addtostory4IgWidgetState();
 }
 
-class _Addtostory4IgWidgetState extends State<Addtostory4IgWidget> {
+class _Addtostory4IgWidgetState extends State<Addtostory4IgWidget>
+    with TickerProviderStateMixin {
+  late Addtostory4IgModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  late FlutterTts flutterTts;
+
+  @override
+  void initState() {
+    super.initState();
+    _model = Addtostory4IgModel();
+    flutterTts = FlutterTts();
+    addtostory(); // Call the method to speak the welcome text
+  }
+
+  Future<void> addtostory() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Your story has been uploaded, You can now explore other functionalities');
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,3 +106,4 @@ class _Addtostory4IgWidgetState extends State<Addtostory4IgWidget> {
     );
   }
 }
+    

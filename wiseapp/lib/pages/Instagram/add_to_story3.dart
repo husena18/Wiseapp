@@ -3,6 +3,21 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story4.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
+class Addtostory3IgModel extends ChangeNotifier {
+  late final FocusNode _unfocusNode;
+
+  FocusNode get unfocusNode => _unfocusNode;
+
+  Addtostory3IgModel() : _unfocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+}
 
 class Addtostory3IgWidget extends StatefulWidget {
   const Addtostory3IgWidget({Key? key}) : super(key: key);
@@ -11,18 +26,31 @@ class Addtostory3IgWidget extends StatefulWidget {
   State<Addtostory3IgWidget> createState() => _Addtostory3IgWidgetState();
 }
 
-class _Addtostory3IgWidgetState extends State<Addtostory3IgWidget> {
-  late FocusNode _unfocusNode;
+class _Addtostory3IgWidgetState extends State<Addtostory3IgWidget>
+    with TickerProviderStateMixin {
+  late Addtostory3IgModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  late FlutterTts flutterTts;
 
   @override
   void initState() {
     super.initState();
-    _unfocusNode = FocusNode();
+    _model = Addtostory3IgModel();
+    flutterTts = FlutterTts();
+    addtostory(); // Call the method to speak the welcome text
+  }
+
+  Future<void> addtostory() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Click on the settings icon to edit your story and click on the cursor to post your story');
   }
 
   @override
   void dispose() {
-    _unfocusNode.dispose();
+    _model.dispose();
     super.dispose();
   }
 

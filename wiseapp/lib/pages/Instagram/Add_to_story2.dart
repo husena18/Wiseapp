@@ -3,6 +3,21 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story3.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
+class Addtostory2IgModel extends ChangeNotifier {
+  late final FocusNode _unfocusNode;
+
+  FocusNode get unfocusNode => _unfocusNode;
+
+  Addtostory2IgModel() : _unfocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+}
 
 class Addtostory2IgWidget extends StatefulWidget {
   const Addtostory2IgWidget({Key? key}) : super(key: key);
@@ -11,8 +26,28 @@ class Addtostory2IgWidget extends StatefulWidget {
   State<Addtostory2IgWidget> createState() => _Addtostory2IgWidgetState();
 }
 
-class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget> {
+class _Addtostory2IgWidgetState extends State<Addtostory2IgWidget>
+    with TickerProviderStateMixin {
+  late Addtostory2IgModel _model;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  late FlutterTts flutterTts;
+
+  @override
+  void initState() {
+    super.initState();
+    _model = Addtostory2IgModel();
+    flutterTts = FlutterTts();
+    addtostory(); // Call the method to speak the welcome text
+  }
+
+  Future<void> addtostory() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Use your camera to click a photo or select from your gallery!');
+  }
+
 
   @override
   Widget build(BuildContext context) {

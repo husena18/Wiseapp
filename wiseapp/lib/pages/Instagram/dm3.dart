@@ -3,7 +3,21 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/dm4.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
+class Dm3IgModel extends ChangeNotifier {
+  late final FocusNode _unfocusNode;
+
+  FocusNode get unfocusNode => _unfocusNode;
+
+  Dm3IgModel() : _unfocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+}
 
 class Dm3IgWidget extends StatefulWidget {
   const Dm3IgWidget({Key? key}) : super(key: key);
@@ -12,15 +26,32 @@ class Dm3IgWidget extends StatefulWidget {
   State<Dm3IgWidget> createState() => _Dm3IgWidgetState();
 }
 
-class _Dm3IgWidgetState extends State<Dm3IgWidget> {
-  // late Dm3IgWidget _model; // Not needed in this example
+class _Dm3IgWidgetState extends State<Dm3IgWidget>
+    with TickerProviderStateMixin {
+  late Dm3IgModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  late FlutterTts flutterTts;
 
   @override
   void initState() {
     super.initState();
-    // _model = Dm3IgWidget(); // Not needed in this example
+    _model = Dm3IgModel();
+    flutterTts = FlutterTts();
+    dm(); // Call the method to speak the welcome text
+  }
+
+  Future<void> dm() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Search and select the person you want to follow!');
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+    super.dispose();
   }
 
   @override

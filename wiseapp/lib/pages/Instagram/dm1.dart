@@ -3,10 +3,56 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/dm2.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
-class Dm1IgWidget extends StatelessWidget {
+class Dm1IgModel extends ChangeNotifier {
+  late final FocusNode _unfocusNode;
+
+  FocusNode get unfocusNode => _unfocusNode;
+
+  Dm1IgModel() : _unfocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+}
+
+class Dm1IgWidget extends StatefulWidget {
   const Dm1IgWidget({Key? key}) : super(key: key);
 
+  @override
+  State<Dm1IgWidget> createState() => _Dm1IgWidgetState();
+}
+
+class _Dm1IgWidgetState extends State<Dm1IgWidget>
+    with TickerProviderStateMixin {
+  late Dm1IgModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  late FlutterTts flutterTts;
+
+  @override
+  void initState() {
+    super.initState();
+    _model = Dm1IgModel();
+    flutterTts = FlutterTts();
+    dm(); // Call the method to speak the welcome text
+  }
+
+  Future<void> dm() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Click here to send a direct message');
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

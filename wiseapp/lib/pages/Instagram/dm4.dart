@@ -2,6 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
+class Dm4IgModel extends ChangeNotifier {
+  late final FocusNode _unfocusNode;
+
+  FocusNode get unfocusNode => _unfocusNode;
+
+  Dm4IgModel() : _unfocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+}
 
 class Dm4IgWidget extends StatefulWidget {
   const Dm4IgWidget({Key? key}) : super(key: key);
@@ -10,17 +25,33 @@ class Dm4IgWidget extends StatefulWidget {
   State<Dm4IgWidget> createState() => _Dm4IgWidgetState();
 }
 
-class _Dm4IgWidgetState extends State<Dm4IgWidget> {
-  // late Dm4IgWidget _model; // Not needed in this example
+class _Dm4IgWidgetState extends State<Dm4IgWidget>
+    with TickerProviderStateMixin {
+  late Dm4IgModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  late FlutterTts flutterTts;
 
   @override
   void initState() {
     super.initState();
-    // _model = Dm4IgWidget(); // Not needed in this example
+    _model = Dm4IgModel();
+    flutterTts = FlutterTts();
+    dm(); // Call the method to speak the welcome text
   }
 
+  Future<void> dm() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('You can now chat with your friends & family!');
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
