@@ -338,10 +338,10 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
         AppLocalizations.of(context)!.navigationapp,
         textAlign: TextAlign.start,
         style: TextStyle(
-          fontFamily: 'Readex Pro',
-          fontSize: 23,
-          color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-        ),
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
       ),
     ),
   ),
@@ -353,111 +353,108 @@ Padding(
     child: Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          color:  Colors.grey[200],
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => GoogleMaps()),
-              );
-            },
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/google-maps-logo-on-transparent-white-background-free-vector.jpg',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
+        InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () async {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => GoogleMaps()),
+            );
+          },
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: ImageFetcher(
+                        imageUrl: 'instagram_assets/google-maps-logo-on-transparent-white-background-free-vector.jpg',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.contain,
                       ),
                     ),
-                    Text(
-                      AppLocalizations.of(context)!.googlemaps,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
+                  ),
+                  Text(
+                    AppLocalizations.of(context)!.googlemaps,
+                    style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: ImageFetcher(
+                        imageUrl: 'instagram_assets/unnamed-3.png',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.contain,
                       ),
                     ),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/unnamed-3.png',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
+                  ),
+                  Text(
+                    AppLocalizations.of(context)!.gpsnavigation,
+                    style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: ImageFetcher(
+                        imageUrl: 'instagram_assets/unnamed-2.png',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.contain,
                       ),
                     ),
-                    Text(
-                      AppLocalizations.of(context)!.gpsnavigation,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/unnamed-2.png',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      AppLocalizations.of(context)!.waze,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                  ),
+                  Text(
+                    AppLocalizations.of(context)!.waze,
+                    style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ],
     ),
   ),
 ),
+
                      
                      
                      
-  Opacity(
+
+Opacity(
   opacity: 0.6,
   child: Align(
     alignment: AlignmentDirectional(-1, 0),
@@ -482,38 +479,30 @@ Padding(
     child: Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          color: Colors.grey[200],
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: ImageFetcher(
-                    imageUrl: 'instagram_assets/Zomato_logo.png',
-                    width: 150,
-                    height: 150,
-                    fit: BoxFit.cover,
-                  ),
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/Zomato_logo.png',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.cover,
                 ),
               ),
-              Text(
-                AppLocalizations.of(context)!.zomato,
-                style: TextStyle(
-                  fontFamily: 'Readex Pro',
-                  fontSize: 22,
-                  color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                ),
+            ),
+            Text(
+              AppLocalizations.of(context)!.zomato,
+              style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         Column(
           mainAxisSize: MainAxisSize.max,
@@ -568,12 +557,11 @@ Padding(
       ],
     ),
   ),
-),                    
+),                 
                      
                      
                      
-                     
-                      Opacity(
+                     Opacity(
   opacity: 0.6,
   child: Align(
     alignment: AlignmentDirectional(-1, 0),
@@ -598,38 +586,30 @@ Padding(
     child: Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          color: Colors.grey[200],
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: ImageFetcher(
-                    imageUrl: 'instagram_assets/605abdb7af3405c6b20a426b1e128322.jpg',
-                    width: 150,
-                    height: 150,
-                    fit: BoxFit.cover,
-                  ),
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/605abdb7af3405c6b20a426b1e128322.jpg',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.cover,
                 ),
               ),
-              Text(
-                AppLocalizations.of(context)!.gpay,
-                style: TextStyle(
-                  fontFamily: 'Readex Pro',
-                  fontSize: 22,
-                  color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                ),
+            ),
+            Text(
+              AppLocalizations.of(context)!.gpay,
+              style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         Column(
           mainAxisSize: MainAxisSize.max,
@@ -686,9 +666,6 @@ Padding(
   ),
 ),
 
-
-
-
                      
 
 
@@ -709,10 +686,10 @@ Padding(
             AppLocalizations.of(context)!.travelapp,
             textAlign: TextAlign.start,
             style: TextStyle(
-          fontFamily: 'Readex Pro',
-          fontSize: 23,
-          color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-        ),
+              fontFamily: 'Readex Pro',
+              fontSize: 23,
+              color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+            ),
           ),
         ),
       ),
@@ -726,99 +703,80 @@ Padding(
     child: Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          color:  Colors.grey[200],
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              Navigator.pop(context);
-            },
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/unnamed.png',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      AppLocalizations.of(context)!.irctc,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/unnamed.png',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.contain,
                 ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/unnamed-4.png',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      AppLocalizations.of(context)!.makemytrip,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/unnamed.png',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      AppLocalizations.of(context)!.whereismytrain,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+              ),
             ),
-          ),
+            Text(
+              AppLocalizations.of(context)!.irctc,
+              style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+            ),
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/unnamed-4.png',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+            Text(
+              AppLocalizations.of(context)!.makemytrip,
+              style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+            ),
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/unnamed.png',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+            Text(
+              AppLocalizations.of(context)!.whereismytrain,
+              style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+            ),
+          ],
         ),
       ],
     ),
