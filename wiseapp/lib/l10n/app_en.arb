@@ -45,9 +45,8 @@
     "editpost":"Edit your photos \n and click on next",
     "posted":"Click here once you\n are ready to post",
     "postuploaded":"Your post is uploaded, and you can now see it in your profile",
-    "nowfollow" : "You are now following this person"
-
-    
-
-      
+    "nowfollow" : "You are now following this person",
+    "searchlocation" : "Search a location",
+    "locationsuccess" : "You,ve Successfully found the location"
+     
 }
