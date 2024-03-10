@@ -4,6 +4,7 @@ import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:wiseapp/image_fetch.dart';
 
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

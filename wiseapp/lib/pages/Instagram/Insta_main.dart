@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
+import 'package:wiseapp/pages/Instagram/Add_to_story2.dart';
+import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Instagram/dm1.dart'; 
+import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
+import 'package:wiseapp/pages/Instagram/dm1.dart';
 import 'dart:ui';
 import 'package:wiseapp/pages/Instagram/follow1.dart';
 import 'package:wiseapp/pages/Instagram/post1.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:wiseapp/pages/video_screen.dart';
 
 class InstaMain extends StatefulWidget {
   @override
@@ -41,7 +44,6 @@ class _InstaMainState extends State<InstaMain> {
               width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height * 0.4,
               color: Colors.black,
-              
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -109,97 +111,95 @@ class _InstaMainState extends State<InstaMain> {
     );
   }
 
- Widget buildButtonWithDropdown(BuildContext context, String buttonText, List<String> dropdownItems, String? selectedValue, Function(String?) onChanged) {
-  return Card(
-    color: Colors.black,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        // Button with dropdown
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: ElevatedButton(
-              onPressed: () {
-                // Handle button press
-                switch (buttonText) {
-                  case 'Add to your story for 24 hrs':
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Addtostory1IgWidget()),
-                    );
-                    break;
-                  case 'Search and follow your friends':
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Follow1IgWidget()),
-                    );
-                    break;
-                  case 'Text your friends (DM)':
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Dm1IgWidget()),
-                    );
-                    break;
-                  case 'Post for everyone to see':
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Post1IgWidget()),
-                    );
-                    break;
-                  case 'Scroll through reels for fun videos':
-                    // Handle Reels button press
-                    break;
-                }
-              },
-              child: Row(
-                children: [
-                  Text(
-                    buttonText,
-                    style: TextStyle(
-                      fontSize: 16,
+  Widget buildButtonWithDropdown(BuildContext context, String buttonText, List<String> dropdownItems, String? selectedValue, Function(String?) onChanged) {
+    return Card(
+      color: Colors.black,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Button with dropdown
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Handle button press
+                  switch (buttonText) {
+                    case 'Add to your story for 24 hrs':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => VideoScreen( videoUrl: 'Adding card details and setting up pin.mp4',redirectionPage:Addtostory1IgWidget(), )),
+                      );
+                      break;
+                    case 'Search and follow your friends':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Follow1IgWidget()),
+                      );
+                      break;
+                    case 'Text your friends (DM)':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dm1IgWidget()),
+                      );
+                      break;
+                    case 'Post for everyone to see':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Post1IgWidget()),
+                      );
+                      break;
+                    case 'Scroll through reels for fun videos':
+                      // Handle Reels button press
+                      break;
+                  }
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      buttonText,
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        // Dropdown menu
-        IconButton(
-          onPressed: () {
-            // Handle dropdown arrow click to show/hide dropdown menu
-            showModalBottomSheet(
-              context: context,
-              builder: (context) {
-                return Container(
-                  height: MediaQuery.of(context).size.height * 0.2,
-                  child: ListView(
-                    children: dropdownItems.map((item) {
-                      return ListTile(
-                        title: Text(
-                          item,
-                          style: TextStyle(
-                            fontSize: 16,
+          // Dropdown menu
+          IconButton(
+            onPressed: () {
+              // Handle dropdown arrow click to show/hide dropdown menu
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Container(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    child: ListView(
+                      children: dropdownItems.map((item) {
+                        return ListTile(
+                          title: Text(
+                            item,
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
                           ),
-                        ),
-                        onTap: () {
-                          onChanged(item);
-                          Navigator.pop(context);
-                        },
-                      );
-                    }).toList(),
-                  ),
-                );
-              },
-            );
-          },
-          icon: Icon(Icons.arrow_drop_down,
-          color: Colors.white,
+                          onTap: () {
+                            onChanged(item);
+                            Navigator.pop(context);
+                          },
+                        );
+                      }).toList(),
+                    ),
+                  );
+                },
+              );
+            },
+            icon: Icon(Icons.arrow_drop_down, color: Colors.white),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 }

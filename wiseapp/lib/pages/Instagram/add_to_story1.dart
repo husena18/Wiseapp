@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wiseapp/pages/Instagram/add_to_story2.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+
 
 class Addtostory1IgModel extends ChangeNotifier {
   late final FocusNode _unfocusNode;
@@ -45,14 +46,10 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
   Future<void> addtostory() async {
     await flutterTts.setLanguage('en');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak('Click on your top left profile icon to add a story');
+    await flutterTts.speak('Use your camera to click a photo or select from your gallery!');
   }
 
-  @override
-  void dispose() {
-    _model.dispose();
-    super.dispose();
-  }
+
 
   @override
   Widget build(BuildContext context) {

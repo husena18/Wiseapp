@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:wiseapp/pages/search_model.dart';
+import 'package:wiseapp/pages/text_to_speech.dart';
 
-void main() {
-  runApp(const MyApp());
+class SearchModel {
+  final String appName;
+  final String appType;
+  final String appImage;
+
+  SearchModel(this.appName, this.appType, this.appImage);
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: SearchPage(),
-    );
+List<SearchModel> performSearch(String query, List<SearchModel> dataList) {
+  if (query.isEmpty) {
+    return []; // Return an empty list if the query is empty
   }
+
+  // Perform the search and filter the dataList based on the query
+  return dataList.where((item) =>
+    item.appName.toLowerCase().contains(query.toLowerCase())
+  ).toList();
 }
 
 class SearchPage extends StatefulWidget {
@@ -25,26 +28,36 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  static List<SearchModel> main_app_list = [
+  final List<SearchModel> mainAppList = [
     SearchModel(
       "Instagram",
       "Social Media",
       "https://w7.pngwing.com/pngs/722/1011/png-transparent-logo-icon-instagram-logo-instagram-logo-purple-violet-text.png",
     ),
+    SearchModel(
+      "Zomato",
+      "Food Delivery",
+      "https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png",
+    ),
+    SearchModel(
+      "GPAY",
+      "Payment/Finance",
+      "https://w7.pngwing.com/pngs/667/120/png-transparent-google-pay-2020-hd-logo.png",
+    ),
+    SearchModel(
+      "Google Maps",
+      "Navigation",
+      "https://w7.pngwing.com/pngs/200/830/png-transparent-google-map-logo-google-maps-navigation-location-text-logo-sign.png",
+    ),
+    SearchModel(
+      "IRCTC",
+      "Travel Assistance",
+      "https://logos-world.net/wp-content/uploads/2020/11/IRCTC-Logo.png",
+    ),
+    // Add more SearchModel objects as needed
   ];
 
-  List<SearchModel> display_list = List.from(main_app_list);
-
-  void updatedList(String value) {
-    setState(() {
-      display_list = main_app_list
-          .where(
-            (element) =>
-                element.app_name!.toLowerCase().contains(value.toLowerCase()),
-          )
-          .toList();
-    });
-  }
+  String searchText = '';
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +85,11 @@ class _SearchPageState extends State<SearchPage> {
               height: 20.0,
             ),
             TextField(
-              onChanged: (value) => updatedList(value),
+              onChanged: (value) {
+                setState(() {
+                  searchText = value;
+                });
+              },
               decoration: InputDecoration(
                 filled: true,
                 fillColor: const Color.fromARGB(255, 234, 232, 239),
@@ -82,41 +99,39 @@ class _SearchPageState extends State<SearchPage> {
                 ),
                 hintText: "Search Here",
                 prefixIcon: const Icon(Icons.search),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    Navigator.push( // Navigate to another page when animation is clicked
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()), // Replace HomePage with your destination page
+                    );
+                  },
+                  icon: Icon(Icons.mic),
+                ),
               ),
             ),
             const SizedBox(height: 20.0),
             Expanded(
-              child: display_list.isEmpty
-                  ? Center(
-                      child: const Text(
-                        "No app found",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    )
-                  : ListView.builder(
-                      itemCount: display_list.length,
-                      itemBuilder: (context, index) => ListTile(
-                        contentPadding: const EdgeInsets.all(8.0),
-                        title: Text(
-                          display_list[index].app_name!,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        subtitle: Text(
-                          '${display_list[index].app_type!}',
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                        leading: Image.network(
-                          display_list[index].app_image!,
-                        ),
-                      ),
+              child: ListView.builder(
+                itemCount: performSearch(searchText, mainAppList).length,
+                itemBuilder: (context, index) => ListTile(
+                  contentPadding: const EdgeInsets.all(8.0),
+                  title: Text(
+                    performSearch(searchText, mainAppList)[index].appName,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
+                  ),
+                  subtitle: Text(
+                    performSearch(searchText, mainAppList)[index].appType,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                  leading: Image.network(
+                    performSearch(searchText, mainAppList)[index].appImage,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
