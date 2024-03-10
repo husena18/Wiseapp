@@ -41,7 +41,7 @@ class _Follow1IgWidgetState extends State<Follow4IgWidget> {
               child: Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: Alignment(-0.80, 0.85),
+                  alignment: Alignment(-0.4, -0.45),
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 240,

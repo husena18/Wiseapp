@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:wiseapp/image_fetch.dart';
 
 
 
@@ -51,11 +52,18 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(
-            'assets/images/background.jpg',
-             // Replace with your image asset
-            fit: BoxFit.cover,
-          ),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: ClipRRect(
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/background.jpg',
+                  ),
+                ),
+              ),
+            ),
           Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

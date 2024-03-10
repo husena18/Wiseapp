@@ -38,15 +38,18 @@ class _Follow1IgWidgetState extends State<Follow1IgWidget> {
                   MaterialPageRoute(builder: (context) => Follow2IgWidget()),
                 );
               },
-              child: Opacity(
-                opacity: 0.8,
-                child: Align(
-                  alignment: Alignment(-0.80, 0.90),
+              child: Align(
+                alignment: AlignmentDirectional(-1.50, 1.25),
+                child: Transform.rotate(
+                  angle: 3,
                   child: Lottie.asset(
                     'animations/cursor.json',
-                    width: 240,
-                    height: 100,
+                    width: 250,
+                    height: 220,
+                    reverse: true,
+                    repeat: true,
                     fit: BoxFit.fitWidth,
+                    animate: true,
                   ),
                 ),
               ),

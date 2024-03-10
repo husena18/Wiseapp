@@ -12,6 +12,8 @@ import 'package:wiseapp/pages/search.dart';
 import 'package:wiseapp/pages/text_to_speech.dart';
 import 'package:wiseapp/pages/video_screen.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:lottie/lottie.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: SearchPage(),
+            home: MyHomePage(title: 'WiseApp'),
           );
         },
       ),

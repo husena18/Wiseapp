@@ -7,69 +7,86 @@ class Follow5IgWidget extends StatefulWidget {
   const Follow5IgWidget({Key? key}) : super(key: key);
 
   @override
-  State<Follow5IgWidget> createState() => _Follow4IgWidgetState();
+  State<Follow5IgWidget> createState() => _Follow5IgWidgetState();
 }
 
-class _Follow4IgWidgetState extends State<Follow5IgWidget> {
+class _Follow5IgWidgetState extends State<Follow5IgWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    // _model = Dm4IgWidget(); // Not needed in this example
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: SafeArea(
-        top: true,
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.center,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child:  ImageFetcher(
-                  imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.21_(2).jpeg',
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => InstaMain()),
-                );
-              },
-              child: Align(
-                alignment: Alignment(-0.80, 0.85),
-                child: Icon(
-                  Icons.arrow_forward,
-                  color: Theme.of(context).primaryColor,
-                  size: 70,
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment(0.36, -0.86),
-              child: InkWell(
-                splashColor: Color.fromARGB(246, 0, 0, 0),
-                focusColor: Color.fromARGB(246, 0, 0, 0),
-                hoverColor: Colors.transparent,
-                highlightColor: Color.fromARGB(246, 0, 0, 0),
-                onTap: () async {},
-                child: Text(
-                  AppLocalizations.of(context)!.followed,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1!.merge(
-                    TextStyle(
-                      fontFamily: 'Readex Pro',
-                      color: Theme.of(context).primaryColor,
-                      fontSize: 20,
-                    ),
+    return GestureDetector(
+      onTap: () {
+        // No need to handle unfocus node here
+        // FocusScope.of(context).requestFocus(FocusNode());
+        // or
+        // FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          top: true,
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: ClipRRect(
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.21.jpeg',
                   ),
                 ),
               ),
+                ),
+            
+        
+              Align(
+                alignment: AlignmentDirectional(0.4, -0.55),
+                child: Text(
+                  AppLocalizations.of(context)!.nowfollow,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Readex Pro',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 26,
+                    color: Colors.white, 
+                  ),
+                ),
+              ),
+               Align(
+                alignment: AlignmentDirectional(-0.07, 0.19),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => InstaMain()), // Replace YourNextPage with the actual next page widget
+                  );
+                },
+                child: Text(
+                  "Let's explore other functionalities",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
             ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
+
+  // @override
+  // void dispose() {
+  //   _model.dispose(); // Not needed in this example
+  //   super.dispose();
+  // }
 }
