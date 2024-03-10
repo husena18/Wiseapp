@@ -13,6 +13,7 @@ import 'package:wiseapp/pages/text_to_speech.dart';
 import 'package:wiseapp/pages/video_screen.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 
 
 void main() async {
