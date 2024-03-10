@@ -324,6 +324,255 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                           ),
                         ),
                       ),
+                     
+                     
+                     
+                     
+                     Opacity(
+  opacity: 0.6,
+  child: Align(
+    alignment: AlignmentDirectional(-1, 0),
+    child: Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
+      child: Text(
+        AppLocalizations.of(context)!.navigationapp,
+        textAlign: TextAlign.start,
+        style: TextStyle(
+          fontFamily: 'Readex Pro',
+          fontSize: 23,
+          color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+        ),
+      ),
+    ),
+  ),
+),
+Padding(
+  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+  child: SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Row(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Card(
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          color:  Colors.grey[200],
+          elevation: 4,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => GoogleMaps()),
+              );
+            },
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: ImageFetcher(
+                          imageUrl: 'instagram_assets/google-maps-logo-on-transparent-white-background-free-vector.jpg',
+                          width: 150,
+                          height: 150,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      AppLocalizations.of(context)!.googlemaps,
+                      style: TextStyle(
+                        fontFamily: 'Readex Pro',
+                        fontSize: 22,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: ImageFetcher(
+                          imageUrl: 'instagram_assets/unnamed-3.png',
+                          width: 150,
+                          height: 150,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      AppLocalizations.of(context)!.gpsnavigation,
+                      style: TextStyle(
+                        fontFamily: 'Readex Pro',
+                        fontSize: 22,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: ImageFetcher(
+                          imageUrl: 'instagram_assets/unnamed-2.png',
+                          width: 150,
+                          height: 150,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      AppLocalizations.of(context)!.waze,
+                      style: TextStyle(
+                        fontFamily: 'Readex Pro',
+                        fontSize: 22,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  ),
+),
+                     
+                     
+                     
+  Opacity(
+  opacity: 0.6,
+  child: Align(
+    alignment: AlignmentDirectional(-1, 0),
+    child: Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
+      child: Text(
+        AppLocalizations.of(context)!.foodeliveryapp,
+        textAlign: TextAlign.start,
+        style: TextStyle(
+          fontFamily: 'Readex Pro',
+          fontSize: 23,
+          color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+        ),
+      ),
+    ),
+  ),
+),
+Padding(
+  padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+  child: SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Row(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Card(
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          color: Colors.grey[200],
+          elevation: 4,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/Zomato_logo.png',
+                    width: 150,
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Text(
+                AppLocalizations.of(context)!.zomato,
+                style: TextStyle(
+                  fontFamily: 'Readex Pro',
+                  fontSize: 22,
+                  color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+                ),
+              ),
+            ],
+          ),
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/Swiggy.png',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+            Text(
+              AppLocalizations.of(context)!.swiggy,
+              style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+            ),
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: ImageFetcher(
+                  imageUrl: 'instagram_assets/ubereats.png',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+            Text(
+              AppLocalizations.of(context)!.swiggy,
+              style: TextStyle(
+                fontFamily: 'Readex Pro',
+                fontSize: 22,
+                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  ),
+),                    
+                     
+                     
+                     
+                     
                       Opacity(
   opacity: 0.6,
   child: Align(
@@ -440,118 +689,7 @@ Padding(
 
 
 
-                      Opacity(
-  opacity: 0.6,
-  child: Align(
-    alignment: AlignmentDirectional(-1, 0),
-    child: Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
-      child: Text(
-        AppLocalizations.of(context)!.foodeliveryapp,
-        textAlign: TextAlign.start,
-        style: TextStyle(
-          fontFamily: 'Readex Pro',
-          fontSize: 23,
-          color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-        ),
-      ),
-    ),
-  ),
-),
-Padding(
-  padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
-  child: SingleChildScrollView(
-    scrollDirection: Axis.horizontal,
-    child: Row(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          color: Colors.grey[200],
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: ImageFetcher(
-                    imageUrl: 'instagram_assets/Zomato_logo.png',
-                    width: 150,
-                    height: 150,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Text(
-                AppLocalizations.of(context)!.zomato,
-                style: TextStyle(
-                  fontFamily: 'Readex Pro',
-                  fontSize: 22,
-                  color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                ),
-              ),
-            ],
-          ),
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: ImageFetcher(
-                  imageUrl: 'instagram_assets/Swiggy.png',
-                  width: 150,
-                  height: 150,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            Text(
-              AppLocalizations.of(context)!.swiggy,
-              style: TextStyle(
-                fontFamily: 'Readex Pro',
-                fontSize: 22,
-                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-              ),
-            ),
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: ImageFetcher(
-                  imageUrl: 'instagram_assets/ubereats.png',
-                  width: 150,
-                  height: 150,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            Text(
-              AppLocalizations.of(context)!.swiggy,
-              style: TextStyle(
-                fontFamily: 'Readex Pro',
-                fontSize: 22,
-                color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
-  ),
-),
+                     
 
 
 
@@ -686,132 +824,7 @@ Padding(
     ),
   ),
 ),
-Opacity(
-  opacity: 0.6,
-  child: Align(
-    alignment: AlignmentDirectional(-1, 0),
-    child: Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
-      child: Text(
-        AppLocalizations.of(context)!.navigationapp,
-        textAlign: TextAlign.start,
-        style: TextStyle(
-          fontFamily: 'Readex Pro',
-          fontSize: 23,
-          color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-        ),
-      ),
-    ),
-  ),
-),
-Padding(
-  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
-  child: SingleChildScrollView(
-    scrollDirection: Axis.horizontal,
-    child: Row(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          color:  Colors.grey[200],
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => GoogleMaps()),
-              );
-            },
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/google-maps-logo-on-transparent-white-background-free-vector.jpg',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      AppLocalizations.of(context)!.googlemaps,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/unnamed-3.png',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      AppLocalizations.of(context)!.gpsnavigation,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ImageFetcher(
-                          imageUrl: 'instagram_assets/unnamed-2.png',
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      AppLocalizations.of(context)!.waze,
-                      style: TextStyle(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 22,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    ),
-  ),
-),
+
           ],
         ),
                 ),
