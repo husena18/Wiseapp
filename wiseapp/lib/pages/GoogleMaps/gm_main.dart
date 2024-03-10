@@ -13,9 +13,19 @@ class _GoogleMapsState extends State<GoogleMaps> {
   // Define variables to store the selected dropdown values
   String? selectedOption;
 
-  @override
+
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back to the homepage
+          },
+        ),
+      ),
+
       body: Stack(
         children: [
           // Background Image using ImageFetcher
