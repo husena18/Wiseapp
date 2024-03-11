@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:video_player/video_player.dart';
-import 'package:wiseapp/pages/Instagram/add_to_story1.dart';
-import 'package:wiseapp/pages/Instagram/dm1.dart';
-import 'package:wiseapp/pages/Instagram/follow1.dart';
-import 'package:wiseapp/pages/Instagram/post1.dart'; // Assuming Addtostory1IgWidget is from here
+import 'package:wiseapp/pages/Instagram/dm1.dart'; // Assuming Dm1IgWidget is from here
 
 class VideoScreen2 extends StatefulWidget {
   @override
@@ -28,7 +25,7 @@ class _VideoScreen2State extends State<VideoScreen2> {
       var url = await videoRef.getDownloadURL();
 
       setState(() {
-        _controller = VideoPlayerController.networkUrl(Uri.parse(url));
+        _controller = VideoPlayerController.network(url);
         _initializeVideoPlayerFuture = _controller!.initialize().then((_) {
           // Start playing the video automatically when it's initialized
           _controller!.play();
@@ -46,10 +43,13 @@ class _VideoScreen2State extends State<VideoScreen2> {
   }
 
   void _skipVideo() {
+      // Stop the video player
+  _controller?.pause();
+
     // Navigate to the new screen when skip button is pressed
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) =>  Dm1IgWidget()),
+      MaterialPageRoute(builder: (context) => Dm1IgWidget()),
     );
   }
 
@@ -58,6 +58,18 @@ class _VideoScreen2State extends State<VideoScreen2> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Video Player'),
+        actions: [
+          TextButton(
+            onPressed: _skipVideo,
+            child: Text(
+              'SKIP',
+              style: TextStyle(
+                color: Color.fromRGBO(88, 35, 201, 1),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
       ),
       body: FutureBuilder(
         future: _initializeVideoPlayerFuture,
@@ -74,12 +86,6 @@ class _VideoScreen2State extends State<VideoScreen2> {
           }
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _skipVideo,
-        child: Icon(Icons.skip_next),
-      ),
     );
   }
 }
-
-// No changes needed in NewScreen class
