@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
+import 'package:wiseapp/pages/IRCTC/irctc_main.dart';
 import 'package:wiseapp/image_fetch.dart';
 
 
@@ -667,15 +668,8 @@ Padding(
   ),
 ),
 
-                     
 
-
-
-
-
-
-
-                                  Opacity(
+  Opacity(
   opacity: 0.6,
   child: Column(
     children: [
@@ -704,31 +698,45 @@ Padding(
     child: Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: ImageFetcher(
-                  imageUrl: 'instagram_assets/unnamed.png',
-                  width: 150,
-                  height: 150,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            Text(
-              AppLocalizations.of(context)!.irctc,
-              style: TextStyle(
+        InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () async {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => IRCTC()),
+            );
+          },
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: ImageFetcher(
+                        imageUrl: 'instagram_assets/google-maps-logo-on-transparent-white-background-free-vector.jpg',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    AppLocalizations.of(context)!.irctc,
+                    style: TextStyle(
                 fontFamily: 'Readex Pro',
                 fontSize: 22,
                 color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
               ),
-            ),
-          ],
-        ),
+                  ),
+                ],
+              ),
         Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -782,9 +790,9 @@ Padding(
       ],
     ),
   ),
-),
+      ],
 
-          ],
+          
         ),
                 ),
               ),
@@ -793,7 +801,11 @@ Padding(
     ),
   ),
 ),
-              );
+],
+),
+),
+),
+);             
 
   }
 }
