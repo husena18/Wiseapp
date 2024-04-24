@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-// TODO Implement this library.
-=======
 import 'package:flutter/material.dart';
 import 'package:wiseapp/pages/IRCTC/irctc1.dart';
 import 'package:wiseapp/image_fetch.dart';
@@ -150,4 +147,4 @@ class _IRCTCState extends State<IRCTC> {
     );
   }
 }
->>>>>>> Stashed changes
+
