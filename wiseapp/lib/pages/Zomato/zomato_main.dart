@@ -1,18 +1,15 @@
-<<<<<<< Updated upstream
-// TODO Implement this library.
-=======
 import 'package:flutter/material.dart';
-import 'package:wiseapp/pages/IRCTC/irctc1.dart';
+import 'package:wiseapp/pages/Zomato/zomato1.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'dart:ui';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class IRCTC extends StatefulWidget {
+class Zomato extends StatefulWidget {
   @override
-  _IRCTCState createState() => _IRCTCState();
+  _ZomatoState createState() => _ZomatoState();
 }
 
-class _IRCTCState extends State<IRCTC> {
+class _ZomatoState extends State<Zomato> {
   // Define variables to store the selected dropdown values
   String? selectedOption;
 
@@ -35,7 +32,7 @@ class _IRCTCState extends State<IRCTC> {
           Positioned.fill(
             child: ImageFiltered(
               imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-              child: ImageFetcher(imageUrl: 'IRCTC/IMG_4873.PNG'),
+              child: ImageFetcher(imageUrl: 'instagram_assets/gm4.jpeg'),
             ),
           ),
           // Centered Dialog Box
@@ -92,7 +89,7 @@ class _IRCTCState extends State<IRCTC> {
                     case 'લોકેશન શોધવા માટે અહીં ક્લિક કરો':
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => IRCTC1Widget()),
+                        MaterialPageRoute(builder: (context) => Zomato1Widget()),
                       );
                       break;
                     // Add cases for other buttons if needed
@@ -150,4 +147,3 @@ class _IRCTCState extends State<IRCTC> {
     );
   }
 }
->>>>>>> Stashed changes
