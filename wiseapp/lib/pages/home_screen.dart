@@ -6,6 +6,7 @@ import 'home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Zomato/zomato1.dart';
 
 
 
@@ -82,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomeCopyWidget()), // Navigate to HomePage
+                  MaterialPageRoute(builder: (context) => Zomato1Widget()), // Navigate to HomePage
                 );
               },
               child: Text(

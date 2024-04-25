@@ -4,6 +4,7 @@ import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:wiseapp/pages/IRCTC/irctc_main.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Zomato/zomato_main.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -475,27 +476,41 @@ Opacity(
   ),
 ),
 Padding(
-  padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
   child: SingleChildScrollView(
     scrollDirection: Axis.horizontal,
     child: Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: ImageFetcher(
-                  imageUrl: 'instagram_assets/Zomato_logo.png',
-                  width: 150,
-                  height: 150,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
+        InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () async {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Zomato()),
+            );
+          },
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: ImageFetcher(
+                        imageUrl: 'zomato/Zomato_logo.png',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
             Text(
               AppLocalizations.of(context)!.zomato,
               style: TextStyle(
@@ -558,12 +573,8 @@ Padding(
         ),
       ],
     ),
-  ),
-),                 
-                     
-                     
-                     
-                     Opacity(
+  ),             
+ Opacity(
   opacity: 0.6,
   child: Align(
     alignment: AlignmentDirectional(-1, 0),
@@ -802,10 +813,15 @@ Padding(
   ),
 ),
 ],
-),
-),
-),
-);             
 
-  }
+),
+),
+),
+            ],
+),
+
+),
+),
+);
+}
 }

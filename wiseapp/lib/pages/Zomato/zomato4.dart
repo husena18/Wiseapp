@@ -60,7 +60,7 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/gm3.jpeg',
+                    imageUrl: 'zomato/Z-5.PNG',
                   ),
                 ),
               ),
@@ -76,7 +76,7 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
   child: Opacity(
     opacity: 0.8,
     child: Align(
-      alignment: AlignmentDirectional(-1.5, -0.9),
+      alignment: AlignmentDirectional(1.5, 1.3),
       child: Lottie.asset(
         'animations/cursor.json',
         width: 250,
@@ -111,7 +111,7 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(-0.83, -0.53),
+              alignment: AlignmentDirectional(0, 0.6),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -123,7 +123,7 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     fontFamily: 'Readex Pro',
-                    color: Colors.white, // Change text color to white
+                    color: Colors.black, // Change text color to white
                     fontSize: 26,
                   ),
                 ),

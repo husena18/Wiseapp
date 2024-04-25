@@ -60,7 +60,7 @@ class _Zomato2WidgetState extends State<Zomato2Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/gm3.jpeg',
+                    imageUrl: 'zomato/Z-3.PNG',
                   ),
                 ),
               ),
@@ -76,7 +76,7 @@ class _Zomato2WidgetState extends State<Zomato2Widget>
   child: Opacity(
     opacity: 0.8,
     child: Align(
-      alignment: AlignmentDirectional(-1.5, -0.9),
+      alignment: AlignmentDirectional(0, 0.3),
       child: Lottie.asset(
         'animations/cursor.json',
         width: 250,
@@ -93,7 +93,7 @@ class _Zomato2WidgetState extends State<Zomato2Widget>
             Opacity(
               opacity: 0,
               child: Align(
-                alignment: AlignmentDirectional(-0.97, -0.79),
+                alignment: AlignmentDirectional(0,0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,

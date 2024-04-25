@@ -73,7 +73,7 @@ class _Addtostory1IgWidgetState extends State<Addtostory1IgWidget>
               ),
             ),
   
-            GestureDetector( // Wrap Lottie.asset with GestureDetector
+          GestureDetector( // Wrap Lottie.asset with GestureDetector
   onTap: () {
     // Navigate to another page when animation is clicked
     Navigator.push(
