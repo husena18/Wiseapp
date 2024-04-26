@@ -6,6 +6,7 @@ import 'home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/search.dart';
 
 
 
