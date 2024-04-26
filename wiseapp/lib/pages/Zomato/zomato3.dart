@@ -60,7 +60,7 @@ class _Zomato3WidgetState extends State<Zomato3Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/gm3.jpeg',
+                    imageUrl: 'zomato/Z-4.PNG',
                   ),
                 ),
               ),
@@ -76,7 +76,7 @@ class _Zomato3WidgetState extends State<Zomato3Widget>
   child: Opacity(
     opacity: 0.8,
     child: Align(
-      alignment: AlignmentDirectional(-1.5, -0.9),
+      alignment: AlignmentDirectional(2,0.61),
       child: Lottie.asset(
         'animations/cursor.json',
         width: 250,

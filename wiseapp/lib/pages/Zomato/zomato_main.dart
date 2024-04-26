@@ -32,7 +32,7 @@ class _ZomatoState extends State<Zomato> {
           Positioned.fill(
             child: ImageFiltered(
               imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-              child: ImageFetcher(imageUrl: 'instagram_assets/gm4.jpeg'),
+              child: ImageFetcher(imageUrl: 'zomato/Z-2.PNG'),
             ),
           ),
           // Centered Dialog Box
@@ -47,8 +47,8 @@ class _ZomatoState extends State<Zomato> {
                 children: [
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.searchlocation,
-                    [AppLocalizations.of(context)!.whatlocation, AppLocalizations.of(context)!.locans],
+                    AppLocalizations.of(context)!.orderfood,
+                    [AppLocalizations.of(context)!.howtorder, AppLocalizations.of(context)!.howorderfood],
                     selectedOption,
                     (newValue) {
                       setState(() {
@@ -79,21 +79,20 @@ class _ZomatoState extends State<Zomato> {
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
-              child: ElevatedButton(
+            
+                child: ElevatedButton(
                 onPressed: () {
                   // Handle button press
                   // Implement navigation logic here
-                  switch (buttonText) {
-                    case 'Search Location':
-                    case 'जहाँ आप जाना चाहते हैं, वहाँ की जानकारी खोजें':
-                    case 'લોકેશન શોધવા માટે અહીં ક્લિક કરો':
+                  
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Zomato1Widget()),
-                      );
-                      break;
+      context,
+      MaterialPageRoute(builder: (context) => Zomato1Widget()),
+    );
+                      
+
                     // Add cases for other buttons if needed
-                  }
+                  
                 },
                 child: Row(
                   children: [
@@ -103,7 +102,7 @@ class _ZomatoState extends State<Zomato> {
                         fontSize: 16,
                       ),
                     ),
-                    Icon(Icons.arrow_drop_down),
+                    
                   ],
                 ),
               ),
