@@ -83,17 +83,16 @@ class _ZomatoState extends State<Zomato> {
                 child: ElevatedButton(
                 onPressed: () {
                   // Handle button press
-                  switch (buttonText) {
-                    case 'Select and Order Food':
-                    case 'चुनें और खाना आर्डर करें':
+                  // Implement navigation logic here
+                  
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Zomato1Widget()),
-                      );
-                      break;
+      context,
+      MaterialPageRoute(builder: (context) => Zomato1Widget()),
+    );
+                      
 
                     // Add cases for other buttons if needed
-                  }
+                  
                 },
                 child: Row(
                   children: [
