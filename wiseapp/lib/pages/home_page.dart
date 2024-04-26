@@ -4,6 +4,7 @@ import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:wiseapp/pages/IRCTC/irctc_main.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/search.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -98,6 +99,15 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                 alignment: AlignmentDirectional(1, -1),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
+                  child: Padding(
+    padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
+    child: InkWell(
+      onTapDown: (TapDownDetails details) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SearchPage()),
+        );
+      },
                   child: Container(
                     width: 2537,
                     decoration: BoxDecoration(
@@ -171,6 +181,8 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                       ),
                     ),
                   ),
+                ),
+              ),
                 ),
               ),
               Flexible(
@@ -451,11 +463,6 @@ Padding(
     ),
   ),
 ),
-
-                     
-                     
-                     
-
 Opacity(
   opacity: 0.6,
   child: Align(
@@ -559,10 +566,7 @@ Padding(
       ],
     ),
   ),
-),                 
-                     
-                     
-                     
+),                                   
                      Opacity(
   opacity: 0.6,
   child: Align(

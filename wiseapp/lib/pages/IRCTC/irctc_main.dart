@@ -147,4 +147,3 @@ class _IRCTCState extends State<IRCTC> {
     );
   }
 }
-
