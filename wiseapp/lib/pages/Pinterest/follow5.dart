@@ -69,7 +69,7 @@ class _follow4WidgetState extends State<follow4Widget>
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: ImageFetcher(
-                    imageUrl: 'Pinterest/WhatsApp Image 2024-04-27 at 00.21.27 (2).jpeg',
+                    imageUrl: 'Pinterest/WhatsApp Image 2024-04-27 at 00.21.24 (1).jpeg',
                   ),
                 ),
               ),

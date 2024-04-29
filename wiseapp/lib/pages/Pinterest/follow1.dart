@@ -67,7 +67,7 @@ class _follow1WidgetState extends State<follow1Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets//WhatsApp_Image_2024-02-28_at_23.28.03.jpeg',
+                    imageUrl: 'Pinterest/HOMEPAGE_D.jpeg',
                   ),
                 ),
               ),

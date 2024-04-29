@@ -25,7 +25,7 @@ class _signin4WidgetState extends State<signin4Widget> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child:  ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.22.jpeg',
+                    imageUrl: 'Pinterest/SU4_D.jpeg',
                   width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 ),
