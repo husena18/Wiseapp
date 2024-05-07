@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: MyHomePage(title: 'WiseApp'),
+            home: MyHomePage(title : 'Wiseapp'),
           
           ); // 
         },

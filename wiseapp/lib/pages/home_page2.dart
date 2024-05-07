@@ -6,13 +6,13 @@ import 'package:wiseapp/pages/IRCTC/irctc_main.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Zomato/zomato_main.dart';
 import 'package:wiseapp/pages/search.dart';
-import 'package:wiseapp/pages/Pinterest/pint_main.dart';
 
-class HomePage extends StatelessWidget {
+
+class Homepage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar( 
         title: Text( 
             AppLocalizations.of(context)!.wiseapp,
 ),
@@ -26,11 +26,61 @@ class HomeCopyWidget extends StatefulWidget {
   @override
   State<HomeCopyWidget> createState() => _HomeCopyWidgetState();
 }
+class SearchModel {
+  final String appName;
+  final String appType;
+  final String appImage;
+
+  SearchModel(this.appName, this.appType, this.appImage);
+}
+
+List<SearchModel> performSearch(String query, List<SearchModel> dataList) {
+  if (query.isEmpty) {
+    return []; // Return an empty list if the query is empty
+  }
+
+  // Perform the search and filter the dataList based on the query
+  return dataList.where((item) =>
+    item.appName.toLowerCase().contains(query.toLowerCase())
+  ).toList();
+}
+
+final List<SearchModel> mainAppList = [
+    SearchModel(
+      "Instagram",
+      "Social Media",
+      "https://w7.pngwing.com/pngs/722/1011/png-transparent-logo-icon-instagram-logo-instagram-logo-purple-violet-text.png",
+    ),
+    SearchModel(
+      "Zomato",
+      "Food Delivery",
+      "https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png",
+    ),
+    SearchModel(
+      "GPAY",
+      "Payment/Finance",
+      "https://w7.pngwing.com/pngs/667/120/png-transparent-google-pay-2020-hd-logo.png",
+    ),
+    SearchModel(
+      "Google Maps",
+      "Navigation",
+      "https://w7.pngwing.com/pngs/200/830/png-transparent-google-map-logo-google-maps-navigation-location-text-logo-sign.png",
+    ),
+    SearchModel(
+      "IRCTC",
+      "Travel Assistance",
+      "https://logos-world.net/wp-content/uploads/2020/11/IRCTC-Logo.png",
+    ),
+    // Add more SearchModel objects as needed
+  ];
+   String searchText = '';
 
 class _HomeCopyWidgetState extends State<HomeCopyWidget> {
   late TextEditingController _textController;
   late FocusNode _textFieldFocusNode;
   bool _switchValue = true;
+  
+  
 
   @override
   void initState() {
@@ -99,92 +149,76 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
               Align(
                 alignment: AlignmentDirectional(1, -1),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
-                  child: Padding(
-    padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
-    child: InkWell(
-      onTapDown: (TapDownDetails details) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SearchPage()),
-        );
-      },
-                  child: Container(
-                    width: 2537,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 3,
-                          color: Colors.black.withOpacity(0.2),
-                          offset: const Offset(0, 1),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(40),
-                      border: Border.all(
-                        color: Colors.grey,
-                      ),
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Search ",
+              style: TextStyle(
+                color: Color.fromARGB(255, 158, 158, 158),
+                fontSize: 22.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            // Search bar
+            TextField(
+              onChanged: (value) {
+                setState(() {
+                  searchText = value;
+                });
+              },
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: const Color.fromARGB(255, 234, 232, 239),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                  borderSide: BorderSide.none,
+                ),
+                hintText: "Search Here",
+                prefixIcon: const Icon(Icons.search),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    Navigator.push( // Navigate to another page when animation is clicked
+                      context,
+                      MaterialPageRoute(builder: (context) => Homepage2
+                    ()), // Replace HomePage
+                    );
+                  },
+                  icon: Icon(Icons.mic),
+                ),
+              ),
+            ),
+            // Search bar and results
+            Expanded(
+              child: ListView.builder(
+                itemCount: performSearch(searchText, mainAppList).length,
+                itemBuilder: (context, index) => ListTile(
+                  contentPadding: const EdgeInsets.all(8.0),
+                  title: Text(
+                    performSearch(searchText, mainAppList)[index].appName,
+                    style: const TextStyle(
+                      color:Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
-                    alignment: AlignmentDirectional.center,
-                    child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 12, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Icon(
-                            Icons.search_rounded,
-                            color: Colors.grey,
-                            size: 24,
-                          ),
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
-                              child: Container(
-                                width: 200,
-                                child: TextField(
-                                  controller: _textController,
-                                  focusNode: _textFieldFocusNode,
-                                  decoration: InputDecoration(
-                                    labelText:  AppLocalizations.of(context)!.searchapphere,
-                                    labelStyle: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.normal,
-                                      color: Colors.black,
-                                    ),
-                                    hintStyle: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.normal,
-                                      color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                                    ),
-                                    enabledBorder: InputBorder.none,
-                                    focusedBorder: InputBorder.none,
-                                    errorBorder: InputBorder.none,
-                                    focusedErrorBorder: InputBorder.none,
-                                    filled: true,
-                                    fillColor: Colors.grey[200],
-                                  ),
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                    color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                                  ),
-                                  cursorColor: Colors.blue,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Icon(
-                            Icons.mic_none,
-                            color: Colors.grey,
-                            size: 30,
-                          ),
-                        ],
-                      ),
-                    ),
+                  ),
+                  subtitle: Text(
+                    performSearch(searchText, mainAppList)[index].appType,
+                    style: const TextStyle(color:Colors.white),
+                  ),
+                  leading: Image.network(
+                    performSearch(searchText, mainAppList)[index].appImage,
                   ),
                 ),
               ),
-                ),
+            ),
+          ],
+        ),
+      ),
               ),
               Flexible(
                 child: SingleChildScrollView(
@@ -291,16 +325,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child :InkWell( 
-                                        onTap: () async {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => InstaMain()),
-                                          );
-                                        },
-                                      ),                  
                                       child: ImageFetcher(
-                                        
                                         imageUrl: 'instagram_assets/pinterest-logos-vector-png-hd-14.png',
                                         width: 150,
                                         height: 150,
