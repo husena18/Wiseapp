@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: Whatsapp(),
+            home: MyHomePage(title: 'wiseapp',),
           ); // 
         },
       ),
