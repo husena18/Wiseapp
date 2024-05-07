@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/controller/language_change_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:wiseapp/pages/Whatsapp/Whatsapp_main.dart';
+import 'package:wiseapp/pages/Whatsapp/updates1.dart';
 import 'home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -86,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Whatsapp()), // Navigate to HomePage
+                  MaterialPageRoute(builder: (context) => Updates1Widget()), // Navigate to HomePage
                 );
               },
               child: Text(

@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Whatsapp/updates3.dart';
+import 'package:wiseapp/pages/Whatsapp/updates4.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import 'package:flutter_tts/flutter_tts.dart';
 
-class Updates2Model extends ChangeNotifier {
+class Updates31Model extends ChangeNotifier {
   late final FocusNode _unfocusNode;
 
   FocusNode get unfocusNode => _unfocusNode;
 
-  Updates2Model() : _unfocusNode = FocusNode();
+  Updates31Model() : _unfocusNode = FocusNode();
 
   @override
   void dispose() {
@@ -20,16 +19,16 @@ class Updates2Model extends ChangeNotifier {
   }
 }
 
-class Updates2Widget extends StatefulWidget {
-  const Updates2Widget({Key? key}) : super(key: key);
+class Updates31Widget extends StatefulWidget {
+  const Updates31Widget({Key? key}) : super(key: key);
 
   @override
-  State<Updates2Widget> createState() => _Updates2WidgetState();
+  State<Updates31Widget> createState() => _Updates31WidgetState();
 }
 
-class _Updates2WidgetState extends State<Updates2Widget>
+class _Updates31WidgetState extends State<Updates31Widget>
     with TickerProviderStateMixin {
-  late Updates2Model _model;
+  late Updates31Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -38,7 +37,7 @@ class _Updates2WidgetState extends State<Updates2Widget>
   @override
   void initState() {
     super.initState();
-    _model = Updates2Model();
+    _model = Updates31Model();
     flutterTts = FlutterTts();
     dm(); // Call the method to speak the welcome text
   }
@@ -48,14 +47,14 @@ Future<void> dm() async {
   await flutterTts.setLanguage('hi');
   await flutterTts.setLanguage('gu');
   await flutterTts.setPitch(1.0);
-  await flutterTts.speak(AppLocalizations.of(context)!.chtsm); // Use chdm property to get the localized string
+  await flutterTts.speak(AppLocalizations.of(context)!.chtss); // Use chdm property to get the localized string
 }
-
   @override
   void dispose() {
     _model.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -79,7 +78,8 @@ Future<void> dm() async {
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'whatsapp/status2.jpg',
+                    imageUrl:
+                     'whatsapp/status1.jpg',
                   ),
                 ),
               ),
@@ -89,13 +89,13 @@ Future<void> dm() async {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Updates3Widget()),
+                  MaterialPageRoute(builder: (context) => Updates4Widget()),
                 );
               },
               child: Align(
-                alignment: AlignmentDirectional(0, -0.75),
+                alignment: AlignmentDirectional(0.5, 0.61),
                 child: Transform.rotate(
-                  angle: 1,
+                  angle:0,
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 250,
@@ -109,9 +109,9 @@ Future<void> dm() async {
               ),
             ),
               Align(
-                alignment: AlignmentDirectional(0.1, -0.83),
+                alignment: AlignmentDirectional(-0.2, 0.5),
                 child: Text(
-                  AppLocalizations.of(context)!.clickhere,
+                  AppLocalizations.of(context)!.chtss,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

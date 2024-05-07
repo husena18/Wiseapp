@@ -68,5 +68,6 @@
     "howtorder" : "How to order food?",
     "howorderfood" : "1. Open the Zomato app and sign in to your account.\n2. Enter your location to see the restaurants near you.\n3. Browse the menu of the restaurant you want to order from.\n4. Add the items you want to your cart and proceed to checkout.\n5. Choose your payment method and place your order.\n6. Track your order and wait for it to be delivered to your door!",
     "selectsuccess" : "You have successfully selected the restaurant and ordered food in the cart",
-    "successlearn" : "Congratulations, you have successfully learned it!"
+    "successlearn" : "Congratulations, you have successfully learned it!",
+    "chtss" : "Click here to send status!"
 }

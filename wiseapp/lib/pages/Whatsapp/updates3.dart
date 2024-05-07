@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Whatsapp/updates4.dart';
+import 'package:wiseapp/pages/Whatsapp/updates31.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -79,7 +79,7 @@ Future<void> dm() async {
                 child: ClipRRect(
                   child: ImageFetcher(
                     imageUrl:
-                     'instagram_assets/WhatsApp_Image_2024-03-02_at_02.05.53.jpeg',
+                     'whatsapp/statu41.jpg',
                   ),
                 ),
               ),
@@ -89,11 +89,11 @@ Future<void> dm() async {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Updates4Widget()),
+                  MaterialPageRoute(builder: (context) => Updates31Widget()),
                 );
               },
               child: Align(
-                alignment: AlignmentDirectional(-1.03, -0.74),
+                alignment: AlignmentDirectional(0, -0.2),
                 child: Transform.rotate(
                   angle:0,
                   child: Lottie.asset(
@@ -109,9 +109,9 @@ Future<void> dm() async {
               ),
             ),
               Align(
-                alignment: AlignmentDirectional(-0.07, 0.29),
+                alignment: AlignmentDirectional(-0, 0),
                 child: Text(
-                  AppLocalizations.of(context)!.selectpersontotext,
+                  AppLocalizations.of(context)!.editstory,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
