@@ -42,7 +42,7 @@ class _share4WidgetState extends State<share4Widget> {
                   height: MediaQuery.of(context).size.height,
                   child: ClipRRect(
                     child: ImageFetcher(
-                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.15.31.jpeg',
+                      imageUrl: 'Pinterest/WhatsApp Image 2024-04-27 at 00.21.21 (2).jpeg',
                     ),
                   ),
                 ),

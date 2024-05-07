@@ -42,7 +42,7 @@ class _signin5WidgetState extends State<signin5Widget> {
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'Pinterest/SU5_D.jpeg',
+                    imageUrl: 'Pinterest/SU7_D.jpeg',
                   ),
                 ),
               ),
