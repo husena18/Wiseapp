@@ -21,7 +21,7 @@ class Call3Widget extends StatelessWidget {
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.24.59_(1).jpeg',
+                    imageUrl: 'whatsapp/call2.jpg',
                   ),
                 ),
               ),
@@ -37,9 +37,9 @@ class Call3Widget extends StatelessWidget {
               child: Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: AlignmentDirectional(1.51, 1.13),
+                  alignment: AlignmentDirectional(0, -0.8),
                   child: Transform.rotate(
-                  angle: 3,
+                  angle: 0,
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 250,
@@ -54,7 +54,7 @@ class Call3Widget extends StatelessWidget {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.21, 1),
+              alignment: AlignmentDirectional(0, -0.8),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -62,7 +62,7 @@ class Call3Widget extends StatelessWidget {
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  AppLocalizations.of(context)!.editpost,
+                  AppLocalizations.of(context)!.searchhere,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     fontFamily: 'Readex Pro',

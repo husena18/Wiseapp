@@ -21,7 +21,7 @@ class Call1Widget extends StatelessWidget {
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.39_(1).jpeg',
+                    imageUrl: 'whatsapp/status2.jpg',
                   ),
                 ),
               ),
@@ -34,7 +34,7 @@ class Call1Widget extends StatelessWidget {
                 );
               },
               child: Align(
-                alignment: AlignmentDirectional(-0.54, 1.25),
+                alignment: AlignmentDirectional(-1.94, 1.1),
                 child: Transform.rotate(
                   angle: 3,
                   child: Lottie.asset(
@@ -50,7 +50,7 @@ class Call1Widget extends StatelessWidget {
               ),
             ),
             Align(
-              alignment: Alignment(0.29, 0.92),
+              alignment: Alignment(-0.39, 0.82),
               child: InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, 'DM2_IG');

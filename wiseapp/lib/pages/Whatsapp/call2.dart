@@ -21,7 +21,7 @@ class Call2Widget extends StatelessWidget {
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.00.jpeg',
+                    imageUrl: 'whatsapp/call7.jpg',
                   ),
                 ),
               ),
@@ -36,7 +36,7 @@ class Call2Widget extends StatelessWidget {
               child: Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: AlignmentDirectional(1.85, -1.13),
+                  alignment: AlignmentDirectional(1.65, -1),
                   child: Transform.rotate(
                     angle: 1.2,
                     child: Lottie.asset(
@@ -53,7 +53,7 @@ class Call2Widget extends StatelessWidget {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.8, -0.84),
+              alignment: AlignmentDirectional(0.9, -0.74),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -61,7 +61,7 @@ class Call2Widget extends StatelessWidget {
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  AppLocalizations.of(context)!.postphoto,
+                  AppLocalizations.of(context)!.clickhere,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                         fontFamily: 'Readex Pro',

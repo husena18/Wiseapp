@@ -24,15 +24,15 @@ class Call5Widget extends StatelessWidget {
                   height: MediaQuery.of(context).size.height,
                   child: ClipRRect(
                     child: ImageFetcher(
-                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.15.31_(2).jpeg',
+                      imageUrl: 'whatsapp/call1.jpg',
                     ),
                   ),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.07, 0.09),
+                alignment: AlignmentDirectional(0, -0.6),
                 child: Text(
-                  AppLocalizations.of(context)!.postuploaded,
+                  AppLocalizations.of(context)!.successlearn,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
