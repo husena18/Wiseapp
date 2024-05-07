@@ -70,5 +70,14 @@
     "selectsuccess" : "You have successfully selected the restaurant and ordered food in the cart",
     "successlearn" : "Congratulations, you have successfully learned it!",
     "chtss" : "Click here to send status!",
-    "clickherecam": "Click here to open \n your camera"
+    "clickherecam": "Click here to open \n your camera",
+    "status": "Keep a status",
+    "call" : "Call someone new",
+    "picsend" : "Send a picture to your friend",
+    "statusq": "What is a status?",
+    "callq" : "How to Call someone new?",
+    "picq" : "How to Send a picture to your friend?",
+    "statusa": "Status on WhatsApp is a popular way to share updates with friends and close contacts. \nEvery status disappears in 24 hours and may include photos, videos, GIFs, text and more. ",
+    "calla" : "When someone calls you via WhatsApp, it will look similar to when you receive a\n regular phone call, but it will display the words WhatsApp Audio somewhere on the screen.\n In our example, our screenshot is from an iPhone, so it may look different to you \ndepending on the device youre using.",
+    "pica" : "With WhatsApp, you can share photos, videos, and so much more with your contacts.\n You now have the ability to send documents, contact information that you can share with other contacts,\n audio messages that you can record directly using the service, \nand even share your location natively within the service."
 }

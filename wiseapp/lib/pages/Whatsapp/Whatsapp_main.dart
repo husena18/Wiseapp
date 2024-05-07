@@ -18,8 +18,6 @@ class _WhatsappState extends State<Whatsapp> {
   String? selectedOption1;
   String? selectedOption2;
   String? selectedOption3;
-  String? selectedOption4;
-  String? selectedOption5;
 
    @override
   Widget build(BuildContext context) {
@@ -40,7 +38,7 @@ class _WhatsappState extends State<Whatsapp> {
             child: ImageFiltered(
               imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
               child: ImageFetcher(
-                imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.28.03.jpeg',
+                imageUrl: 'whatsapp/call3.jpg',
               ),
             ),
           ),
@@ -55,8 +53,8 @@ class _WhatsappState extends State<Whatsapp> {
                 children: [
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.storyadd,
-                    [AppLocalizations.of(context)!.story, AppLocalizations.of(context)!.storyans],
+                    AppLocalizations.of(context)!.status,
+                    [AppLocalizations.of(context)!.statusq, AppLocalizations.of(context)!.statusa],
                     selectedOption1,
                     (newValue) {
                       setState(() {
@@ -64,10 +62,11 @@ class _WhatsappState extends State<Whatsapp> {
                       });
                     },
                   ),
+                
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.searchfollow,
-                    [AppLocalizations.of(context)!.follow,AppLocalizations.of(context)!.followans],
+                    AppLocalizations.of(context)!.call,
+                    [AppLocalizations.of(context)!.callq, AppLocalizations.of(context)!.calla],
                     selectedOption2,
                     (newValue) {
                       setState(() {
@@ -77,34 +76,12 @@ class _WhatsappState extends State<Whatsapp> {
                   ),
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.dm,
-                    [AppLocalizations.of(context)!.dms, AppLocalizations.of(context)!.dmans],
+                    AppLocalizations.of(context)!.picsend,
+                    [AppLocalizations.of(context)!.picq, AppLocalizations.of(context)!.pica],
                     selectedOption3,
                     (newValue) {
                       setState(() {
                         selectedOption3 = newValue;
-                      });
-                    },
-                  ),
-                  buildButtonWithDropdown(
-                    context,
-                    AppLocalizations.of(context)!.post,
-                    [AppLocalizations.of(context)!.posts, AppLocalizations.of(context)!.postans],
-                    selectedOption4,
-                    (newValue) {
-                      setState(() {
-                        selectedOption4 = newValue;
-                      });
-                    },
-                  ),
-                  buildButtonWithDropdown(
-                    context,
-                    AppLocalizations.of(context)!.reels,
-                    [AppLocalizations.of(context)!.reelss, AppLocalizations.of(context)!.reelsans],
-                    selectedOption5,
-                    (newValue) {
-                      setState(() {
-                        selectedOption5 = newValue;
                       });
                     },
                   ),
@@ -130,47 +107,25 @@ class _WhatsappState extends State<Whatsapp> {
               child: ElevatedButton(
                 onPressed: () {
                   // Handle button press
-                  switch (buttonText) {
-                    case 'Add to your story for 24 hrs':
-                    case 'તમારા વાર્તા માટે 24 કલાક ઉમેરો':
-                    case 'अपनी कहानी में 24 घंटे के लिए जोड़ें':
-
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Message1Widget()),
-                      );
-                      break;
-                    case 'Search and follow your friends':
-                    case 'તમારા મિત્રો શોધો અને અનુસરો':
-                    case 'अपने दोस्तों को खोजें और फॉलो करें':
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Call1Widget()),
-                      );
-                      break;
-                    case 'Text your friends (DM)':
-                    case 'તમારા મિત્રોને ટેક્સ્ટ કરો (DM)':
-                    case 'अपने दोस्तों को टेक्स्ट करें (DM)':
                   
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Linkd1Widget()),
-                      );
-                      break;
-                    case 'Post for everyone to see':
-                    case 'બધાને જોવા માટે પોસ્ટ કરો':
-                    case 'सभी को दिखाने के लिए पोस्ट करें':
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Updates1Widget()),
                       );
-                      break;
-                    case 'Scroll through reels for fun videos':
-                    case 'મજા માટે રીલ્સ સ્ક્રોલ કરો':
-                    case 'मजेदार वीडियो के लिए रील्स स्क्रॉल करें':
-                      // Handle Reels button press
-                      break;
-                  }
+                    
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Call1Widget()),
+                      );
+                     
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Message1Widget()),
+                      );
+                      
+
+                  
                 },
                 child: Row(
                   children: [

@@ -70,7 +70,16 @@
     "selectsuccess" : "आपका चयन सफल हुआ है",
     "successlearn" : " ",
     "chtss": "click here to send status",
-    "clickherecam":" "
+    "clickherecam":" ",
+    "status": "Keep a status",
+    "call" : "Call someone new",
+    "picsend" : "Send a picture to your friend",
+    "statusq": "",
+    "callq" : "",
+    "picq" : "",
+    "statusa": "",
+    "calla" : "",
+    "pica" : ""
     
 
 

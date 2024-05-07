@@ -20,6 +20,8 @@ import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 import 'package:wiseapp/pages/Whatsapp/call1.dart';
 import 'package:wiseapp/pages/Whatsapp/updates1.dart';
 import 'package:wiseapp/pages/Whatsapp/message1.dart';
+import 'package:wiseapp/pages/Whatsapp/Whatsapp_main.dart';
+
 
 
 
@@ -65,7 +67,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
-            home: Message1Widget(),
+            home: Whatsapp(),
           ); // 
         },
       ),
