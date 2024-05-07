@@ -41,7 +41,7 @@ class _signin2WidgetState extends State<signin2Widget>
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.25.jpeg',
+                    imageUrl: 'Pinterest/SU1_D.jpeg',
                     width: 443,
                     height: 809,
                     fit: BoxFit.cover,
