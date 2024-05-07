@@ -6,7 +6,7 @@ import 'package:wiseapp/pages/IRCTC/irctc_main.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Zomato/zomato_main.dart';
 import 'package:wiseapp/pages/search.dart';
-
+import 'package:wiseapp/pages/Pinterest/pint_main.dart';
 
 class HomePage extends StatelessWidget {
   @override
