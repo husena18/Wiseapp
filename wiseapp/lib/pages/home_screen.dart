@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Updates1Widget()), // Navigate to HomePage
+                  MaterialPageRoute(builder: (context) => HomeCopyWidget()), // Navigate to HomePage
                 );
               },
               child: Text(

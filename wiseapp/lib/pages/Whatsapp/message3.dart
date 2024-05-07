@@ -65,7 +65,7 @@ class _Message3WidgetState extends State<Message3Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.40_(1).jpeg',
+                    imageUrl: 'whatsapp/picsend1.jpg',
                   ),
                 ),
               ),
@@ -80,7 +80,9 @@ class _Message3WidgetState extends State<Message3Widget>
               child: Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: AlignmentDirectional(0.3, 0.43),
+                  alignment: AlignmentDirectional(1.4, 0.98),
+                  child: Transform.rotate(
+                  angle: 3,
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 250,
@@ -93,18 +95,36 @@ class _Message3WidgetState extends State<Message3Widget>
                 ),
               ),
             ),
+          ),
             Align(
-              alignment: AlignmentDirectional(0.01, -0.79),
+              alignment: AlignmentDirectional(0.01, 0.7),
               child: InkWell(
                 onTap: () async {
                   // Handle onTap
                 },
                 child: Text(
-                  AppLocalizations.of(context)!.fromgallery,
+                  AppLocalizations.of(context)!.chdm,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
                     color: Colors.white,
+                    fontSize: 22,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: AlignmentDirectional(0, -0.8),
+              child: InkWell(
+                onTap: () async {
+                  // Handle onTap
+                },
+                child: Text(
+                  AppLocalizations.of(context)!.editstory,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Readex Pro',
+                    color: Colors.black,
                     fontSize: 22,
                   ),
                 ),

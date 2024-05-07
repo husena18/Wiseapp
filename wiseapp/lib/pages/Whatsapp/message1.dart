@@ -67,7 +67,7 @@ class _Message1WidgetState extends State<Message1Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets//WhatsApp_Image_2024-02-28_at_23.28.03.jpeg',
+                    imageUrl: 'whatsapp/pic1.jpg',
                   ),
                 ),
               ),
@@ -84,7 +84,9 @@ class _Message1WidgetState extends State<Message1Widget>
   child: Opacity(
     opacity: 0.8,
     child: Align(
-      alignment: AlignmentDirectional(-1.38, -0.96),
+      alignment: AlignmentDirectional(0.93, 1),
+      child: Transform.rotate(
+                  angle: 3,
       child: Lottie.asset(
         'animations/cursor.json',
         width: 250,
@@ -97,11 +99,12 @@ class _Message1WidgetState extends State<Message1Widget>
     ),
   ),
 ),
+),
 
             Opacity(
               opacity: 0,
               child: Align(
-                alignment: AlignmentDirectional(-0.97, -0.79),
+                alignment: AlignmentDirectional(-0.97, -0.9),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -119,7 +122,7 @@ class _Message1WidgetState extends State<Message1Widget>
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.43, -0.53),
+              alignment: AlignmentDirectional(0.43, 0.7),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -127,11 +130,11 @@ class _Message1WidgetState extends State<Message1Widget>
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  AppLocalizations.of(context)!.clickhere,
+                  AppLocalizations.of(context)!.clickherecam,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     fontFamily: 'Readex Pro',
-                    color: Colors.white, // Change text color to white
+                    // Change text color to white
                     fontSize: 26,
                   ),
                 ),

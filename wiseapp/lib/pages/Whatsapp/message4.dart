@@ -69,15 +69,15 @@ class _Message4WidgetState extends State<Message4Widget>
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.39_(1).jpeg',
+                    imageUrl: 'whatsapp/pic1.jpg',
                   ),
                 ),
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0, -0.1),
+              alignment: AlignmentDirectional(0, -0.2),
               child: Text(
-                AppLocalizations.of(context)!.storyuploaded,
+                AppLocalizations.of(context)!.successlearn,
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,

@@ -65,7 +65,7 @@ class _Message2WidgetState extends State<Message2Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.40_(1).jpeg',
+                    imageUrl: 'whatsapp/picsend2.jpg',
                   ),
                 ),
               ),
@@ -80,7 +80,7 @@ class _Message2WidgetState extends State<Message2Widget>
               child: Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: AlignmentDirectional(0.3, 0.43),
+                  alignment: AlignmentDirectional(0.45, 1.05),
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 250,
