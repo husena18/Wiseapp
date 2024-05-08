@@ -3,9 +3,38 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Whatsapp/call2.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
-class Call1Widget extends StatelessWidget {
+class Call1Widget extends StatefulWidget {
   const Call1Widget({Key? key}) : super(key: key);
+
+  @override
+  State<Call1Widget> createState() => _Call1WidgetState();
+}
+
+class _Call1WidgetState extends State<Call1Widget> {
+  late FlutterTts flutterTts;
+  late FocusNode _unfocusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    flutterTts = FlutterTts();
+    _unfocusNode = FocusNode();
+    addVoiceCommand(); // Call the method to speak the voice command
+  }
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  Future<void> addVoiceCommand() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak('Tap the image to proceed to the next screen!');
+  }
 
   @override
   Widget build(BuildContext context) {

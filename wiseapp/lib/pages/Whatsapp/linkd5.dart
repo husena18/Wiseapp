@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Whatsapp/Whatsapp_main.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 class Linkd5Widget extends StatefulWidget {
   const Linkd5Widget({Key? key}) : super(key: key);
@@ -11,23 +12,27 @@ class Linkd5Widget extends StatefulWidget {
 }
 
 class _Linkd5WidgetState extends State<Linkd5Widget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+  late FlutterTts flutterTts;
+  late GlobalKey<ScaffoldState> scaffoldKey;
 
   @override
   void initState() {
     super.initState();
-    // _model = Dm4IgWidget(); // Not needed in this example
+    flutterTts = FlutterTts();
+    scaffoldKey = GlobalKey<ScaffoldState>();
+    addVoiceCommand(); // Call the method to speak the voice command
+  }
+
+  Future<void> addVoiceCommand() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak("You're now following this link!");
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        // No need to handle unfocus node here
-        // FocusScope.of(context).requestFocus(FocusNode());
-        // or
-        // FocusScope.of(context).unfocus();
-      },
+      onTap: () {},
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
@@ -38,17 +43,15 @@ class _Linkd5WidgetState extends State<Linkd5Widget> {
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                child: ClipRRect(
-                  child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.21.jpeg',
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  child: ClipRRect(
+                    child: ImageFetcher(
+                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.21.jpeg',
+                    ),
                   ),
                 ),
               ),
-                ),
-            
-        
               Align(
                 alignment: AlignmentDirectional(0.4, -0.55),
                 child: Text(
@@ -58,25 +61,25 @@ class _Linkd5WidgetState extends State<Linkd5Widget> {
                     fontFamily: 'Readex Pro',
                     fontWeight: FontWeight.w700,
                     fontSize: 26,
-                    color: Colors.white, 
+                    color: Colors.white,
                   ),
                 ),
               ),
-               Align(
+              Align(
                 alignment: AlignmentDirectional(-0.07, 0.19),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => Whatsapp()), // Replace YourNextPage with the actual next page widget
-                  );
-                },
-                child: Text(
-                  "Let's explore other functionalities",
-                  style: TextStyle(fontSize: 18),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Whatsapp()),
+                    );
+                  },
+                  child: Text(
+                    "Let's explore other functionalities",
+                    style: TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
-            ),
             ],
           ),
         ),
@@ -84,9 +87,9 @@ class _Linkd5WidgetState extends State<Linkd5Widget> {
     );
   }
 
-  // @override
-  // void dispose() {
-  //   _model.dispose(); // Not needed in this example
-  //   super.dispose();
-  // }
+//   @override
+//   void dispose() {
+//     flutterTts.stop(); // Stop speaking when the widget is disposed
+//     super.dispose();
+//   }
 }

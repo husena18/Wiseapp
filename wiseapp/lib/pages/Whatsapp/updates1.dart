@@ -42,19 +42,21 @@ class _Updates1WidgetState extends State<Updates1Widget>
     dm(); // Call the method to speak the welcome text
   }
 
-Future<void> dm() async {
-  await flutterTts.setLanguage('en');
-  await flutterTts.setLanguage('hi');
-  await flutterTts.setLanguage('gu');
-  await flutterTts.setPitch(1.0);
-  await flutterTts.speak(AppLocalizations.of(context)!.chdm); // Use chdm property to get the localized string
-}
+  Future<void> dm() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(AppLocalizations.of(context)!.chdm); // Use chdm property to get the localized string
+  }
 
   @override
   void dispose() {
     _model.dispose();
+    flutterTts.stop(); // Stop speaking when the widget is disposed
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

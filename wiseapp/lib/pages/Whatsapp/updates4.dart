@@ -41,19 +41,20 @@ class _Updates4WidgetState extends State<Updates4Widget>
     dm(); // Call the method to speak the welcome text
   }
 
- Future<void> dm() async {
-  await flutterTts.setLanguage('en');
-  await flutterTts.setLanguage('hi');
-  await flutterTts.setLanguage('gu');
-  await flutterTts.setPitch(1.0);
-  await flutterTts.speak(AppLocalizations.of(context)!.fnf); // Use chdm property to get the localized string
-}
+  Future<void> dm() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(AppLocalizations.of(context)!.fnf); // Use fnf property to get the localized string
+  }
 
   @override
   void dispose() {
     _model.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -73,17 +74,15 @@ class _Updates4WidgetState extends State<Updates4Widget>
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                child: ClipRRect(
-                  child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-03-02_at_02.10.02.jpeg',
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  child: ClipRRect(
+                    child: ImageFetcher(
+                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-03-02_at_02.10.02.jpeg',
+                    ),
                   ),
                 ),
               ),
-                ),
-            
-        
               Align(
                 alignment: AlignmentDirectional(-0.07, 0.09),
                 child: Text(
@@ -97,31 +96,25 @@ class _Updates4WidgetState extends State<Updates4Widget>
                   ),
                 ),
               ),
-               Align(
+              Align(
                 alignment: AlignmentDirectional(-0.07, 0.19),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => Whatsapp()), // Replace YourNextPage with the actual next page widget
-                  );
-                },
-                child: Text(
-                  "Let's explore other functionalities",
-                  style: TextStyle(fontSize: 18),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Whatsapp()), // Replace YourNextPage with the actual next page widget
+                    );
+                  },
+                  child: Text(
+                    "Let's explore other functionalities",
+                    style: TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
-            ),
             ],
           ),
         ),
       ),
     );
   }
-
-  // @override
-  // void dispose() {
-  //   _model.dispose(); // Not needed in this example
-  //   super.dispose();
-  // }
 }

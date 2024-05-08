@@ -48,7 +48,6 @@ class _Message2WidgetState extends State<Message2Widget>
     await flutterTts.speak('Use your camera to click a photo or select from your gallery!');
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,11 +69,11 @@ class _Message2WidgetState extends State<Message2Widget>
                 ),
               ),
             ),
-            GestureDetector( // Wrap Lottie.asset with GestureDetector
+            GestureDetector(
               onTap: () {
-                Navigator.push( // Navigate to another page when animation is clicked
+                Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Message3Widget()), // Replace DestinationPage with your destination page
+                  MaterialPageRoute(builder: (context) => Message3Widget()),
                 );
               },
               child: Opacity(
@@ -114,6 +113,11 @@ class _Message2WidgetState extends State<Message2Widget>
         ),
       ),
     );
-
   }
+
+  // @override
+  // void dispose() {
+  //   flutterTts.stop(); // Stop speaking when the widget is disposed
+  //   super.dispose();
+  // }
 }

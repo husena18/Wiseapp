@@ -5,7 +5,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/pages/Whatsapp/message2.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
-
 class Message1Model extends ChangeNotifier {
   late final FocusNode _unfocusNode;
 
@@ -49,8 +48,6 @@ class _Message1WidgetState extends State<Message1Widget>
     await flutterTts.speak('Use your camera to click a photo or select from your gallery!');
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,32 +69,29 @@ class _Message1WidgetState extends State<Message1Widget>
                 ),
               ),
             ),
-  
-          GestureDetector( // Wrap Lottie.asset with GestureDetector
-  onTap: () {
-    // Navigate to another page when animation is clicked
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Message2Widget()),
-    );
-  },
-  child: Opacity(
-    opacity: 0.8,
-    child: Align(
-      alignment: AlignmentDirectional(-1.38, -0.96),
-      child: Lottie.asset(
-        'animations/cursor.json',
-        width: 250,
-        height: 220,
-        reverse: true,
-        repeat: true,
-        fit: BoxFit.fitWidth,
-        animate: true,
-      ),
-    ),
-  ),
-),
-
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Message2Widget()),
+                );
+              },
+              child: Opacity(
+                opacity: 0.8,
+                child: Align(
+                  alignment: AlignmentDirectional(-1.38, -0.96),
+                  child: Lottie.asset(
+                    'animations/cursor.json',
+                    width: 250,
+                    height: 220,
+                    reverse: true,
+                    repeat: true,
+                    fit: BoxFit.fitWidth,
+                    animate: true,
+                  ),
+                ),
+              ),
+            ),
             Opacity(
               opacity: 0,
               child: Align(
@@ -142,4 +136,10 @@ class _Message1WidgetState extends State<Message1Widget>
       ),
     );
   }
+
+  // @override
+  // void dispose() {
+  //   flutterTts.stop(); // Stop speaking when the widget is disposed
+  //   super.dispose();
+  
 }

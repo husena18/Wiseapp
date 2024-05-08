@@ -291,16 +291,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child :InkWell( 
-                                        onTap: () async {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => InstaMain()),
-                                          );
-                                        },
-                                      ),                  
                                       child: ImageFetcher(
-                                        
                                         imageUrl: 'instagram_assets/pinterest-logos-vector-png-hd-14.png',
                                         width: 150,
                                         height: 150,

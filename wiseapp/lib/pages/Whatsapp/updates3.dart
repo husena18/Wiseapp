@@ -42,13 +42,14 @@ class _Updates3WidgetState extends State<Updates3Widget>
     dm(); // Call the method to speak the welcome text
   }
 
-Future<void> dm() async {
-  await flutterTts.setLanguage('en');
-  await flutterTts.setLanguage('hi');
-  await flutterTts.setLanguage('gu');
-  await flutterTts.setPitch(1.0);
-  await flutterTts.speak(AppLocalizations.of(context)!.searchselectfollow); // Use chdm property to get the localized string
-}
+  Future<void> dm() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(AppLocalizations.of(context)!.searchselectfollow); // Use searchselectfollow property to get the localized string
+  }
+
   @override
   void dispose() {
     _model.dispose();
@@ -74,40 +75,38 @@ Future<void> dm() async {
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                child: ClipRRect(
-                  child: ImageFetcher(
-                    imageUrl:
-                     'instagram_assets/WhatsApp_Image_2024-03-02_at_02.05.53.jpeg',
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  child: ClipRRect(
+                    child: ImageFetcher(
+                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-03-02_at_02.05.53.jpeg',
+                    ),
                   ),
                 ),
               ),
-                ),
-            
-        GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Updates4Widget()),
-                );
-              },
-              child: Align(
-                alignment: AlignmentDirectional(-1.03, -0.74),
-                child: Transform.rotate(
-                  angle:0,
-                  child: Lottie.asset(
-                    'animations/cursor.json',
-                    width: 250,
-                    height: 220,
-                    reverse: true,
-                    repeat: true,
-                    fit: BoxFit.fitWidth,
-                    animate: true,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Updates4Widget()),
+                  );
+                },
+                child: Align(
+                  alignment: AlignmentDirectional(-1.03, -0.74),
+                  child: Transform.rotate(
+                    angle: 0,
+                    child: Lottie.asset(
+                      'animations/cursor.json',
+                      width: 250,
+                      height: 220,
+                      reverse: true,
+                      repeat: true,
+                      fit: BoxFit.fitWidth,
+                      animate: true,
+                    ),
                   ),
                 ),
               ),
-            ),
               Align(
                 alignment: AlignmentDirectional(-0.07, 0.29),
                 child: Text(
@@ -127,10 +126,4 @@ Future<void> dm() async {
       ),
     );
   }
-
-  // @override
-  // void dispose() {
-  //   _model.dispose(); // Not needed in this example
-  //   super.dispose();
-  // }
 }

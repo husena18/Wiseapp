@@ -50,6 +50,7 @@ class _Message4WidgetState extends State<Message4Widget>
   @override
   void dispose() {
     _model.dispose();
+    flutterTts.stop(); // Stop speaking when the widget is disposed
     super.dispose();
   }
 
@@ -106,4 +107,3 @@ class _Message4WidgetState extends State<Message4Widget>
     );
   }
 }
-    
