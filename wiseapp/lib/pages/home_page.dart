@@ -276,7 +276,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/snapchat-logo-filters-png-5.png',
+                    imageUrl: 'whatsapp/w_logo.jpg',
                     height: 150,
                     fit: BoxFit.scaleDown,
                   ),
