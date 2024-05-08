@@ -102,7 +102,7 @@ flutter:
 
 
   assets:
-    - animations\cursor.json
+    - animations/cursor.json
     - android/app/src/main/res/mipmap-mdpi/ic_launcher.png
     - android/app/src/main/res/mipmap-hdpi/ic_launcher.png
     - android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
