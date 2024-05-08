@@ -4,6 +4,7 @@ import 'package:wiseapp/pages/GoogleMaps/gm_main.dart';
 import 'package:wiseapp/pages/Instagram/Insta_main.dart';
 import 'package:wiseapp/pages/IRCTC/irctc_main.dart';
 import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Whatsapp/Whatsapp_main.dart';
 import 'package:wiseapp/pages/Zomato/zomato_main.dart';
 import 'package:wiseapp/pages/search.dart';
 import 'package:wiseapp/pages/Pinterest/pint_main.dart';
@@ -247,101 +248,91 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                   ),
                 ),
               ),
-                                      Text(
-                                         AppLocalizations.of(context)!.instagram,
-                                        style: TextStyle(
-                                          fontFamily: 'Readex Pro',
-                                          fontSize: 22,
-                                          color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8),
-                                      child: ImageFetcher(
-                                        imageUrl: 'instagram_assets/snapchat-logo-filters-png-5.png',
-                                        height: 150,
-                                        fit: BoxFit.scaleDown,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(                 
-                                     AppLocalizations.of(context)!.whatsapp,
-
-                                    style: TextStyle(
-                                      fontFamily: 'Readex Pro',
-                                      fontSize: 22,
-                                      color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8),
-                                      child: ImageFetcher(
-                                        imageUrl: 'instagram_assets/pinterest-logos-vector-png-hd-14.png',
-                                        width: 150,
-                                        height: 150,
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(                           
-                                              AppLocalizations.of(context)!.pinterest,
-                                    style: TextStyle(
-                                      fontFamily: 'Readex Pro',
-                                      fontSize: 22,
-                                      color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8),
-                                      child: ImageFetcher(
-                                       imageUrl: 'instagram_assets/1690643640twitter-x-icon-png.webp',
-                                        width: 150,
-                                        height: 150,
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(        
-                                      AppLocalizations.of(context)!.x,
-
-                                    style: TextStyle(
-                                      fontFamily: 'Readex Pro',
-                                      fontSize: 22,
-                                      color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                     
-                     
-                     
+              Text(
+                AppLocalizations.of(context)!.instagram,
+                style: TextStyle(
+                  fontFamily: 'Readex Pro',
+                  fontSize: 22,
+                  color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+                ),
+              ),
+            ],
+          ),
+        ),
+        InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () async {
+            // Navigate to WhatsApp page
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Whatsapp()));
+          },
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/snapchat-logo-filters-png-5.png',
+                    height: 150,
+                    fit: BoxFit.scaleDown,
+                  ),
+                ),
+              ),
+              Text(                 
+                AppLocalizations.of(context)!.whatsapp,
+                style: TextStyle(
+                  fontFamily: 'Readex Pro',
+                  fontSize: 22,
+                  color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+                ),
+              ),
+            ],
+          ),
+        ),
+        InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () async {
+            // Navigate to Pinterest page
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Pinterest()));
+          },
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: ImageFetcher(
+                    imageUrl: 'instagram_assets/pinterest-logos-vector-png-hd-14.png',
+                    width: 150,
+                    height: 150,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Text(                           
+                AppLocalizations.of(context)!.pinterest,
+                style: TextStyle(
+                  fontFamily: 'Readex Pro',
+                  fontSize: 22,
+                  color: _switchValue ? Colors.black : Colors.white, // Change text color based on switch value
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+),
+                                           
                      
                      Opacity(
   opacity: 0.6,
@@ -579,8 +570,15 @@ Padding(
           ],
         ),
       ],
+      
     ),
-  ),             
+  ),
+  
+      ],
+    ),
+  ),
+),
+         
  Opacity(
   opacity: 0.6,
   child: Align(
@@ -824,11 +822,6 @@ Padding(
 ),
 ),
 ),
-            ],
-),
-
-),
-),
 );
-}
+  }
 }
