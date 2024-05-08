@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wiseapp/pages/Whatsapp/linkd1.dart';
 import 'package:wiseapp/pages/Whatsapp/call1.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Whatsapp/message1.dart';
@@ -106,9 +105,6 @@ class _WhatsappState extends State<Whatsapp> {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle button press
-                  
-
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Updates1Widget()),
@@ -123,9 +119,7 @@ class _WhatsappState extends State<Whatsapp> {
                         context,
                         MaterialPageRoute(builder: (context) => Message1Widget()),
                       );
-                      
-
-                  
+             
                 },
                 child: Row(
                   children: [
