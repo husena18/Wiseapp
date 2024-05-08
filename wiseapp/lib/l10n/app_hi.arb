@@ -21,7 +21,7 @@
     "googlemaps" : "गूगल मैप्स",
     "gpsnavigation" : "जी पी एस नेविगेशन",
     "waze" : "वेज",
-    "snapchat" : "स्नैपचैट",
+    "whatsapp" : "व्हाट्सएप",
     "pinterest" : "पिंटरेस्ट",
     "x" : "एक्स",
     "fromgallery" : "फ़ोटो क्लिक करने या अपनी \n गैलरी से चयन करने के लिए अपने \n कैमरे का उपयोग करें",
@@ -68,7 +68,18 @@
     "howtorder" : "खाना ऑर्डर करने के लिए यहाँ क्लिक करें",
     "howorderfood" : "खाना ऑर्डर करने के लिए आपको अपना पता और खाना चुनना होगा। आप अपने खाने को ऑर्डर करने के बाद आपको अपने खाने की डिलीवरी का समय भी दिखाया जाएगा।",
     "selectsuccess" : "आपका चयन सफल हुआ है",
-    "successlearn" : " "
+    "successlearn" : " ",
+    "chtss": "click here to send status",
+    "clickherecam":" ",
+    "status": "Keep a status",
+    "call" : "Call someone new",
+    "picsend" : "Send a picture to your friend",
+    "statusq": "",
+    "callq" : "",
+    "picq" : "",
+    "statusa": "",
+    "calla" : "",
+    "pica" : ""
     
 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
-import 'package:wiseapp/pages/Whatsapp/updates4.dart';
+import 'package:wiseapp/pages/Whatsapp/updates31.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -75,42 +75,44 @@ class _Updates3WidgetState extends State<Updates3Widget>
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                  child: ClipRRect(
-                    child: ImageFetcher(
-                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-03-02_at_02.05.53.jpeg',
-                    ),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: ClipRRect(
+                  child: ImageFetcher(
+                    imageUrl:
+                     'whatsapp/statu41.jpg',
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Updates4Widget()),
-                  );
-                },
-                child: Align(
-                  alignment: AlignmentDirectional(-1.03, -0.74),
-                  child: Transform.rotate(
-                    angle: 0,
-                    child: Lottie.asset(
-                      'animations/cursor.json',
-                      width: 250,
-                      height: 220,
-                      reverse: true,
-                      repeat: true,
-                      fit: BoxFit.fitWidth,
-                      animate: true,
-                    ),
+                ),
+            
+        GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Updates31Widget()),
+                );
+              },
+              child: Align(
+                alignment: AlignmentDirectional(0, -0.2),
+                child: Transform.rotate(
+                  angle:0,
+                  child: Lottie.asset(
+                    'animations/cursor.json',
+                    width: 250,
+                    height: 220,
+                    reverse: true,
+                    repeat: true,
+                    fit: BoxFit.fitWidth,
+                    animate: true,
                   ),
                 ),
               ),
+            ),
               Align(
-                alignment: AlignmentDirectional(-0.07, 0.29),
+                alignment: AlignmentDirectional(-0, 0),
                 child: Text(
-                  AppLocalizations.of(context)!.selectpersontotext,
+                  AppLocalizations.of(context)!.editstory,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

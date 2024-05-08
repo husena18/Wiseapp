@@ -71,7 +71,7 @@ class _Updates1WidgetState extends State<Updates1Widget>
                 height: MediaQuery.of(context).size.height,
                 child: ClipRRect(
                   child: ImageFetcher(
-                    imageUrl: 'instagram_assets/WhatsApp_Image_2024-02-28_at_23.25.39_(1).jpeg',
+                    imageUrl: 'whatsapp/call4.jpg',
                   ),
                 ),
               ),
@@ -84,9 +84,9 @@ class _Updates1WidgetState extends State<Updates1Widget>
                 );
               },
               child: Align(
-                alignment: AlignmentDirectional(1.6, -1.16),
+                alignment: AlignmentDirectional(-1.8, 0.9),
                 child: Transform.rotate(
-                  angle: 1.3,
+                  angle: 4,
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 250,
@@ -100,7 +100,7 @@ class _Updates1WidgetState extends State<Updates1Widget>
               ),
             ),
             Align(
-              alignment: Alignment(0.91, -0.84),
+              alignment: Alignment(-0.61, 0.76),
               child: InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, 'DM2_IG');

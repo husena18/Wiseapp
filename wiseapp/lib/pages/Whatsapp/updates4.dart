@@ -41,13 +41,13 @@ class _Updates4WidgetState extends State<Updates4Widget>
     dm(); // Call the method to speak the welcome text
   }
 
-  Future<void> dm() async {
-    await flutterTts.setLanguage('en');
-    await flutterTts.setLanguage('hi');
-    await flutterTts.setLanguage('gu');
-    await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.fnf); // Use fnf property to get the localized string
-  }
+ Future<void> dm() async {
+  await flutterTts.setLanguage('en');
+  await flutterTts.setLanguage('hi');
+  await flutterTts.setLanguage('gu');
+  await flutterTts.setPitch(1.0);
+  await flutterTts.speak(AppLocalizations.of(context)!.successlearn); // Use chdm property to get the localized string
+}
 
   @override
   void dispose() {
@@ -74,19 +74,21 @@ class _Updates4WidgetState extends State<Updates4Widget>
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                  child: ClipRRect(
-                    child: ImageFetcher(
-                      imageUrl: 'instagram_assets/WhatsApp_Image_2024-03-02_at_02.10.02.jpeg',
-                    ),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: ClipRRect(
+                  child: ImageFetcher(
+                    imageUrl: 'whatsapp/status3.jpg',
                   ),
                 ),
               ),
+                ),
+            
+        
               Align(
-                alignment: AlignmentDirectional(-0.07, 0.09),
+                alignment: AlignmentDirectional(-0.07, 0.0),
                 child: Text(
-                  AppLocalizations.of(context)!.chatwithfriends,
+                  AppLocalizations.of(context)!.successlearn,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

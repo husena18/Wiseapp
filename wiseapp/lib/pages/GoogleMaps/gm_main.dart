@@ -83,17 +83,12 @@ class _GoogleMapsState extends State<GoogleMaps> {
                 onPressed: () {
                   // Handle button press
                   // Implement navigation logic here
-                  switch (buttonText) {
-                    case 'Search Location':
-                    case 'जहाँ आप जाना चाहते हैं, वहाँ की जानकारी खोजें':
-                    case 'લોકેશન શોધવા માટે અહીં ક્લિક કરો':
+                 
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => GM1Widget()),
                       );
-                      break;
-                    // Add cases for other buttons if needed
-                  }
+                  
                 },
                 child: Row(
                   children: [
