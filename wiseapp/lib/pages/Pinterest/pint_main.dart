@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:wiseapp/pages/Pinterest/signin1.dart';
-import 'package:wiseapp/pages/Pinterest/share1.dart';
-import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Pinterest/follow1.dart';
-import 'dart:ui';
 import 'package:wiseapp/pages/Pinterest/log1.dart';
+import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Pinterest/share1.dart';
+import 'dart:ui';
+import 'package:wiseapp/pages/Pinterest/signin1.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wiseapp/pages/video_screen.dart';
+import 'package:wiseapp/pages/video_screen2.dart';
 
 
 class Pinterest extends StatefulWidget {

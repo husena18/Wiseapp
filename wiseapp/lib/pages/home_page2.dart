@@ -308,7 +308,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                     ),
                                   ),
                                   Text(                 
-                                     AppLocalizations.of(context)!.snapchat,
+                                     AppLocalizations.of(context)!.whatsapp,
 
                                     style: TextStyle(
                                       fontFamily: 'Readex Pro',
