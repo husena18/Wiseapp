@@ -42,7 +42,7 @@ class _PinterestState extends State<Pinterest> {
             child: ImageFiltered(
               imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
               child: ImageFetcher(
-                imageUrl: 'Pinterest/login:signup_DM.jpeg.jpeg',
+                imageUrl: 'Pinterest/HOMEPAGE_D.jpeg',
               ),
             ),
           ),
@@ -68,8 +68,8 @@ class _PinterestState extends State<Pinterest> {
                   ),
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.searchfollow,
-                    [AppLocalizations.of(context)!.follow,AppLocalizations.of(context)!.followans],
+                    AppLocalizations.of(context)!.login,
+                    [AppLocalizations.of(context)!.loginq,AppLocalizations.of(context)!.logina],
                     selectedOption2,
                     (newValue) {
                       setState(() {
@@ -79,8 +79,8 @@ class _PinterestState extends State<Pinterest> {
                   ),
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.dm,
-                    [AppLocalizations.of(context)!.dms, AppLocalizations.of(context)!.dmans],
+                    AppLocalizations.of(context)!.follow,
+                    [AppLocalizations.of(context)!.followq, AppLocalizations.of(context)!.followa],
                     selectedOption3,
                     (newValue) {
                       setState(() {
@@ -90,23 +90,12 @@ class _PinterestState extends State<Pinterest> {
                   ),
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.post,
-                    [AppLocalizations.of(context)!.posts, AppLocalizations.of(context)!.postans],
+                    AppLocalizations.of(context)!.share,
+                    [AppLocalizations.of(context)!.shareq, AppLocalizations.of(context)!.sharea],
                     selectedOption4,
                     (newValue) {
                       setState(() {
                         selectedOption4 = newValue;
-                      });
-                    },
-                  ),
-                  buildButtonWithDropdown(
-                    context,
-                    AppLocalizations.of(context)!.reels,
-                    [AppLocalizations.of(context)!.reelss, AppLocalizations.of(context)!.reelsans],
-                    selectedOption5,
-                    (newValue) {
-                      setState(() {
-                        selectedOption5 = newValue;
                       });
                     },
                   ),

@@ -82,5 +82,14 @@
     "pica" : "With WhatsApp, you can share photos, videos, and so much more with your contacts.\n You now have the ability to send documents, contact information that you can share with other contacts,\n audio messages that you can record directly using the service, \nand even share your location natively within the service.",
     "signin": "Sign in to create your account",
     "signq": "What is the sign in process?",
-    "signa" : ""
+    "signa" : "Create an account to be on Pinterest",
+    "login":"Log in",
+    "loginq":"What is the sign in process?",
+    "logina":"Log into your account if you already have one",
+    "follow":"Follow your friends",
+    "followq":"Why Follow people?",
+    "followa":"Following people on Pinterest is a great way to know your friends and family's interest and things that they share, also find similarity amongst your interests.",
+    "share":"Share Pins to your friends",
+    "shareq":"Why Share Pins?",
+    "sharea":"To share ideas and stay connected to your friends."
 }

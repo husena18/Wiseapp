@@ -82,7 +82,10 @@
     "pica" : "",
     "signin": "",
     "signq": "",
-    "signa" : ""
+    "signa" : "",
+    "login":"Log in",
+    "loginq":"What is the sign in process?",
+    "logina":"Log into your account if you already have one"
     
 
 
