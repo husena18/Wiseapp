@@ -50,7 +50,7 @@ class _PinterestState extends State<Pinterest> {
           Center(
             child: Container(
               width: MediaQuery.of(context).size.width * 0.95,
-              height: MediaQuery.of(context).size.height * 0.4,
+              height: MediaQuery.of(context).size.height * 0.3,
               color: Colors.black,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

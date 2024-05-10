@@ -25,7 +25,7 @@ class _signin1WidgetState extends State<signin1Widget> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child:  ImageFetcher(
-                    imageUrl: 'Pinterest/login:signup_DM.jpeg',
+                    imageUrl: 'Pinterest/SU1_D.jpeg',
                   width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 ),
