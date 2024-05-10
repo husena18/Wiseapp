@@ -3,9 +3,40 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/pages/Whatsapp/call5.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
-class Call4Widget extends StatelessWidget {
+class Call4Widget extends StatefulWidget {
   const Call4Widget({Key? key}) : super(key: key);
+
+  @override
+  State<Call4Widget> createState() => _Call4WidgetState();
+}
+
+class _Call4WidgetState extends State<Call4Widget> {
+  late FlutterTts flutterTts;
+  late FocusNode _unfocusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    flutterTts = FlutterTts();
+    _unfocusNode = FocusNode();
+    addVoiceCommand(); // Call the method to speak the voice command
+  }
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  Future<void> addVoiceCommand() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +56,6 @@ class Call4Widget extends StatelessWidget {
                   ),
                 ),
               ),
-              
             ),
             GestureDetector(
               onTap: () {
@@ -39,16 +69,16 @@ class Call4Widget extends StatelessWidget {
                 child: Align(
                   alignment: AlignmentDirectional(0.5, -0.8),
                   child: Transform.rotate(
-                  angle: 2,
-                  child: Lottie.asset(
-                    'animations/cursor.json',
-                    width: 250,
-                    height: 220,
-                    reverse: true,
-                    repeat: true,
-                    fit: BoxFit.fitWidth,
-                    animate: true,
-                  ),
+                    angle: 2,
+                    child: Lottie.asset(
+                      'animations/cursor.json',
+                      width: 250,
+                      height: 220,
+                      reverse: true,
+                      repeat: true,
+                      fit: BoxFit.fitWidth,
+                      animate: true,
+                    ),
                   ),
                 ),
               ),

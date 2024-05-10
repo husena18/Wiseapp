@@ -43,8 +43,10 @@ class _Message4WidgetState extends State<Message4Widget>
 
   Future<void> addtostory() async {
     await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak('Your story has been uploaded, You can now explore other functionalities');
+    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess);
   }
 
   @override

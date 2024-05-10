@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:wiseapp/pages/Whatsapp/linkd1.dart';
 import 'package:wiseapp/pages/Whatsapp/call1.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Whatsapp/message1.dart';
 import 'dart:ui';
 import 'package:wiseapp/pages/Whatsapp/updates1.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wiseapp/pages/video_screen3w1.dart';
+import 'package:wiseapp/pages/video_screen3w2.dart';
+import 'package:wiseapp/pages/video_screen3w3.dart';
 
 
 class Whatsapp extends StatefulWidget {
@@ -111,17 +113,17 @@ class _WhatsappState extends State<Whatsapp> {
 
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Updates1Widget()),
+                        MaterialPageRoute(builder: (context) => VideoScreen3w3()),
                       );
                     
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Call1Widget()),
+                        MaterialPageRoute(builder: (context) => VideoScreen3w1()),
                       );
                      
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Message1Widget()),
+                        MaterialPageRoute(builder: (context) => VideoScreen3w2()),
                       );
                       
 

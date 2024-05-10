@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:video_player/video_player.dart';
-import 'package:wiseapp/pages/Instagram/dm1.dart'; // Assuming Dm1IgWidget is from here
+import 'package:wiseapp/pages/Instagram/dm1.dart';
+import 'package:wiseapp/pages/Whatsapp/call1.dart'; // Assuming Dm1IgWidget is from here
 
-class VideoScreen2 extends StatefulWidget {
+class VideoScreen3w1 extends StatefulWidget {
   @override
-  _VideoScreen2State createState() => _VideoScreen2State();
+  VideoScreen3State createState() => VideoScreen3State();
 }
 
-class _VideoScreen2State extends State<VideoScreen2> {
+class VideoScreen3State extends State<VideoScreen3w1> {
   VideoPlayerController? _controller;
   Future<void>? _initializeVideoPlayerFuture;
   bool isVideoPlaying = true;
@@ -22,7 +23,7 @@ class _VideoScreen2State extends State<VideoScreen2> {
   Future<void> fetchVideoUrl() async {
     try {
       var storage = FirebaseStorage.instance;
-      var videoRef = storage.ref().child('dm.mp4');
+      var videoRef = storage.ref().child('Whatsapp Calling.mp4');
       var url = await videoRef.getDownloadURL();
 
       setState(() {
@@ -50,7 +51,7 @@ class _VideoScreen2State extends State<VideoScreen2> {
     // Navigate to the new screen when skip button is pressed
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Dm1IgWidget()),
+      MaterialPageRoute(builder: (context) => Call1Widget()),
     );
   }
 

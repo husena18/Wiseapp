@@ -32,8 +32,10 @@ class _Call1WidgetState extends State<Call1Widget> {
 
   Future<void> addVoiceCommand() async {
     await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak('Tap the image to proceed to the next screen!');
+    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess);
   }
 
   @override

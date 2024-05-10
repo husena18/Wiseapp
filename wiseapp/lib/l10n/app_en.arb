@@ -79,5 +79,6 @@
     "picq" : "How to Send a picture to your friend?",
     "statusa": "Status on WhatsApp is a popular way to share updates with friends and close contacts. \nEvery status disappears in 24 hours and may include photos, videos, GIFs, text and more. ",
     "calla" : "When someone calls you via WhatsApp, it will look similar to when you receive a\n regular phone call, but it will display the words WhatsApp Audio somewhere on the screen.\n In our example, our screenshot is from an iPhone, so it may look different to you \ndepending on the device youre using.",
-    "pica" : "With WhatsApp, you can share photos, videos, and so much more with your contacts.\n You now have the ability to send documents, contact information that you can share with other contacts,\n audio messages that you can record directly using the service, \nand even share your location natively within the service."
+    "pica" : "With WhatsApp, you can share photos, videos, and so much more with your contacts.\n You now have the ability to send documents, contact information that you can share with other contacts,\n audio messages that you can record directly using the service, \nand even share your location natively within the service.",
+    "snapchat" : "Snapchat"
 }

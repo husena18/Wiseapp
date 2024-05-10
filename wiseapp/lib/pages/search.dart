@@ -127,7 +127,7 @@ class _SearchPageState extends State<SearchPage> {
                   title: Text(
                     performSearch(searchText, mainAppList)[index].appName,
                     style: const TextStyle(
-                      color:Colors.black,
+                      color:Color.fromARGB(255, 249, 242, 242),
                       fontWeight: FontWeight.bold,
                     ),
                   ),

@@ -44,8 +44,10 @@ class _Message3WidgetState extends State<Message3Widget>
 
   Future<void> addtostory() async {
     await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak('Use your camera to click a photo or select from your gallery!');
+    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess);
   }
 
   @override

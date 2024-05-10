@@ -3,7 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Zomato/zomato5.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:flutter_tts/flutter_tts.dart';
 
 class Zomato4Model extends ChangeNotifier {
   late final FocusNode _unfocusNode;
@@ -29,6 +29,7 @@ class Zomato4Widget extends StatefulWidget {
 class _Zomato4WidgetState extends State<Zomato4Widget>
     with TickerProviderStateMixin {
   late Zomato4Model _model;
+  late FlutterTts flutterTts;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -36,6 +37,16 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
   void initState() {
     super.initState();
     _model = Zomato4Model();
+    flutterTts = FlutterTts();
+    addVoiceCommand(); // Call the method to speak the welcome text
+  }
+
+  Future<void> addVoiceCommand() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(AppLocalizations.of(context)!.clickhere); // Use clickhere property to get the localized string
   }
 
   @override
@@ -65,31 +76,30 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
                 ),
               ),
             ),
-            GestureDetector( // Wrap Lottie.asset with GestureDetector
-  onTap: () {
-    // Navigate to another page when animation is clicked
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Zomato5Widget()),
-    );
-  },
-  child: Opacity(
-    opacity: 0.8,
-    child: Align(
-      alignment: AlignmentDirectional(1.5, 1.3),
-      child: Lottie.asset(
-        'animations/cursor.json',
-        width: 250,
-        height: 220,
-        reverse: true,
-        repeat: true,
-        fit: BoxFit.fitWidth,
-        animate: true,
-      ),
-    ),
-  ),
-),
-
+            GestureDetector(
+              onTap: () {
+                // Navigate to another page when animation is clicked
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Zomato5Widget()),
+                );
+              },
+              child: Opacity(
+                opacity: 0.8,
+                child: Align(
+                  alignment: AlignmentDirectional(1.5, 1.3),
+                  child: Lottie.asset(
+                    'animations/cursor.json',
+                    width: 250,
+                    height: 220,
+                    reverse: true,
+                    repeat: true,
+                    fit: BoxFit.fitWidth,
+                    animate: true,
+                  ),
+                ),
+              ),
+            ),
             Opacity(
               opacity: 0,
               child: Align(

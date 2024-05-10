@@ -1,9 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Zomato/zomato_main.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 class Zomato5Widget extends StatefulWidget {
   const Zomato5Widget({Key? key}) : super(key: key);
@@ -13,14 +14,23 @@ class Zomato5Widget extends StatefulWidget {
 }
 
 class _Zomato5WidgetState extends State<Zomato5Widget> {
-  // late Zomato5Widget _model; // Not needed in this example
+  late FlutterTts flutterTts;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    // _model = Zomato5Widget(); // Not needed in this example
+    flutterTts = FlutterTts();
+    addVoiceCommand(); // Call the method to speak the welcome text
+  }
+
+  Future<void> addVoiceCommand() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess); // Use selectsuccess property to get the localized string
   }
 
   @override
@@ -91,7 +101,7 @@ class _Zomato5WidgetState extends State<Zomato5Widget> {
 
   // @override
   // void dispose() {
-  //   _model.dispose(); // Not needed in this example
+  //   flutterTts.stop(); // Stop speaking when the widget is disposed
   //   super.dispose();
   // }
 }
