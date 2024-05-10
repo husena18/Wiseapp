@@ -142,7 +142,6 @@ class _PinterestState extends State<Pinterest> {
                         MaterialPageRoute(builder: (context) => log1Widget()),
                       );
                       
-                  
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => follow1Widget()),
