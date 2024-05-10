@@ -57,8 +57,8 @@ class _PinterestState extends State<Pinterest> {
                 children: [
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.storyadd,
-                    [AppLocalizations.of(context)!.story, AppLocalizations.of(context)!.storyans],
+                    AppLocalizations.of(context)!.signin,
+                    [AppLocalizations.of(context)!.signq, AppLocalizations.of(context)!.signa],
                     selectedOption1,
                     (newValue) {
                       setState(() {
