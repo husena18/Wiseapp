@@ -131,44 +131,31 @@ class _PinterestState extends State<Pinterest> {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle button press
-                  switch (buttonText) {
-                    case 'Sign In to Pinterest':
-                    case 'તમારા વાર્તા માટે 24 કલાક ઉમેરો':
-                    case 'अपनी कहानी में 24 घंटे के लिए जोड़ें':
 
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => signin1Widget()),
                       );
-                      break;
-                    case 'Log In to Pinterest':
-                    case 'તમારા મિત્રો શોધો અને અનુસરો':
-                    case 'अपने दोस्तों को खोजें और फॉलो करें':
+                      
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => log1Widget()),
                       );
-                      break;
-                    case 'Search and Follow People':
-                    case 'તમારા મિત્રોને ટેક્સ્ટ કરો (DM)':
-                    case 'अपने दोस्तों को टेक्स्ट करें (DM)':
+                      
                   
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => follow1Widget()),
                       );
-                      break;
-                    case 'Share Pins with Friends':
-                    case 'બધાને જોવા માટે પોસ્ટ કરો':
-                    case 'सभी को दिखाने के लिए पोस्ट करें':
+                     
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => share1Widget()),
                       );
-                      break;
+                    
                   }
-                },
+                ,
+                
                 child: Row(
                   children: [
                     Text(
@@ -182,6 +169,8 @@ class _PinterestState extends State<Pinterest> {
               ),
             ),
           ),
+          // Dropdown arrow
+      
           // Dropdown menu
           IconButton(
             onPressed: () {
