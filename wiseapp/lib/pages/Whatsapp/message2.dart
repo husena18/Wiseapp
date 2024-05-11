@@ -47,7 +47,7 @@ class _Message2WidgetState extends State<Message2Widget>
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess);
+    await flutterTts.speak(AppLocalizations.of(context)!.fromgallery);
   }
 
   @override

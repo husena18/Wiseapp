@@ -35,7 +35,7 @@ class _Call1WidgetState extends State<Call1Widget> {
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess);
+    await flutterTts.speak(AppLocalizations.of(context)!.call1);
   }
 
   @override
@@ -87,7 +87,7 @@ class _Call1WidgetState extends State<Call1Widget> {
                   Navigator.pushNamed(context, 'DM2_IG');
                 },
                 child: Text(
-                  AppLocalizations.of(context)!.clickhere,
+                  AppLocalizations.of(context)!.call1,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
                     fontSize: 26,

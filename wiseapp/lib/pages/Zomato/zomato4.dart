@@ -46,7 +46,7 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.clickhere); // Use clickhere property to get the localized string
+    await flutterTts.speak(AppLocalizations.of(context)!.clickherez4); // Use clickherez4 property to get the localized string
   }
 
   @override
@@ -129,7 +129,7 @@ class _Zomato4WidgetState extends State<Zomato4Widget>
                 highlightColor: Colors.transparent,
                 onTap: () async {},
                 child: Text(
-                  AppLocalizations.of(context)!.clickhere,
+                  AppLocalizations.of(context)!.clickherez4,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                     fontFamily: 'Readex Pro',

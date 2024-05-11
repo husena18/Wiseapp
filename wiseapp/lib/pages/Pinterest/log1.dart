@@ -82,9 +82,9 @@ Future<void> dm() async {
                 );
               },
               child: Align(
-                alignment: AlignmentDirectional(1.6, -1.16),
+                alignment: AlignmentDirectional(-0.6, -0.3),
                 child: Transform.rotate(
-                  angle: 1.3,
+                  angle: 4,
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 250,
@@ -98,7 +98,7 @@ Future<void> dm() async {
               ),
             ),
             Align(
-              alignment: Alignment(0.91, -0.84),
+              alignment: Alignment(0.3, -0.2),
               child: InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, 'DM2_IG');

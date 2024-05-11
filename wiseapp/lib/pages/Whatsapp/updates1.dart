@@ -47,7 +47,7 @@ class _Updates1WidgetState extends State<Updates1Widget>
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.chdm); // Use chdm property to get the localized string
+    await flutterTts.speak(AppLocalizations.of(context)!.chdmu1); // Use chdmu1 property to get the localized string
   }
 
   @override
@@ -106,7 +106,7 @@ class _Updates1WidgetState extends State<Updates1Widget>
                   Navigator.pushNamed(context, 'DM2_IG');
                 },
                 child: Text(
-                  AppLocalizations.of(context)!.clickhere,
+                  AppLocalizations.of(context)!.chdmu1,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
                     fontSize: 26,

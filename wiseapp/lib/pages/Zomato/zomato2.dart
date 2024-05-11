@@ -46,7 +46,7 @@ class _Zomato2WidgetState extends State<Zomato2Widget>
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.clickhere); // Use clickhere property to get the localized string
+    await flutterTts.speak(AppLocalizations.of(context)!.clickherez2); // Use clickhere property to get the localized string
   }
 
   @override

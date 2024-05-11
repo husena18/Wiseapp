@@ -736,7 +736,7 @@ Padding(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: ImageFetcher(
-                        imageUrl: 'instagram_assets/google-maps-logo-on-transparent-white-background-free-vector.jpg',
+                        imageUrl: 'IRCTC/IRCTC-Color.png',
                         width: 150,
                         height: 150,
                         fit: BoxFit.contain,

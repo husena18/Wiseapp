@@ -3,9 +3,40 @@ import 'package:lottie/lottie.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Whatsapp/call3.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
-class Call2Widget extends StatelessWidget {
+class Call2Widget extends StatefulWidget {
   const Call2Widget({Key? key}) : super(key: key);
+
+  @override
+  _Call2WidgetState createState() => _Call2WidgetState();
+}
+
+class _Call2WidgetState extends State<Call2Widget> {
+  late FlutterTts flutterTts;
+  late FocusNode _unfocusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    flutterTts = FlutterTts();
+    _unfocusNode = FocusNode();
+    addVoiceCommand(); // Call the method to speak the voice command
+  }
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  Future<void> addVoiceCommand() async {
+    await flutterTts.setLanguage('en');
+    await flutterTts.setLanguage('hi');
+    await flutterTts.setLanguage('gu');
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(AppLocalizations.of(context)!.call1); // Change to appropriate translation key
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,6 @@ import 'package:wiseapp/controller/language_change_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:wiseapp/pages/Whatsapp/Whatsapp_main.dart';
 import 'package:wiseapp/pages/Whatsapp/updates1.dart';
-import 'package:wiseapp/pages/home_page2.dart';
 import 'home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_tts/flutter_tts.dart';

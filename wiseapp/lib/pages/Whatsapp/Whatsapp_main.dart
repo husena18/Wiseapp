@@ -9,7 +9,6 @@ import 'package:wiseapp/pages/video_screen3w1.dart';
 import 'package:wiseapp/pages/video_screen3w2.dart';
 import 'package:wiseapp/pages/video_screen3w3.dart';
 
-
 class Whatsapp extends StatefulWidget {
   @override
   _WhatsappState createState() => _WhatsappState();
@@ -21,7 +20,7 @@ class _WhatsappState extends State<Whatsapp> {
   String? selectedOption2;
   String? selectedOption3;
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -108,26 +107,29 @@ class _WhatsappState extends State<Whatsapp> {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle button press
-                  
-
+                  // Depending on the selected value, navigate to the corresponding video screen
+                  if (buttonText == AppLocalizations.of(context)!.status) {
+                    if (selectedOption1 == AppLocalizations.of(context)!.statusa) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => VideoScreen3w3()),
                       );
-                    
+                    }
+                  } else if (buttonText == AppLocalizations.of(context)!.call) {
+                    if (selectedOption2 == AppLocalizations.of(context)!.calla) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => VideoScreen3w1()),
                       );
-                     
+                    }
+                  } else if (buttonText == AppLocalizations.of(context)!.picsend) {
+                    if (selectedOption3 == AppLocalizations.of(context)!.pica) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => VideoScreen3w2()),
                       );
-                      
-
-                  
+                    }
+                  }
                 },
                 child: Row(
                   children: [

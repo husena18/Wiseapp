@@ -25,7 +25,7 @@ class _signin1WidgetState extends State<signin1Widget> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child:  ImageFetcher(
-                    imageUrl: 'Pinterest/login:signup_DM.jpeg',
+                    imageUrl: 'Pinterest/SU1_D.jpeg',
                   width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 ),
@@ -39,9 +39,9 @@ class _signin1WidgetState extends State<signin1Widget> {
                 );
               },
               child: Align(
-                alignment: AlignmentDirectional(-1.50, 1.25),
+                alignment: AlignmentDirectional(-0.5, 1.2),
                 child: Transform.rotate(
-                  angle: 3,
+                  angle: 1,
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 250,
@@ -55,7 +55,7 @@ class _signin1WidgetState extends State<signin1Widget> {
               ),
             ),
             Align(
-              alignment: Alignment(0.36, 0.86),
+              alignment: Alignment(0.36, 0.65),
               child: InkWell(
                 splashColor: Color.fromARGB(246, 0, 0, 0),
                 focusColor: Color.fromARGB(246, 0, 0, 0),
@@ -63,12 +63,12 @@ class _signin1WidgetState extends State<signin1Widget> {
                 highlightColor: Color.fromARGB(246, 0, 0, 0),
                 onTap: () async {},
                 child: Text(
-                  AppLocalizations.of(context)!.searchhere,
+                  AppLocalizations.of(context)!.clickhere,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyText1!.merge(
                         TextStyle(
                           fontFamily: 'Readex Pro',
-                          color:Colors.black,
+                          color:Colors.white,
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),

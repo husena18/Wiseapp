@@ -3,6 +3,7 @@ import 'package:wiseapp/pages/Zomato/zomato1.dart';
 import 'package:wiseapp/image_fetch.dart';
 import 'dart:ui';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wiseapp/pages/video_screen4z1.dart';
 
 class Zomato extends StatefulWidget {
   @override
@@ -87,7 +88,7 @@ class _ZomatoState extends State<Zomato> {
                   
                       Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Zomato1Widget()),
+      MaterialPageRoute(builder: (context) => VideoScreen4z1()),
     );
                       
 

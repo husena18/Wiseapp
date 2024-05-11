@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:wiseapp/pages/Pinterest/signin1.dart';
-import 'package:wiseapp/pages/Pinterest/share1.dart';
-import 'package:wiseapp/image_fetch.dart';
 import 'package:wiseapp/pages/Pinterest/follow1.dart';
-import 'dart:ui';
 import 'package:wiseapp/pages/Pinterest/log1.dart';
+import 'package:wiseapp/image_fetch.dart';
+import 'package:wiseapp/pages/Pinterest/share1.dart';
+import 'dart:ui';
+import 'package:wiseapp/pages/Pinterest/signin1.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wiseapp/pages/video_screen.dart';
+import 'package:wiseapp/pages/video_screen2.dart';
 
 
 class Pinterest extends StatefulWidget {
@@ -40,7 +42,7 @@ class _PinterestState extends State<Pinterest> {
             child: ImageFiltered(
               imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
               child: ImageFetcher(
-                imageUrl: 'Pinterest/login:signup_DM.jpeg.jpeg',
+                imageUrl: 'Pinterest/HOMEPAGE_D.jpeg',
               ),
             ),
           ),
@@ -48,15 +50,15 @@ class _PinterestState extends State<Pinterest> {
           Center(
             child: Container(
               width: MediaQuery.of(context).size.width * 0.95,
-              height: MediaQuery.of(context).size.height * 0.4,
+              height: MediaQuery.of(context).size.height * 0.3,
               color: Colors.black,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.storyadd,
-                    [AppLocalizations.of(context)!.story, AppLocalizations.of(context)!.storyans],
+                    AppLocalizations.of(context)!.signin,
+                    [AppLocalizations.of(context)!.signq, AppLocalizations.of(context)!.signa],
                     selectedOption1,
                     (newValue) {
                       setState(() {
@@ -66,8 +68,8 @@ class _PinterestState extends State<Pinterest> {
                   ),
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.searchfollow,
-                    [AppLocalizations.of(context)!.follow,AppLocalizations.of(context)!.followans],
+                    AppLocalizations.of(context)!.login,
+                    [AppLocalizations.of(context)!.loginq,AppLocalizations.of(context)!.logina],
                     selectedOption2,
                     (newValue) {
                       setState(() {
@@ -77,8 +79,8 @@ class _PinterestState extends State<Pinterest> {
                   ),
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.dm,
-                    [AppLocalizations.of(context)!.dms, AppLocalizations.of(context)!.dmans],
+                    AppLocalizations.of(context)!.follow,
+                    [AppLocalizations.of(context)!.followq, AppLocalizations.of(context)!.followa],
                     selectedOption3,
                     (newValue) {
                       setState(() {
@@ -88,23 +90,12 @@ class _PinterestState extends State<Pinterest> {
                   ),
                   buildButtonWithDropdown(
                     context,
-                    AppLocalizations.of(context)!.post,
-                    [AppLocalizations.of(context)!.posts, AppLocalizations.of(context)!.postans],
+                    AppLocalizations.of(context)!.share,
+                    [AppLocalizations.of(context)!.shareq, AppLocalizations.of(context)!.sharea],
                     selectedOption4,
                     (newValue) {
                       setState(() {
                         selectedOption4 = newValue;
-                      });
-                    },
-                  ),
-                  buildButtonWithDropdown(
-                    context,
-                    AppLocalizations.of(context)!.reels,
-                    [AppLocalizations.of(context)!.reelss, AppLocalizations.of(context)!.reelsans],
-                    selectedOption5,
-                    (newValue) {
-                      setState(() {
-                        selectedOption5 = newValue;
                       });
                     },
                   ),
@@ -129,44 +120,30 @@ class _PinterestState extends State<Pinterest> {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle button press
-                  switch (buttonText) {
-                    case 'Sign In to Pinterest':
-                    case 'તમારા વાર્તા માટે 24 કલાક ઉમેરો':
-                    case 'अपनी कहानी में 24 घंटे के लिए जोड़ें':
 
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => signin1Widget()),
                       );
-                      break;
-                    case 'Log In to Pinterest':
-                    case 'તમારા મિત્રો શોધો અને અનુસરો':
-                    case 'अपने दोस्तों को खोजें और फॉलो करें':
+                      
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => log1Widget()),
                       );
-                      break;
-                    case 'Search and Follow People':
-                    case 'તમારા મિત્રોને ટેક્સ્ટ કરો (DM)':
-                    case 'अपने दोस्तों को टेक्स्ट करें (DM)':
-                  
+                      
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => follow1Widget()),
                       );
-                      break;
-                    case 'Share Pins with Friends':
-                    case 'બધાને જોવા માટે પોસ્ટ કરો':
-                    case 'सभी को दिखाने के लिए पोस्ट करें':
+                     
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => share1Widget()),
                       );
-                      break;
+                    
                   }
-                },
+                ,
+                
                 child: Row(
                   children: [
                     Text(
@@ -180,6 +157,8 @@ class _PinterestState extends State<Pinterest> {
               ),
             ),
           ),
+          // Dropdown arrow
+      
           // Dropdown menu
           IconButton(
             onPressed: () {

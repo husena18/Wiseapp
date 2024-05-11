@@ -47,7 +47,7 @@ class _Message3WidgetState extends State<Message3Widget>
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.selectsuccess);
+    await flutterTts.speak(AppLocalizations.of(context)!.editstory);
   }
 
   @override
@@ -104,7 +104,7 @@ class _Message3WidgetState extends State<Message3Widget>
                   // Handle onTap
                 },
                 child: Text(
-                  AppLocalizations.of(context)!.chdm,
+                  AppLocalizations.of(context)!.none,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',

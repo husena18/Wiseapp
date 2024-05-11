@@ -47,7 +47,7 @@ class _Updates3WidgetState extends State<Updates3Widget>
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.searchselectfollow); // Use searchselectfollow property to get the localized string
+    await flutterTts.speak(AppLocalizations.of(context)!.editstory); // Use searchselectfollow property to get the localized string
   }
 
   @override

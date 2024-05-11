@@ -41,7 +41,7 @@ class _signin2WidgetState extends State<signin2Widget>
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: ImageFetcher(
-                    imageUrl: 'Pinterest/SU1_D.jpeg',
+                    imageUrl: 'Pinterest/SU2_D.jpeg',
                     width: 443,
                     height: 809,
                     fit: BoxFit.cover,
@@ -51,7 +51,7 @@ class _signin2WidgetState extends State<signin2Widget>
               Opacity(
                 opacity: 0.8,
                 child: Align(
-                  alignment: Alignment(-0.73, -1.1),
+                  alignment: Alignment(0, 2),
                   child: Lottie.asset(
                     'animations/cursor.json',
                     width: 200,
@@ -84,7 +84,7 @@ class _signin2WidgetState extends State<signin2Widget>
                 ),
               ),
               Align(
-                alignment: Alignment(0.36, -0.66),
+                alignment: Alignment(0, 0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,

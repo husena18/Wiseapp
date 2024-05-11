@@ -47,7 +47,7 @@ class _Updates2WidgetState extends State<Updates2Widget>
     await flutterTts.setLanguage('hi');
     await flutterTts.setLanguage('gu');
     await flutterTts.setPitch(1.0);
-    await flutterTts.speak(AppLocalizations.of(context)!.chtsm); // Use chtsm property to get the localized string
+    await flutterTts.speak(AppLocalizations.of(context)!.clickhere); // Use chtsm property to get the localized string
   }
 
   @override

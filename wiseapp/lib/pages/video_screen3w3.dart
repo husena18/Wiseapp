@@ -53,7 +53,7 @@ class VideoScreen3State extends State<VideoScreen3w3> {
     // Navigate to the new screen when skip button is pressed
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) =>  Updates1Widget()),
+      MaterialPageRoute(builder: (context) => Updates1Widget()),
     );
   }
 
@@ -71,6 +71,8 @@ class VideoScreen3State extends State<VideoScreen3w3> {
 
   @override
   Widget build(BuildContext context) {
+    double aspectRatio = 9 / 18.5; // Aspect ratio for Google Pixel 3a XL
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Video Player'),
@@ -87,32 +89,34 @@ class VideoScreen3State extends State<VideoScreen3w3> {
           ),
         ],
       ),
-      body: FutureBuilder(
-        future: _initializeVideoPlayerFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AspectRatio(
-                  aspectRatio: _controller?.value?.aspectRatio ?? 1.0,
-                  child: VideoPlayer(_controller!),
-                ),
-                IconButton(
-                  icon: Icon(
-                    isVideoPlaying ? Icons.pause : Icons.play_arrow,
+      body: SingleChildScrollView(
+        child: FutureBuilder(
+          future: _initializeVideoPlayerFuture,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AspectRatio(
+                    aspectRatio: aspectRatio,
+                    child: VideoPlayer(_controller!),
                   ),
-                  onPressed: _togglePlayPause,
-                ),
-              ],
-            );
-          } else {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-        },
+                  IconButton(
+                    icon: Icon(
+                      isVideoPlaying ? Icons.pause : Icons.play_arrow,
+                    ),
+                    onPressed: _togglePlayPause,
+                  ),
+                ],
+              );
+            } else {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+          },
+        ),
       ),
     );
   }
